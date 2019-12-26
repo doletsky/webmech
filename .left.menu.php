@@ -1,0 +1,32 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Учеба", 
+		"/soft.php#section-study",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Развитие", 
+		"/soft.php#section-developing",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Развлечение", 
+		"/soft.php#section-entertainment",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Рекомендации", 
+		"/soft.php",
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
