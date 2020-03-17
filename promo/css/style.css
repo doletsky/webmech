@@ -2853,6 +2853,7 @@ input[type=submit]:focus,input[type=submit].form-control:focus{box-shadow:none}
 .testmonial-single-2 .ts-person h5{margin-bottom:0}
 .testmonial-single-2 .ts-person span{font-size:12px}
 .testmonial-single-2 .ts-content{margin-top:12px;font-size:18px;font-style:italic;font-family:georgia}
+.testmonial-single-2 td { border: solid 1px grey;padding: 5px }
 #scroll-progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:25;background:#18c687}
 #scroll-progress .scroll-percent{float:right;width:80px;margin-top:2px;color:#fff;font-weight:700;background-color:#000;padding:5px;text-align:center;display:none}
 #website-loading{position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:9999999999;text-align:center;display:none}
@@ -2930,7 +2931,7 @@ input[type=submit]:focus,input[type=submit].form-control:focus{box-shadow:none}
 .main-menu.sf-arrows ul.sub-menu a.sf-with-ul::after{position:absolute;font-weight:400;content:'\f105';right:15px;top:13px}
 .main-menu.sf-arrows li>a.sf-with-ul:focus:after,.main-menu.sf-arrows li:hover>a.sf-with-ul:after,.main-menu.sf-arrows .sfHover>a.sf-with-ul:after{color:#18c687}
 #mobile-menu-wrap{display:none;padding:12px 0;border-top:1px solid #e7e7e7;background:#fff}
-#mobile-menu{overflow:hidden;overflow-y:auto;position:relative;clear:both;height:200px;background:#fff}
+#mobile-menu{overflow:hidden;overflow-y:auto;position:relative;clear:both;height:260px;background:#fff}
 #mobile-menu .ss-content{padding:0 5px 0 0}
 #mobile-menu .ss-scroll{opacity:.5;width:6px}
 #mobile-menu.ss-container:hover .ss-scroll{opacity:1}
