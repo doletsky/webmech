@@ -3166,7 +3166,7 @@ input[type=submit]:focus,input[type=submit].form-control:focus{box-shadow:none}
 .testmonials-slider .owl-carousel .slide{position:relative}
 .testmonials-slider .owl-carousel>img{width:100%}
 .testmonials-slider .owl-nav{margin:0}
-.testmonials-slider .owl-nav [class*=owl-]{font-size:24px;font-weight:100;width:35px;height:80px;line-height:78px;margin:0;padding:0;margin-top:-40px!important;position:absolute;top:50%;border-radius:0;opacity:0;visibility:hidden;transition:all .2s;color:#fff;background:rgba(0,0,0,.6)}
+.testmonials-slider .owl-nav [class*=owl-]{font-size:24px;font-weight:100;width:35px;height:80px;line-height:78px;margin:0;padding:0;margin-top:-40px!important;position:absolute;top:50%;border-radius:0;opacity:1;visibility:visible;transition:all .2s;color:#fff;background:rgba(0,0,0,.6)}
 .testmonials-slider .owl-nav [class*=owl-]:hover{background:#000;color:#fff}
 .testmonials-slider .owl-nav .owl-prev{left:0;margin-left:-10px;text-indent:-2px}
 .testmonials-slider .owl-nav .owl-next{right:0;margin-right:-10px;text-indent:2px}

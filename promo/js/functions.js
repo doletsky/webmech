@@ -602,7 +602,7 @@ function convertHex(e, a) {
     }
 
     e(document).on("ready", function () {
-        t(), a(), i(), o(), c(), r(), u(), m(), d(), h(), p(), v(), g(), y(), C(), b(), l(), T(), E(), x(), k(), S(), f()
+        t(), a(), i(), o(), c(), r(), u(), m(), d(), h(), p(), g(), y(), C(), b(), l(), T(), E(), x(), k(), S(), f()//, v()
     }), e(window).on("resize", function () {
         k(), t(), i(), s()
     }), e(window).on("scroll", function () {
