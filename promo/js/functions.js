@@ -531,11 +531,11 @@ function convertHex(e, a) {
         e(".clients-slider > .owl-carousel").owlCarousel({
             items: 6,
             rtl: Y,
-            autoplay: !1,
+            autoplay: !0,
             autoplaySpeed: 500,
             autoplayTimeout: 3e3,
             dragEndSpeed: 400,
-            autoplayHoverPause: !0,
+            autoplayHoverPause: !1,
             loop: !0,
             slideBy: 1,
             margin: 30,

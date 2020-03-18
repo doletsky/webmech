@@ -3000,12 +3000,14 @@ input[type=submit]:focus,input[type=submit].form-control:focus{box-shadow:none}
 .text-center.banner-center-box.bottom-position{transform:translateY(-50%)}
 .banner-center-box h1:last-child,.banner-center-box h2:last-child,.banner-center-box h3:last-child,.banner-center-box h4:last-child,.banner-center-box h5:last-child,.banner-center-box h6:last-child{padding-bottom:0;margin-bottom:0}
 .banner-center-box img{max-height:100%;max-width:100%}
-.signup-form{position:relative;display:inline-block;margin-top:50px}
+.signup-form{position:relative;display:inline-block;margin-top:50px;width: 100%}
 .signup-form .sf1-notifications{max-width:403px}
-.signup-form .form-group{display:table;margin-bottom:0}
-.signup-form input[type=email]{float:left;width:300px;font-weight:400;border-radius:3px 0 0 3px;background:#fff;border-color:#fff}
+.signup-form .form-group{display:table;margin-bottom:0;width: 100%}
+.signup-form select{float:left;width:33%;font-weight:400;border-radius:3px 0 0 3px;background:#fff;border-color:#fff;height: 50px;margin-right: 20px;color: gray}
+.signup-form select:focus{background:#da;border-color:#fff}
+.signup-form input[type=email]{float:left;width:33%;font-weight:400;border-radius:3px 0 0 3px;background:#fff;border-color:#fff}
 .signup-form input[type=email]:focus{background:#da;border-color:#fff}
-.signup-form input[type=submit]{vertical-align:middle;border:1px solid #18c687;background:#18c687;border-radius:0 3px 3px 0}
+.signup-form input[type=submit]{vertical-align:middle;border:1px solid #18c687;background:#18c687;border-radius:0 3px 3px 0;float: left;margin-left: 20px}
 .signup-form input[type=submit]:hover{color:#fff;border-color:#000;background:#000!important}
 .signup-form img{position:absolute;right:-35px;bottom:-40px}
 .box-header-form{position:relative;padding:30px;text-align:center;border-top:5px solid #18c687;border-radius:0 0 10px 10px;background:#fff}
@@ -3183,7 +3185,7 @@ input[type=submit]:focus,input[type=submit].form-control:focus{box-shadow:none}
 .testmonials-slider .owl-dots .owl-dot.active span,.testmonials-slider .owl-dots .owl-dot.active:hover span{border-color:#18c687;opacity:1;background:0 0}
 .testmonials-slider .owl-dots .owl-dot span{margin:0;width:10px;height:10px;border-radius:100%;border:2px solid transparent;background:#000;opacity:.2;transition:all .2s}
 #our-clients .section-content{padding:70px 0;background:#18c687}
-.client-single{height:60px}
+.client-single{height:70px}
 .client-single img{width:auto!important;position:relative;top:50%;left:50%;transform:translate(-50%,-50%)}
 .clients-slider{width:100%}
 .clients-slider .owl-carousel{list-style:none}
