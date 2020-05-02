@@ -2,8 +2,8 @@
 
 <?if (!empty($arResult)):?>
     <h5>
-        <?if(isset($_REQUEST["course"])):?>Список занятий:
-        <?else:?>Список курсов:
+        <?if(isset($_REQUEST["course"])):?>Р•СЃС‚СЊ РєСѓСЂСЃ:
+        <?else:?>РќРµС‚ РєСѓСЂСЃР°:
         <?endif;?>
     </h5>
 <?
