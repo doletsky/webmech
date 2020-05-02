@@ -1,1 +1,1 @@
-<?$arTemplate = Array("NAME"=>"Заметки", "DESCRIPTION"=>"");?>
+<?$arTemplate = Array("NAME"=>"practicum", "DESCRIPTION"=>"");?>
