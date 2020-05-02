@@ -1,0 +1,96 @@
+
+.lk-students-chat{
+    height: 100vh;
+    overflow-y: scroll;
+}
+.lk-students-chat .reviews-reply-form {
+    padding: 0 30px 0 0;
+    margin-left: 9px;
+}
+.lk-students-chat .reviews-reply-form textarea{
+    line-height: inherit !important;
+    height: 70px;
+    padding: 0;
+    font-size: 80%;
+    background-color: #ffffff;
+}
+.lk-students-chat .chat-message-submit{
+    position: relative;
+    width: 26px;
+    height: 66px;
+    /* border: 1px solid gray !important; */
+    /* border-radius: 4px; */
+    /* background-color: #fff; */
+    font-size: 200%;
+    color: rgb(245, 106, 106);
+    text-align: center;
+    padding-top: 5px;
+    bottom: -20px;
+    cursor: pointer;
+    float: right;
+}
+
+.lk-students-chat .chat-message-submit:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none !important;
+}
+
+.lk-students-chat .chat-message-submit:before {
+    content: '\f1d8';
+    font-size: 2rem;
+    height: inherit;
+    left: 0;
+    line-height: inherit;
+    position: absolute;
+    text-indent: 0;
+    top: 0;
+    width: inherit;
+}
+
+.lk-students-chat .reviews-form{
+    margin:0;
+    padding: 0;
+}
+.chat-message .reviews-text {
+    width:80%;
+    padding: 15px 10px;
+}
+.chat-message .chat-message-author{
+    font-size: 70%;
+    color: #AA0000;
+}
+.chat-message-me {
+    float: right;
+    text-align: right;
+}
+.chat-message-me .chat-message-author {
+    color: #00CC00;
+}
+.chat-message-author .message-post-date {
+    color: #333;
+}
+.chat-message-me:after {
+    clear: both;
+}
+.lk-students-chat > .row {
+    margin-bottom: -85px;
+}
+
+/*add bootsrap style*/
+.col-md-12 {
+    width: 100%;
+}
+@media screen and (max-width: 736px){
+    #sidebar-chat {
+        width: 80%;
+    }
+    #sidebar-chat > .inner {
+        padding: 1.6666666667em 1.6666666667em 1.3333333333em 1.6666666667em;
+        width: 100%;
+        font-size: 160%;
+    }
+}
