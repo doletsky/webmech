@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forque Bootstrap Admin Template - dashboard3.html</title>
+    <link href="./css/animate.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/linearicons.css" rel="stylesheet">
+    <link href="./css/simple-line-icons.css" rel="stylesheet">
+    <link href="./css/dataTables.bootstrap4.min.css" rel="stylesheet" media="none" onload="if(media!=&apos;all&apos;)media=&apos;all&apos;">
+    <link href="./css/theme.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+  </head>
+  <body class="navbar-expand-lg wow fadeIn faster" data-wow-delay="300ms" data-spy="scroll" data-target="#sm" data-offset="60">
+        <div class="container-fluid fixed-top bg-primary" id="topnav">
+        <div class="row collapse show no-gutters d-flex h-100 position-relative sidebar-collapse">
+            <div class="col-3 pr-4 w-sidebar navbar-collapse collapse d-none d-lg-flex">
+                <input class="form-control form-control-sm border-0 font-weight-light rounded-pill" type="text" placeholder="search...">
+            </div>
+            <div class="col">
+                <nav class="navbar navbar-dark navbar-expand px-lg-1">
+                    <a data-toggle="collapse" href="#" data-target=".sidebar-collapse" class="navbar-brand mr-3">
+                        <span class="h4 align-middle mb-0"><span class="lnr lnr-menu"></span></span>
+                    </a>
+                    <a class="navbar-brand" href="#" title="Home" data-toggle="dropdown">Forque</a>
+                    <div class="dropdown-menu border-light shadow text-uppercase animate-grow-in">
+                        <a class="dropdown-item px-3" href="../" target="_new">Home</a>
+                        <span class="dropdown-item-text small text-uppercase text-muted px-3">Versions</span>
+                        <a class="dropdown-item px-3" href="../static" target="_new">jQuery</a>
+                        <a class="dropdown-item px-3" href="../react" target="_new">React</a>
+                        <a class="dropdown-item px-3" href="../vue" target="_new">Vue</a>
+                    </div>
+                    <ul class="navbar-nav ml-auto mr-2">
+                        <li class="nav-item dropdown position-static mr-1">
+                            <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Mega
+                            </a>
+                            <ul class="dropdown-menu w-100 shadow-lg animate-grow-in border-0" id="navbarDropdownMega">
+                                <li class="px-3 pt-2">
+                                    <div class="row py-2">
+                                        <div class="col-md-6 col-lg-3 pb-2">
+                                            <div class="card h-100">
+                                                <div class="card-body p-2 d-flex flex-column justify-content-center">
+                                                    <div class="d-flex p-1 align-items-center">
+                                                        <div class="flex-shrink-1">
+                                                            <img src="assets/profile_1.png" class="img-fluid rounded-circle avatar" style="height: 35px;">
+                                                        </div>
+                                                        <div class="flex-grow-1 p-2">
+                                                            Mark Jones
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex p-1 align-items-center">
+                                                        <div class="flex-shrink-1">
+                                                            <img src="assets/profile_2.png" class="img-fluid rounded-circle avatar" style="height: 35px;">
+                                                        </div>
+                                                        <div class="flex-grow-1 p-2">
+                                                            Randy Philips
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex p-1 align-items-center">
+                                                        <div class="flex-shrink-1">
+                                                            <img src="assets/profile_3.png" class="img-fluid rounded-circle avatar" style="height: 35px;">
+                                                        </div>
+                                                        <div class="flex-grow-1 p-2">
+                                                            Amy Rice
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex p-1 align-items-center">
+                                                        <div class="flex-shrink-1">
+                                                            <img src="assets/profile_4.png" class="img-fluid rounded-circle avatar" style="height: 35px;">
+                                                        </div>
+                                                        <div class="flex-grow-1 p-2">
+                                                            Anjay Sinhg 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3 pb-2">
+                                            <div class="card rounded-lg h-100">
+                                                <div class="card-body py-3 d-flex flex-column">
+                                                    <h6 class="text-uppercase small">New Customer</h6>
+                                                    <h4 class="mb-0 text-info text-truncate">Austin Farnum</h4>
+                                                    <p class="mt-1 text-truncate">Fort Knox, TX 28192</p>
+                                                    <h3 class="mb-0 mt-auto">$197.55</h3>
+                                                    <div>Total items: 3</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3 pb-2 text-center">
+                                            <form>
+                                                <div class="position-relative form-group">
+                                                    <input name="name" id="textname1" placeholder="Name" type="text" class="form-control">
+                                                </div>
+                                                <div class="position-relative form-group">
+                                                    <input name="email" id="exampleEmail2" placeholder="Email" type="email" class="form-control">
+                                                </div>
+                                                <div class="position-relative form-group">
+                                                    <textarea name="text" id="exampleText2" placeholder="Message" class="form-control"></textarea>
+                                                </div>
+                                                <button class="btn btn-primary float-right" type="button">Submit</button>
+                                            </form>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3 pb-2">
+                                            <div class="card rounded-lg h-100">
+                                                <div class="card-body py-3 d-flex flex-column">
+                                                    <h6 class="text-uppercase small">More</h6>
+                                                    <p>Add any content that is needed here to inspire the audience and spark the conversation. Format this in a responsive way to works across all devices.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link py-0 text-truncate" data-toggle="dropdown">
+                                <span class="align-middle" data-toggle="tooltip" data-placement="left" title="You are logged in">
+                                    Robojo
+                                </span>
+                                <img alt="avatar" src="./assets/m20.jpg" class="avatar mx-1 ml-0 rounded-circle bg-white shadow-sm">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mt-3 border-light shadow text-uppercase animate-grow-in">
+                                <a class="dropdown-item px-3" href="#profile" data-target="#modalProfile" data-toggle="modal"><span class="lnr lnr-user"></span> Profile</a>
+                                <a class="dropdown-item px-3" href="./inbox.html">
+                                    <span class="lnr lnr-inbox"></span> Inbox <span class="badge badge-primary badge-pill font-weight-light align-middle mb-1 pt-0" title="notify count"><small>3</small></span>
+                                </a>
+                                <a class="dropdown-item px-3" href="#edit" data-target="#modalProfile" data-toggle="modal"><span class="lnr lnr-cog"></span> Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item px-3" href="#modalSmall" data-target="#modalSmall" data-toggle="modal"><span class="lnr lnr-exit"></span> Logout</a>
+                                <a class="dropdown-item px-3 font-weight-bold" href="//themes.guide" target="_new" rel="nofollow">About Forque</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid h-100 px-0">
+        <div class="row collapse show no-gutters d-flex h-100 position-relative sidebar-collapse">
+            <div class="col-3 p-0 h-100 w-sidebar navbar-collapse collapse d-none d-lg-flex sidebar-collapse sidebar">
+                                <!-- fixed sidebar -->
+                <div class="navbar navbar-dark d-block bg-dark text-white position-fixed h-100 align-self-start w-sidebar shadow-sm p-0 pt-2 pb-4 text-uppercase" id="sidebar">
+                    <button data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-brand my-1 mr-3 float-right p-0 d-inline-block d-lg-none btn btn-link">
+                        <span class="h4 align-middle mb-0"><span class="lnr lnr-menu"></span></span>
+                    </button>
+                    <div class="nav flex-column flex-wrap pt-5 mt-3" id="menu1">
+                        <a href="./#" class="nav-link ripple" aria-expanded="true" data-toggle="collapse" data-target="#demo1"><i class="icon-speedometer icons"></i> Dashboards</a>
+                        <div class="collapse show" data-parent="#menu1" id="demo1">
+                            <div class="nav flex-column flex-wrap text-truncate">
+                                <a href="./" class="nav-link">Dashboard 1</a>
+                                <a href="./dashboard2.html" class="nav-link" title="Default">Dashboard 2</a>
+                                <a href="./dashboard3.html" class="nav-link">Dashboard 3</a>
+                                <a href="./dashboard4.html" class="nav-link">Dashboard 4</a>
+                                <a href="./dashboard5.html" class="nav-link">Dashboard 5</a>
+                            </div>
+                        </div>
+                        <a href="./charts.html" class="nav-link"><i class="icon-chart icons"></i> Charts</a>
+                        <a href="./report.html" class="nav-link"><i class="icon-docs icons"></i> Reports</a>
+                        <a href="#submenu1" class="nav-link ripple" data-toggle="collapse" aria-expanded="false"><i class="icon-plus icons"></i> More</a>
+                        <div class="collapse" data-parent="#menu1" id="submenu1">
+                            <div class="nav flex-column flex-wrap">
+                                <a href="#" class="nav-link" data-target="#subsubmenu" data-toggle="collapse" aria-expanded="false">Sub level 1</a>
+                                <div class="collapse" data-parent="#submenu1" id="subsubmenu">
+                                    <div class="nav flex-column flex-wrap text-truncate">
+                                        <a href="#" class="nav-link pl-4">Subsub item 1</a>
+                                        <a href="#" class="nav-link pl-4">Subsub item 2</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link">Sub level 2</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav flex-column text-truncate">
+                        <a href="./inbox.html" class="nav-link"><i class="icon-drawer icons"></i> Inbox</a>
+                        <a href="./kanban.html" class="nav-link"><i class="icon-notebook icons"></i> Kanban</a>
+                        <a href="#profile" data-target="#modalProfile" data-toggle="modal" class="nav-link"><i class="icon-mustache icons"></i> Profile</a>
+                    </div>
+                    <div class="nav flex-column flex-wrap text-truncate" id="menu3">
+                        <a href="./icons.html" class="nav-link"><i class="icon-puzzle icons"></i> Icons</a>
+                        <a href="./cards.html" class="nav-link"><i class="icon-doc icons"></i> Cards</a>
+                        <a href="#" class="nav-link ripple" aria-expanded="false" data-toggle="collapse" data-target="#elements"><span><i class="icon-layers icons"></i> Elements</span></a>
+                        <div class="collapse" data-parent="#menu3" id="elements">
+                            <div class="nav flex-column text-truncate">
+                                <a class="nav-link" href="./elements.html#alerts">Alerts</a>
+                                <a class="nav-link" href="./elements.html#badges">Badges</a>
+                                <a class="nav-link" href="./elements.html#breadcrumbs">Breadcrumbs</a>
+                                <a class="nav-link" href="./elements.html#buttons">Buttons</a>
+                                <a class="nav-link" href="./elements.html#colors">Colors</a>
+                                <a class="nav-link" href="./elements.html#jumbotron">Jumbotron</a>
+                                <a class="nav-link" href="./elements.html#lists">Lists</a>
+                                <a class="nav-link" href="./elements.html#modals">Modals</a>
+                                <a class="nav-link" href="./elements.html#progress">Progress</a>
+                                <a class="nav-link" href="./elements.html#sliders">Slider</a>
+                                <a class="nav-link" href="./elements.html#tables">Tables</a>
+                                <a class="nav-link" href="./elements.html#tabs">Tabs</a>
+                                <a class="nav-link" href="./elements.html#typo">Typography</a>
+                            </div>
+                        </div>
+                        <a href="./forms.html" class="nav-link" data-target="#forms"><span><i class="icon-note icons"></i> Forms</span></a>
+                        <div class="collapse" data-parent="#menu3" id="forms">
+                            <div class="nav flex-column text-truncate">
+                                <a class="nav-link" href="./forms.html#formLogin">Login</a>
+                                <a class="nav-link" href="./forms.html#formRegister">Sign-up</a>
+                                <a class="nav-link" href="./forms.html#formChangePassword">Password</a>
+                                <a class="nav-link" href="./forms.html#formResetPassword">Reset</a>
+                                <a class="nav-link" href="./forms.html#formPayment">Payment</a>
+                                <a class="nav-link" href="./forms.html#formUserEdit">User</a>
+                                <a class="nav-link" href="./forms.html#formContact">Contact</a>
+                                <a class="nav-link" href="./forms.html#formComplex">Complex</a>
+                            </div>
+                        </div>
+                        <a href="#" class="nav-link ripple" aria-expanded="false" data-toggle="collapse" data-target="#pages"><span><i class="icon-docs icons"></i> Pages</span></a>
+                        <div class="collapse" data-parent="#menu3" id="pages">
+                            <div class="nav flex-column text-truncate">
+                                <a class="nav-link" href="./artwork.html">Artwork</a>
+                                <a class="nav-link" href="#modalLogin" data-toggle="modal">Login Modal</a>
+                                <a class="nav-link" href="./timeline.html">Timeline</a>
+                                <a class="nav-link" href="./faq.html">FAQ</a>
+                                <a class="nav-link" href="./pricingtables.html">Pricing</a>
+                                <a class="nav-link" href="./error_404.html">Error 404</a>
+                                <a class="nav-link" href="./error_500.html">Error 500</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col p-0 d-flex flex-column">
+                <main class="p-4 flex-fill">
+                    <section class="row mt-1">
+                        <div class="col-lg-6 pb-3 wow fadeIn" data-wow-delay="300ms">
+                            <div class="card shadow-sm h-100">
+                                <div class="card-body p-xl-3 p-2 d-flex flex-column">
+                                    <h4 class="font-weight-light mb-3">Visits</h4>
+                                    <div class="my-xl-auto p-1">
+                                        <canvas id="chLine"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 pb-3 wow fadeIn" data-wow-delay="400ms">
+                                        <div class="card shadow-sm h-100">
+                <div class="card-body p-xl-3 p-2 d-flex flex-column">
+                    <h4 class="font-weight-light">
+                        <div class="float-right dropdown show"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="lnr lnr-cog"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#" class="dropdown-item">Action</a>
+                                <a href="#" class="dropdown-item">Another action</a>
+                            </div>
+                        </div>
+                        Devices
+                    </h4>
+                    <div class="my-auto p-1">
+                        <canvas class="mx-auto p-2" id="chPie"></canvas>
+                    </div>
+                    <table class="table table-hover table-sm d-xl-table d-md-none d-sm-table mb-0 text-uppercase small">
+                        <tr>
+                            <td>Desktop</td>
+                            <td>52%</td>
+                            <td><h5 class="mb-0 text-right"><span class="badge badge-pill bg-light border">&#xA0;</span></h5></td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td>40%</td>
+                            <td><h5 class="mb-0 text-right"><span class="badge badge-pill bg-primary">&#xA0;</span></h5></td>
+                        </tr>
+                        <tr>
+                            <td>Tablet</td>
+                            <td>15%</td>
+                            <td><h5 class="mb-0 text-right"><span class="badge badge-pill bg-dark">&#xA0;</span></h5></td>
+                        </tr>
+                        <tr>
+                            <td>Unknown</td>
+                            <td>5%</td>
+                            <td><h5 class="mb-0 text-right"><span class="badge badge-pill bg-secondary">&#xA0;</span></h5></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-12 pb-3 wow fadeIn" data-wow-delay="500ms">
+                                        <div class="card shadow-sm h-100">
+                <div class="card-body p-2">
+                    <div class="row no-gutters">
+                        <div class="col-xl-12 col-lg-6 py-3">
+                            <div class="card border-0 h-100">
+                                <div class="card-body p-1 text-center">
+                                    <div class="text-uppercase mt-1"><i class="lnr lnr-rocket"></i> Activity</div>
+                                    <div>
+                                        <canvas id="chBar"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-6 py-3">
+                            <div class="card border-0 h-100">
+                                <div class="card-body p-1 text-center">
+                                    <div class="text-uppercase mt-1"><i class="lnr lnr-leaf"></i> Nodes</div>
+                                    <div>
+                                        <canvas id="chBar1"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        </div>
+                    </section>
+                    <section class="row">
+                        <div class="col-xl-9 col-md-8 py-3 wow fadeInUp" data-wow-delay="200ms">
+                            <div class="card shadow-sm h-100">
+                                <div class="card-body">
+                                    <!-- tabs -->
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item"><a href="#tab1" class="nav-link text-uppercase active" data-toggle="tab" data-target="#tab1" role="tab">Log</a></li>
+                                        <li class="nav-item"><a href="#tab2" class="nav-link text-uppercase" data-toggle="tab" data-target="#tab2" role="tab">Users</a></li>
+                                    </ul>
+                                    <div class="tab-content py-4">
+                                        <div class="tab-pane active" id="tab1" role="tabpanel">
+                                                                                    <div class="card shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <span class="float-right text-muted small">11.12.2019T8:02:10.35Z</span>
+                                                <h5 class="card-title"><span class="badge badge-pill bg-warning">&#xA0;</span> Vuedoo</h5>
+                                                <p class="card-text">The process completed, but the write disk is at 10% remaining. <a href="#" class="btn btn-sm btn-outline-warning align-bottom ml-3">Details</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="card shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <span class="float-right text-muted small">11.12.2019T8:00:20.10Z</span>
+                                                <h5 class="card-title"><span class="badge badge-pill bg-success">&#xA0;</span> Esque</h5>
+                                                <p class="card-text">The process completed successfully.</p>
+                                            </div>
+                                        </div>
+                                        <div class="card shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <span class="float-right text-muted small">11.12.2019T7:59:33.12Z</span>
+                                                <h5 class="card-title"><span class="badge badge-pill bg-success">&#xA0;</span> Nachure</h5>
+                                                <p class="card-text">The process completed successfully.</p>
+                                            </div>
+                                        </div>
+                                        <div class="card shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <span class="float-right text-muted small">11.12.2019T7:57:04.13Z</span>
+                                                <h5 class="card-title"><span class="badge badge-pill bg-danger">&#xA0;</span> Admine</h5>
+                                                <p class="card-text">The process completed, but an error occured. <a href="#" class="btn btn-sm btn-outline-danger align-bottom ml-3">Details</a></p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="tab-pane" id="tab2" role="tabpanel">
+                                                                                    <div class="row">
+                                            <div class="col-xl-3 col-lg-12 pb-3">
+                                                <div class="card shadow-sm text-white bg-primary">
+                                                    <div class="card-body">
+                                                        <h3 class="card-title">Bots</h3>
+                                                        <p class="card-text">Click on a robot friend to learn more about them.</p>
+                                                        <a href="#" class="btn text-white border-white rounded-pill">Button</a>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="card shadow-sm float-left w-100 text-white bg-primary mb-2">
+                                                    <div class="card-body">
+                                                        <div class="float-right dropdown show"><a href="#" data-toggle="dropdown" class="dropdown-toggle text-white"><i class="align-middle lnr lnr-cog"></i></a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a href="#" class="dropdown-item">Action</a>
+                                                                <a href="#" class="dropdown-item">Another action</a>
+                                                            </div>
+                                                        </div>
+                                                        <h4 class="card-title">Working</h4>
+                                                        <p class="card-text">
+                                                            This template features <em>working</em> components to demonstrate realistic use and implementation.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div id="accordion" class="border rounded" role="tablist" aria-multiselectable="true">
+                                                    <a role="tab" id="headingOne" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="card-header d-block collapsed">
+                                                        Amy Phillips
+                                                    </a>
+                                                    <div id="collapseOne" role="tabpanel" class="collapse" data-parent="#accordion">
+                                                        <div class="card shadow-sm border-0">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-xl-10 col-lg-9 col-md-7">
+                                                                        <h5>Web / UI Developer</h5>
+                                                                        <p>
+                                                                            I love to read, hang out with friends, listen to music, and learn new things. I&apos;ve been with ACME since the dotcom boom in 1999.
+                                                                        </p>
+                                                                        <p><span class="badge badge-info tags">html5</span> <span class="badge badge-info tags">css3</span> <span class="badge badge-info tags">nodejs</span></p>
+                                                                    </div>
+                                                                    <div class="col-xl-2 col-lg-3 col-md-5 col-10 mx-auto text-center">
+                                                                        <img src="./assets/w42.jpg" alt="" class="mx-auto rounded-circle img-fluid bg-dark">
+                                                                        <ul title="Ratings" class="list-inline ratings text-center">
+                                                                            <li class="list-inline-item"><a href="#"><span class="lnr lnr-star text-success"></span></a></li>
+                                                                            <li class="list-inline-item"><a href="#"><span class="lnr lnr-star text-success"></span></a></li>
+                                                                            <li class="list-inline-item"><a href="#"><span class="lnr lnr-star text-success"></span></a></li>
+                                                                            <li class="list-inline-item"><a href="#"><span class="lnr lnr-star-half text-success"></span></a></li>
+                                                                            <li class="list-inline-item"><a href="#"><span class="lnr lnr-star-empty text-success"></span></a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <h3 class="mb-0">20.7K</h3> <small>Followers</small>
+                                                                        <button class="btn btn-block btn-outline-secondary text-truncate">Follow</button>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <h3 class="mb-0">245</h3> <small>Following</small>
+                                                                        <button class="btn btn-outline-secondary btn-block text-truncate">View Profile</button>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <h3 class="mb-0">43</h3> <small>Snippets</small>
+                                                                        <button type="button" class="btn btn-outline-secondary btn-block text-truncate">Show</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a role="tab" id="headingTwo" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="card-header d-block collapsed">
+                                                        Devin Wozniak
+                                                    </a>
+                                                    <div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" class="collapse show" data-parent="#accordion">
+                                                        <div class="card shadow-sm border-0">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-xl-10 col-lg-9 col-md-7">
+                                                                        <h5>Network Admininstrator</h5>
+                                                                        <p>
+                                                                            I love to read, hang out with friends, listen to music, and learn new things. I got a BS in CS from Bot University.
+                                                                        </p>
+                                                                        <p><span class="badge badge-info tags">html5</span> <span class="badge badge-info tags">css3</span> <span class="badge badge-info tags">nodejs</span></p>
+                                                                    </div>
+                                                                    <div class="col-xl-2 col-lg-3 col-md-5 col-10 text-center mx-auto">
+                                                                        <img src="./assets/m20.jpg" alt="bot" class="mx-auto rounded-circle img-fluid bg-dark">
+                                                                        <ul title="Ratings" class="list-inline ratings text-center">
+                                                                            <li class="list-inline-item"><a href="#"><span class="lnr lnr-star"></span></a></li>
+                                                                            <li class="list-inline-item"><a href="#"><span class="lnr lnr-star"></span></a></li>
+                                                                            <li class="list-inline-item"><a href="#"><span class="lnr lnr-star"></span></a></li>
+                                                                            <li class="list-inline-item"><a href="#"><span class="lnr lnr-star"></span></a></li>
+                                                                            <li class="list-inline-item"><a href="#"><span class="lnr lnr-star-half"></span></a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <h3 class="mb-0">289</h3> <small>Followers</small>
+                                                                        <button class="btn btn-block btn-outline-secondary text-truncate"><span class="fa fa-plus-circle"></span> Follow</button>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <h3 class="mb-0">89</h3> <small>Following</small>
+                                                                        <button class="btn btn-outline-secondary btn-block text-truncate"><span class="fa fa-user"></span> View Profile</button>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <h3 class="mb-0">64</h3> <small>Snippets</small>
+                                                                        <button type="button" class="btn btn-outline-secondary btn-block"><span class="fa fa-gear"></span> Options</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a role="tab" id="headingThree" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="card-header d-block collapsed">
+                                                        Tom Sumner
+                                                    </a>
+                                                    <div id="collapseThree" role="tabpanel" aria-labelledby="headingThree" class="collapse" data-parent="#accordion">
+                                                        <div class="card shadow-sm border-0">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-xl-10 col-lg-9 col-md-7">
+                                                                        <h5>Quarterback</h5>
+                                                                        <p>
+                                                                            I love to play football and spend time with my beautiful supermodel wife, Gizel.
+                                                                        </p>
+                                                                        <p><span class="badge badge-info tags">passing</span> <span class="badge badge-info tags">receptions</span> <span class="badge badge-info tags">yards</span></p>
+                                                                    </div>
+                                                                    <div class="col-xl-2 col-lg-3 col-md-5 col-10 mx-auto text-center">
+                                                                        <img src="./assets/m83.jpg" alt="bot" class="mx-auto rounded-circle img-fluid bg-dark">
+                                                                        <ul title="Ratings" class="list-inline ratings text-center">
+                                                                            <li class="list-inline-item"><a href="#"><span class="lnr lnr-star text-success"></span></a></li>
+                                                                            <li class="list-inline-item"><a href="#"><span class="lnr lnr-star text-success"></span></a></li>
+                                                                            <li class="list-inline-item"><a href="#"><span class="lnr lnr-star text-success"></span></a></li>
+                                                                            <li class="list-inline-item"><a href="#"><span class="lnr lnr-star text-success"></span></a></li>
+                                                                            <li class="list-inline-item"><a href="#"><span class="lnr lnr-star-empty text-success"></span></a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <h3 class="mb-0">17.6K</h3> <small>Followers</small>
+                                                                        <button class="btn btn-block btn-outline-secondary text-truncate">Follow</button>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <h3 class="mb-0">120</h3> <small>Following</small>
+                                                                        <button class="btn btn-outline-secondary btn-block text-truncate">View Profile</button>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <h3 class="mb-0">2</h3> <small>Snippets</small>
+                                                                        <button type="button" class="btn btn-outline-secondary btn-block">Options</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /accordion -->
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <!-- /tab-pane -->
+                                    </div>
+                                    <!-- /tab-content -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-4 py-3 d-sm-block d-none wow fadeInUp" data-wow-delay="200ms">
+                            <div class="card shadow-sm bg-primary border-0 h-100">
+                                <div class="card-body d-flex flex-column justify-content-between text-white">
+                                    <h4 class="font-weight-light">
+                                        <div class="float-right dropdown show"><a href="#" data-toggle="dropdown" class="text-white dropdown-toggle"><i class="lnr lnr-cog"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#" class="dropdown-item">Action</a>
+                                                <a href="#" class="dropdown-item">Another action</a>
+                                            </div>
+                                        </div>
+                                        Leads
+                                    </h4>
+                                    <div class="text-center py-2">
+                                        <canvas class="mx-auto" id="chLine1" height="120"></canvas>
+                                        May 2018
+                                    </div>
+                                    <div class="text-center py-2">
+                                        <canvas class="mx-auto" id="chLine2" height="120"></canvas>
+                                        Jun 2018
+                                    </div>
+                                    <div class="text-center py-2">
+                                        <canvas class="mx-auto" id="chLine3" height="120"></canvas>
+                                        July 2018
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="row">
+                        <div class="col py-3">
+                            <div class="card shadow-sm">
+                                <div class="card-body table-responsive">
+                                                                        <table id="datatable-example" class="table table-sm table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Age</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>61</td>
+                                                <td>2011/04/25</td>
+                                                <td>$320,800</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Garrett Winters</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>63</td>
+                                                <td>2011/07/25</td>
+                                                <td>$170,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Carol Skelly</td>
+                                                <td>Lead Developer</td>
+                                                <td>Boston</td>
+                                                <td>49</td>
+                                                <td>2018/12/02</td>
+                                                <td>$130,560</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Yuri Berry</td>
+                                                <td>Chief Marketing Officer (CMO)</td>
+                                                <td>New York</td>
+                                                <td>40</td>
+                                                <td>2009/06/25</td>
+                                                <td>$675,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Caesar Vance</td>
+                                                <td>Pre-Sales Support</td>
+                                                <td>New York</td>
+                                                <td>21</td>
+                                                <td>2011/12/12</td>
+                                                <td>$106,450</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Doris Wilder</td>
+                                                <td>Sales Assistant</td>
+                                                <td>Sidney</td>
+                                                <td>23</td>
+                                                <td>2010/09/20</td>
+                                                <td>$85,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Angelica Ramos</td>
+                                                <td>Chief Executive Officer (CEO)</td>
+                                                <td>London</td>
+                                                <td>47</td>
+                                                <td>2009/10/09</td>
+                                                <td>$1,200,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gavin Joyce</td>
+                                                <td>Developer</td>
+                                                <td>Edinburgh</td>
+                                                <td>42</td>
+                                                <td>2010/12/22</td>
+                                                <td>$92,575</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jennifer Chang</td>
+                                                <td>Regional Director</td>
+                                                <td>Singapore</td>
+                                                <td>28</td>
+                                                <td>2010/11/14</td>
+                                                <td>$357,650</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hope Fuentes</td>
+                                                <td>Secretary</td>
+                                                <td>San Francisco</td>
+                                                <td>41</td>
+                                                <td>2010/02/12</td>
+                                                <td>$109,850</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vivian Harrell</td>
+                                                <td>Financial Controller</td>
+                                                <td>San Francisco</td>
+                                                <td>62</td>
+                                                <td>2009/02/14</td>
+                                                <td>$452,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Timothy Mooney</td>
+                                                <td>Office Manager</td>
+                                                <td>London</td>
+                                                <td>37</td>
+                                                <td>2008/12/11</td>
+                                                <td>$136,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jackson Bradshaw</td>
+                                                <td>Director</td>
+                                                <td>New York</td>
+                                                <td>65</td>
+                                                <td>2008/09/26</td>
+                                                <td>$645,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Olivia Liang</td>
+                                                <td>Support Engineer</td>
+                                                <td>Singapore</td>
+                                                <td>64</td>
+                                                <td>2011/02/03</td>
+                                                <td>$234,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sakura Yamamoto</td>
+                                                <td>Support Engineer</td>
+                                                <td>Tokyo</td>
+                                                <td>37</td>
+                                                <td>2009/08/19</td>
+                                                <td>$139,575</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thor Walton</td>
+                                                <td>Developer</td>
+                                                <td>New York</td>
+                                                <td>61</td>
+                                                <td>2013/08/11</td>
+                                                <td>$98,540</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Finn Camacho</td>
+                                                <td>Support Engineer</td>
+                                                <td>San Francisco</td>
+                                                <td>47</td>
+                                                <td>2009/07/07</td>
+                                                <td>$87,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Serge Baldwin</td>
+                                                <td>Data Coordinator</td>
+                                                <td>Singapore</td>
+                                                <td>64</td>
+                                                <td>2012/04/09</td>
+                                                <td>$138,575</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Michael Bruce</td>
+                                                <td>Javascript Developer</td>
+                                                <td>Singapore</td>
+                                                <td>29</td>
+                                                <td>2011/06/27</td>
+                                                <td>$183,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Donna Snider</td>
+                                                <td>Customer Support</td>
+                                                <td>New York</td>
+                                                <td>27</td>
+                                                <td>2011/01/25</td>
+                                                <td>$112,000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                                        <div class="row mt-1">
+                        <div class="col-xl col-sm-6 pb-3">
+                            <div class="card shadow-sm d-block p-1 h-100">
+                                <div class="row h-100 no-gutters flex-nowrap">
+                                    <div class="col-6 p-3 py-4">
+                                        <h5 class="text-truncate">Health</h5>
+                                        <h3 class="text-nowrap">99.3%</h3></div>
+                                    <div class="col bg-light text-success d-flex">
+                                        <h1 class="mb-0 mx-auto align-self-center"><a href="#" lass="nav-link pb-0" title="View details"><span class="d-inline-block lnr lnr-heart"></span></a></h1></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl col-sm-6 pb-3">
+                            <div class="card shadow-sm d-block p-1 h-100">
+                                <div class="row h-100 no-gutters flex-nowrap">
+                                    <div class="col-6 p-3 py-4">
+                                        <h5 class="text-truncate">Cycles</h5>
+                                        <h3>53</h3></div>
+                                    <div class="col bg-light text-success d-flex">
+                                        <h1 class="mb-0 mx-auto align-self-center"><a href="#" class="nav-link pb-0" title="View details"><span class="d-inline-block lnr lnr-history"></span></a></h1></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl col-sm-6 pb-3">
+                            <div class="card shadow-sm d-block p-1 h-100">
+                                <div class="row h-100 no-gutters flex-nowrap">
+                                    <div class="col-6 p-3 py-4">
+                                        <h5 class="text-truncate">Storage</h5>
+                                        <h3 class="text-nowrap">69%</h3>
+                                    </div>
+                                    <div class="col bg-light text-success d-flex">
+                                        <h1 class="mb-0 mx-auto align-self-center"><a href="#" class="nav-link pb-0" title="View details"><span class="d-inline-block lnr lnr-database"></span></a></h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl col-sm-6 pb-3">
+                            <div class="card shadow-sm d-block p-1 h-100">
+                                <div class="row h-100 no-gutters flex-nowrap">
+                                    <div class="col-6 p-3 py-4">
+                                        <h5 class="text-truncate">Signal</h5>
+                                        <h3>4.1</h3></div>
+                                    <div class="col bg-light text-success d-flex">
+                                        <h1 class="mb-0 mx-auto align-self-center"><a href="#" class="nav-link pb-0" title="View details"><i class="lnr lnr-heart-pulse"></i></a></h1></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                                <footer id="footer" class="p-4 py-5">
+                    <div class="row">
+                        <div class="col-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Benefits</a></li>
+                                <li><a href="#">Developers</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3 column">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Delivery Information</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-3 column">
+                            <h6 class="text-primary">Want Updates?</h6>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" title="Enter your email. No spam, we promise!" autocomplete="false" placeholder="Enter your email address">
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-outline-primary text-uppercase small" data-toggle="modal" data-target="#modalSmall" type="button">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-12 col-lg-2 offset-lg-1 col-md-3 offset-md-0 text-right">
+                            <h6 class="text-primary">Satisfaction</h6>
+                            <p class="font-weight-light"><em>If for <b>any</b> reason you are not 100% satisfied, <a href="#">please tell us.</a></em></p>
+                        </div>
+                        <div class="col-12 text-md-right text-center">
+                            <br>
+                            <ul class="list-inline h4">
+                                <li class="list-inline-item pr-1"><a rel="nofollow" href="//twitter.com/ThemesGuide" title="Twitter"><i class="icons icon-social-twitter"></i></a></li>
+                                <li class="list-inline-item pr-1"><a rel="nofollow" href="#" title=""><i class="icons icon-social-instagram"></i></a></li>
+                                <li class="list-inline-item pr-1"><a rel="nofollow" href="#" title="Facebook"><i class="icons icon-social-facebook"></i></a></li>
+                                <li class="list-inline-item"><a rel="nofollow" href="#" title="Dribbble"><i class="icons icon-social-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="text-center small">
+                        <a href="http://themes.guide" class="mb-3">Made by Themes.guide in Little Rhody <i class="icons icon-location-pin"></i></a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    
+        <div id="modalProfile" class="modal fade px-md-5 px-0" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg mw-100 w-100 mx-auto">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="myModalLabel">Robojoe</h3>
+                    <button type="button" class="close font-weight-light" data-dismiss="modal" aria-hidden="true">&#xD7;</button>
+                </div>
+                <div class="modal-body p-lg-5 p-3">
+                    <div class="row">
+                        <div class="col-xl-9 order-lg-2 col-lg-8">
+                            <ul class="nav nav-tabs small text-uppercase">
+                                <li class="nav-item">
+                                    <a href="#profile" data-target="#profile" data-toggle="tab" class="nav-link active">Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#edit" data-target="#edit" data-toggle="tab" class="nav-link">Edit</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content py-4">
+                                <div class="tab-pane py-2 active" id="profile">
+                                    <div class="row my-2">
+                                        <div class="col-md-6">
+                                            <h6>Title</h6>
+                                            <p>
+                                                Web Designer, UI/UX Engineer
+                                            </p>
+                                            <h6>About</h6>
+                                            <p>
+                                                Indie music, skiing and hiking. I love the great outdoors.
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6>Recent Tags</h6>
+                                            <a href="#" class="badge badge-dark badge-pill">html5</a>
+                                            <a href="#" class="badge badge-dark badge-pill">react</a>
+                                            <a href="#" class="badge badge-dark badge-pill">bootstrap</a>
+                                            <a href="#" class="badge badge-dark badge-pill">responsive-design</a>
+                                            <hr>
+                                            <span class="badge badge-primary"><i class="fa fa-user"></i> 900 Followers</span>
+                                            <span class="badge badge-primary"><i class="fa fa-cog"></i> 43 Forks</span>
+                                            <span class="badge badge-primary"><i class="fa fa-eye"></i> 245 Views</span>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <h6 class="mt-3"><span class="fa fa-clock-o ion-clock float-right"></span> Recent Activity</h6>
+                                            <table class="table table-hover table-striped table-sm">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="font-weight-bold">Abby</span> joined ACME Project Team in <span class="font-weight-bold">`Collaboration`</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="font-weight-bold">Gary</span> deleted My Board1 in <span class="font-weight-bold">`Discussions`</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="font-weight-bold">Skell</span> deleted his post Look at Why this is.. in <span class="font-weight-bold">`Discussions`</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--/row-->
+                                </div>
+                                <div class="tab-pane py-2" id="edit">
+                                    <form class="row">
+                                        <div class="col-xl-6">
+                                            <div class="form-group">
+                                                <label for="text-input">Title</label>
+                                                <input type="text" value="Developer" id="text-input" class="form-control" placeholder="Title">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email-input">Email</label>
+                                                <input type="email" value="me@achme.com" id="email-input" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="tel-input">Mobile phone</label>
+                                                <input type="tel" value="(555)-222-1212" id="tel-input" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="time-input">Time Zone</label>
+                                                <select id="time-input" size="0" class="form-control">
+                                                    <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                                                    <option value="Alaska">(GMT-09:00) Alaska</option>
+                                                    <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                                                    <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                                                    <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                                                    <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 d-flex flex-column justify-content-between">
+                                            <div class="form-group">
+                                                <label class="form-label">Preferences</label>
+                                                <div class="form-check small">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" checked="checked" class="form-check-input"> Send notifications via SMS
+                                                    </label>
+                                                </div>
+                                                <div class="form-check small">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input"> Send copy to group administrator
+                                                    </label>
+                                                </div>
+                                                <div class="form-check small disabled">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" disabled="disabled" class="form-check-input"> Delete messages on server
+                                                    </label>
+                                                </div>
+                                                <div class="form-row no-gutters align-items-center small py-2">
+                                                    <label for="example-number" class="col-12 col-xl-3 text-truncate">Purge server after</label>
+                                                    <input type="text" value="8,000" id="example-number" class="form-control form-control-sm col-xl-3 col-6">
+                                                    <span class="col-2 ml-1">messages</span>
+                                                </div>
+                                                <div class="form-row no-gutters align-items-center small py-2">
+                                                    <label for="example-add" class="col-12 col-xl-3 text-truncate">Forward to</label>
+                                                    <input type="text" value="email@email.com" id="example-add" class="form-control form-control-sm col-xl-5 col-6">
+                                                </div>
+                                            </div>
+                                            <div class="form-group text-right">
+                                                <div class="form-row">
+                                                    <div class="col-md">
+                                                        <button type="button" class="btn btn-outline-secondary btn-lg d-none d-md-inline" data-dismiss="modal" aria-hidden="true">Close</button>
+                                                    </div>
+                                                    <div class="col-md">
+                                                        <button type="button" class="btn btn-outline-secondary btn-lg btn-block">Save Settings</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 order-lg-1 col-lg-4 text-center">
+                            <div class="rounded bg-light border p-xl-4 p-sm-3 p-2 h-100">
+                                <img src="./assets/m20.jpg" class="mx-auto my-2 img-fluid rounded-circle bg-dark" alt="avatar image">
+                                <table class="table small text-left mt-3">
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-uppercase">Joined</td>
+                                            <td>6-4-2016</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-uppercase">Last seen</td>
+                                            <td>2 hours ago</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-uppercase">Posts</td>
+                                            <td>340</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-uppercase">Reputation</td>
+                                            <td>14,583</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div id="modalSmall" class="modal show" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-body text-center">
+                    <div class="alert text-white bg-primary fade show" role="alert">
+                        <span class="font-weight-bold">Womp!</span> There it is.
+                    </div>
+                    <a data-dismiss="modal">
+                        <span aria-hidden="true" class="display-2">&#xD7;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div id="modalLogin" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="mb-0">Login</h3>
+                    <button type="button" class="close font-weight-light" data-dismiss="modal" aria-hidden="true">&#xD7;</button>
+                </div>
+                <div class="modal-body py-4">
+                    <form class="form  mx-auto w-75" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                        <div class="form-group">
+                            <a href="" class="float-right">New user?</a>
+                            <label for="uname1">Username</label>
+                            <input type="text" class="form-control form-control-lg" name="uname1" id="uname1" required>
+                            <div class="invalid-feedback">Oops, you missed this one.</div>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control form-control-lg" id="pwd1" required autocomplete="new-password">
+                            <div class="invalid-feedback">Enter your password too!</div>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="rememberMe">
+                          <label class="custom-control-label" for="rememberMe">Remember me on this computer</label>
+                        </div>
+                        <div class="form-group py-4">
+                            <button class="btn btn-outline-secondary btn-lg" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                            <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--scripts loaded here-->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/Chart.min.js"></script>
+    <script src="./js/jquery.dataTables.min.js"></script>
+    <script src="./js/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
