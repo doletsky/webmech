@@ -33,6 +33,7 @@
     <link href="<?=SITE_TEMPLATE_PATH?>/css/dataTables.bootstrap4.min.css" rel="stylesheet" media="none" onload="if(media!=&apos;all&apos;)media=&apos;all&apos;">
     <link href="<?=SITE_TEMPLATE_PATH?>/css/theme-green.css" rel="stylesheet">
     <link href="<?=SITE_TEMPLATE_PATH?>/css/styles.css" rel="stylesheet">
+    <link href="<?=SITE_TEMPLATE_PATH?>/css/banner_ssu.css" rel="stylesheet">
 </head>
 <body class="navbar-expand-lg wow fadeIn faster" data-wow-delay="300ms" data-spy="scroll" data-target="#sm" data-offset="60">
 <div class="container-fluid fixed-top bg-primary" id="topnav">
