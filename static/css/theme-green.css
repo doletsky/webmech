@@ -2355,6 +2355,13 @@ input[type="button"].btn-block {
     align-items: center;
     justify-content: space-between; }
 
+.navbar .icon-graduation {
+    margin-right: 0.7rem;
+    font-size: 1.25rem;
+}
+.navbar a.icons:hover {
+    text-decoration: none;
+}
 .navbar-brand {
     display: inline-block;
     padding-top: 0.3125rem;
@@ -2568,7 +2575,10 @@ input[type="button"].btn-block {
     color: rgba(85, 85, 85, 0.9); }
 
 .navbar-dark .navbar-brand {
-    color: #fff; }
+    color: #fff;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;}
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
     color: #fff; }
 
