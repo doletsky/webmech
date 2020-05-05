@@ -3,9 +3,14 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 //$APPLICATION->SetTitle("Индигос.ru — магазин образовательного контента");
 ?>
-    “Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?”
+
 <?if(0):?>
+
+
         <main class="p-4 flex-fill">
+            <div class="wow fadeIn">
+                “Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?”
+            </div>
             <div class="row mb-3">
                 <div class="col-xl col-sm-6 pb-3">
                     <div class="card d-block p-0 h-100 shadow-sm wow zoomIn">
@@ -379,7 +384,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
     <?endif?>
 
 
-            <?if(0):?>
+            <?if(1):?>
                 <main class="p-4 flex-fill">
                     <div class="row mt-1 mb-3">
                         <div class="col-xl-9 col-md-6 pb-3 wow fadeIn">
@@ -387,7 +392,10 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                 <div class="card-body p-xl-3 p-2 d-flex flex-column">
                                     <h4 class="font-weight-light mb-3">Visits</h4>
                                     <div class="my-auto p-1 py-2">
-                                        <canvas class="mw-100 my-2" id="chLine" height="120"></canvas>
+                                        <?if(0):?>
+                                        “Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?”
+                                        <?endif;?>
+                                        <img src="/images/Banner_ssu.jpg" />
                                     </div>
                                 </div>
                             </div>
