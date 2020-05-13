@@ -440,81 +440,48 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                             </div>
                         </div>
                     </div>
-                    <div class="wow fadeIn">
-                        <div class="row mt-1">
-                            <div class="col-xl col-sm-6 pb-3">
-                                <div class="card shadow-sm d-block p-1 h-100">
-                                    <div class="row h-100 no-gutters flex-nowrap">
-                                        <div class="col-6 p-3 py-4">
-                                            <h5 class="text-truncate">Health</h5>
-                                            <h3 class="text-nowrap">99.3%</h3></div>
-                                        <div class="col bg-light text-success d-flex">
-                                            <h1 class="mb-0 mx-auto align-self-center"><a href="#" lass="nav-link pb-0" title="View details"><span class="d-inline-block lnr lnr-heart"></span></a></h1></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl col-sm-6 pb-3">
-                                <div class="card shadow-sm d-block p-1 h-100">
-                                    <div class="row h-100 no-gutters flex-nowrap">
-                                        <div class="col-6 p-3 py-4">
-                                            <h5 class="text-truncate">Cycles</h5>
-                                            <h3>53</h3></div>
-                                        <div class="col bg-light text-success d-flex">
-                                            <h1 class="mb-0 mx-auto align-self-center"><a href="#" class="nav-link pb-0" title="View details"><span class="d-inline-block lnr lnr-history"></span></a></h1></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl col-sm-6 pb-3">
-                                <div class="card shadow-sm d-block p-1 h-100">
-                                    <div class="row h-100 no-gutters flex-nowrap">
-                                        <div class="col-6 p-3 py-4">
-                                            <h5 class="text-truncate">Storage</h5>
-                                            <h3 class="text-nowrap">69%</h3>
-                                        </div>
-                                        <div class="col bg-light text-success d-flex">
-                                            <h1 class="mb-0 mx-auto align-self-center"><a href="#" class="nav-link pb-0" title="View details"><span class="d-inline-block lnr lnr-database"></span></a></h1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl col-sm-6 pb-3">
-                                <div class="card shadow-sm d-block p-1 h-100">
-                                    <div class="row h-100 no-gutters flex-nowrap">
-                                        <div class="col-6 p-3 py-4">
-                                            <h5 class="text-truncate">Signal</h5>
-                                            <h3>4.1</h3></div>
-                                        <div class="col bg-light text-success d-flex">
-                                            <h1 class="mb-0 mx-auto align-self-center"><a href="#" class="nav-link pb-0" title="View details"><i class="lnr lnr-heart-pulse"></i></a></h1></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="row">
-                        <div class="col-xl py-3">
-                            <div class="card shadow-sm h-100 wow fadeIn">
-                                <div class="card-body">
-                                    <div class="h4 m-0">
-                                        <i class="float-right lnr lnr-cloud-sync"></i>
-                                        Latest Build v1.1.6
-                                    </div>
-                                    <div>75% complete</div>
-                                    <div class="progress my-3">
-                                        <div role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-primary w-75"></div>
-                                    </div>
-                                    <small class="text-muted"><a href="#modalSmall" data-toggle="modal">View build log</a></small>
-                                </div>
+                        <div class="col-md-12">
+                            <div class="card-header">
+                                <h4 class="font-weight-light mb-0">Новые статьи</h4>
                             </div>
-                        </div>
-                        <div class="col-xl py-3">
-                            <div class="card shadow-sm h-100 wow fadeIn">
-                                <div class="card-body">
-                                    <div class="h4 m-0">
-                                        <i class="float-right lnr lnr-database"></i>
-                                        24 GB
+                            <div class="row pt-3">
+                                <div class="col-md-4">
+                                    <span class="anchor" id="card_feature"></span>
+                                    <div class="card wow fadeIn shadow-sm">
+                                        <div class="card-img-top card-img-top-300 card-zoom">
+                                            <img src="<?=SITE_TEMPLATE_PATH?>/assets/mtn_1.png" class="mx-auto img-fluid rounded-top d-block">
+                                        </div>
+                                        <div class="card-body pt-4">
+                                            <h6 class="text-uppercase small">Call to Action</h6>
+                                            <h3 class="card-title">Not What You Expect</h3>
+                                        </div>
                                     </div>
-                                    <div>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?</div>
-                                    <small class="text-muted">Contact the administrator for reports.</small></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="anchor" id="card_feature"></span>
+                                    <div class="card wow fadeIn shadow-sm">
+                                        <div class="card-img-top card-img-top-300 card-zoom">
+                                            <img src="<?=SITE_TEMPLATE_PATH?>/assets/mtn_1.png" class="mx-auto img-fluid rounded-top d-block">
+                                        </div>
+                                        <div class="card-body pt-4">
+                                            <h6 class="text-uppercase small">Call to Action</h6>
+                                            <h3 class="card-title">Not What You Expect</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="anchor" id="card_feature"></span>
+                                    <div class="card wow fadeIn shadow-sm">
+                                        <div class="card-img-top card-img-top-300 card-zoom">
+                                            <img src="<?=SITE_TEMPLATE_PATH?>/assets/mtn_1.png" class="mx-auto img-fluid rounded-top d-block">
+                                        </div>
+                                        <div class="card-body pt-4">
+                                            <h6 class="text-uppercase small">Call to Action</h6>
+                                            <h3 class="card-title">Not What You Expect</h3>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -524,3 +491,4 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
 ?>
+
