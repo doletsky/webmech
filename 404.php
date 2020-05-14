@@ -8,17 +8,17 @@ require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 //Не менять без включения мозга!!! По Error 404 в заголовке страницы работает Google Tag Manager
 $APPLICATION->SetPageProperty('title', "Страница не найдена (Error 404)");
 ?>
-    <div class="w1000">
-        <div class="message_page">
-            <div class="message_box">
-                <div class="message_box_h h_404">404</div>
-                <div class="message_box_sh">Страница не найдена</div>
-                <div class="message_box_t">Возможно, вы перешли по неработающей ссылке или неверно ввели адрес. Проверьте адрес или перейдите на главную страницу.</div>
-                <div class="message_box_bl">
-                    <a href="/" class="message_box_back">Вернуться на главную</a>
-                </div>
+    <main class="p-4 flex-fill d-flex">
+        <div class="row flex-fill align-items-center text-center">
+            <div class="col">
+                <h1 class="display-1 font-weight-bold mb-0">404<br><span class="lnr lnr-paw"></span></h1>
+                <h6 class="text-uppercase">Страница не найдена</h6>
+                <p class="text-muted">
+                    Такой страницы не существует. <br>
+                    Попробуйте воспользоваться поиском по сайту.
+                </p>
+                <a href="/" class="btn btn-lg btn-primary">Главная</a>
             </div>
         </div>
-
-    </div>
+    </main>
 <?require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
