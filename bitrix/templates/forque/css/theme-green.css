@@ -2642,9 +2642,12 @@ input[type="button"].btn-block {
 
 .card-text:last-child {
     margin-bottom: 0; }
-
+.card-link {
+    color: #212529;
+}
 .card-link:hover {
-    text-decoration: none; }
+    text-decoration: none;
+    color: grey;}
 
 .card-link + .card-link {
     margin-left: 1.25rem; }

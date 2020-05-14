@@ -16,15 +16,17 @@ $this->setFrameMode(true);
 <?foreach($arResult["ITEMS"] as $arItem):?>
     <div class="col-md-4">
         <span class="anchor" id="card_feature"></span>
-        <div class="card wow fadeIn shadow-sm">
-            <div class="card-img-top card-img-top-300 card-zoom">
-                <img src="<?=$arItem["DETAIL_PICTURE"]["SRC"]?>" class="mx-auto img-fluid rounded-top d-block">
+        <a class="card-link" href="<?=$arItem["DETAIL_PAGE_URL"]?>" title="Читать">
+            <div class="card wow fadeIn shadow-sm">
+                <div class="card-img-top card-img-top-300 card-zoom">
+                    <img src="<?=$arItem["DETAIL_PICTURE"]["SRC"]?>" class="mx-auto img-fluid rounded-top d-block">
+                </div>
+                <div class="card-body pt-4">
+                    <h6 class="text-uppercase small"><?echo $arItem["DISPLAY_PROPERTIES"]["SUBTITLE"]["VALUE"]?></h6>
+                    <h3 class="card-title"><?echo $arItem["NAME"]?></h3>
+                </div>
             </div>
-            <div class="card-body pt-4">
-                <h6 class="text-uppercase small"><?echo $arItem["DISPLAY_PROPERTIES"]["SUBTITLE"]["VALUE"]?></h6>
-                <h3 class="card-title"><?echo $arItem["NAME"]?></h3>
-            </div>
-        </div>
+        </a>
     </div>
 <?endforeach;?>
 </div>
