@@ -1,32 +1,33 @@
 <?
 $aMenuLinks = Array(
+
 	Array(
-		"Учеба", 
-		"/soft.php#section-study",
+		"Статьи",
+		"/articles/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+    Array(
+        "Учеба",
+        "/learning/",
+        Array(),
+        Array(),
+        ""
+    ),
+	Array(
+		"Сервис",
+		"/service/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Развитие", 
-		"/soft.php#section-developing",
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Развлечение", 
-		"/soft.php#section-entertainment",
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Рекомендации", 
-		"/soft.php",
-		Array(), 
-		Array(), 
-		"" 
+		"Личный кабинет",
+		"/profile/",
+		Array(),
+		Array(),
+		""
 	)
 );
 ?>
