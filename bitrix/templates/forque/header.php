@@ -7,7 +7,7 @@
 //$APPLICATION->AddHeadString('<script type="text/javascript" src="/bitrix/js/main/core/core.js?'.SM_VERSION.'"></script>');
 
 //$APPLICATION->AddHeadString('<link rel="icon" type="image/x-icon" href="/favicon.ico" />');
-//$APPLICATION->ShowHead();
+
 //$APPLICATION->AddHeadString('<meta property="og:title" content="Индигос" />');
 //$APPLICATION->AddHeadString('<meta property="og:type" content="website" />');
 //$APPLICATION->AddHeadString('<meta property="og:url" content="http://www.indigos.ru" />');
@@ -34,8 +34,9 @@
     <link href="<?=SITE_TEMPLATE_PATH?>/css/theme-green.css" rel="stylesheet">
     <link href="<?=SITE_TEMPLATE_PATH?>/css/styles.css" rel="stylesheet">
     <link href="<?=SITE_TEMPLATE_PATH?>/css/banner_ssu.css" rel="stylesheet">
+    <?$APPLICATION->ShowHead();?>
 </head>
-<body class="navbar-expand-lg wow fadeIn faster" data-wow-delay="300ms" data-spy="scroll" data-target="#sm" data-offset="60">
+<body class="navbar-expand-lg faster" data-wow-delay="300ms" data-spy="scroll" data-target="#sm" data-offset="60">
 <div class="container-fluid fixed-top bg-primary" id="topnav">
     <div class="row collapse no-gutters d-flex h-100 position-relative sidebar-collapse">
         <div class="col-3 pr-4 w-sidebar navbar-collapse collapse d-none d-lg-flex">
@@ -47,14 +48,14 @@
                     <span class="h4 align-middle mb-0"><span class="lnr lnr-menu"></span></span>
                 </a>
                 <a class="icons" href="#" title="Сам себе унивеситет" aria-expanded="false"><span class="icon-graduation icons text-white"></span></a>
-                <a class="navbar-brand" href="#" title="Home" data-toggle="dropdown">Сам себе унивеситет</a>
-                <div class="dropdown-menu border-light shadow text-uppercase animate-grow-in">
-                    <a class="dropdown-item px-3" href="../" target="_new">Home</a>
-                    <span class="dropdown-item-text small text-uppercase text-muted px-3">Versions</span>
-                    <a class="dropdown-item px-3" href="../static" target="_new">jQuery</a>
-                    <a class="dropdown-item px-3" href="../react" target="_new">React</a>
-                    <a class="dropdown-item px-3" href="../vue" target="_new">Vue</a>
-                </div>
+                <a class="navbar-brand" href="/" title="Home">Сам себе унивеситет</a>
+<!--                <div class="dropdown-menu border-light shadow text-uppercase animate-grow-in">-->
+<!--                    <a class="dropdown-item px-3" href="../" target="_new">Home</a>-->
+<!--                    <span class="dropdown-item-text small text-uppercase text-muted px-3">Versions</span>-->
+<!--                    <a class="dropdown-item px-3" href="../static" target="_new">jQuery</a>-->
+<!--                    <a class="dropdown-item px-3" href="../react" target="_new">React</a>-->
+<!--                    <a class="dropdown-item px-3" href="../vue" target="_new">Vue</a>-->
+<!--                </div>-->
                 <ul class="navbar-nav ml-auto mr-2">
                     <li class="nav-item dropdown position-static mr-1">
                         <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

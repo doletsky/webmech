@@ -6452,8 +6452,10 @@ a.text-dark:hover, a.text-dark:focus {
         border-color: #dee2e6; } }
 
 /* app-wide css styles */
-.h1, h1, .h2, h2 {
+.h1, h1 {
     font-size: 70px; }
+.h2, h2 {
+    font-size: 40px; }
 
 .border-light {
     border-color: rgba(60, 60, 60, 0.1) !important; }

@@ -12,14 +12,40 @@
 /** @var CBitrixComponent $component */
 //$this->setFrameMode(true);
 ?>
-    <main class="p-4 flex-fill">
-    <div class="wow fadeIn">
-        <div class="col-md-12 pb-3">
-        “Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?”
+
+        <?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arResult["DETAIL_PICTURE"])):?>
+            <div
+                    class="img_detail_picture"
+                    style="background-image: url('<?=$arResult["DETAIL_PICTURE"]["SRC"]?>')"
+            ></div>
+<!--            <img-->
+<!--                    class="detail_picture"-->
+<!--                    border="0"-->
+<!--                    src="--><?//=$arResult["DETAIL_PICTURE"]["SRC"]?><!--"-->
+<!--                    width="100%"-->
+<!--                    alt="--><?//=$arResult["DETAIL_PICTURE"]["ALT"]?><!--"-->
+<!--                    title="--><?//=$arResult["DETAIL_PICTURE"]["TITLE"]?><!--"-->
+<!--            />-->
+        <?endif?>
+        <div class="row">
+            <div class="col-md-8 offset-md-2 font-italic">
+
+
+                <?if(is_array($arResult["DISPLAY_PROPERTIES"]["SUBTITLE"])):?>
+                    <h4><?echo $arResult["DISPLAY_PROPERTIES"]["SUBTITLE"]["VALUE"];?></h4><br>
+                <?endif;?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2><?=$arResult["NAME"]?></h2>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2 detail_text">
+            <?echo $arResult["DETAIL_TEXT"];?>
         </div>
     </div>
-    </main>
-<pre><?print_r($_REQUEST)?></pre>
 <?if(0):?>
 <div class="news-detail">
 	<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arResult["DETAIL_PICTURE"])):?>

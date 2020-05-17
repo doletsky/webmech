@@ -11,3 +11,18 @@ div.news-detail img.detail_picture
 {
 	color:#486DAA;
 }
+.img_detail_picture {
+    margin-bottom: 40px;
+    margin-top: -50px;
+    margin-left: -5%;
+    width: 110%;
+    height: 450px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.detail_text * {
+    font-size: 17px !important;
+    line-height: 1.7;
+}
