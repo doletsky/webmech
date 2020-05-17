@@ -2355,10 +2355,6 @@ input[type="button"].btn-block {
     align-items: center;
     justify-content: space-between; }
 
-.navbar .icon-graduation {
-    margin-right: 0.7rem;
-    font-size: 1.25rem;
-}
 .navbar a.icons:hover {
     text-decoration: none;
 }

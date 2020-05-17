@@ -47,15 +47,8 @@
                 <a data-toggle="collapse" href="#" data-target=".sidebar-collapse" class="navbar-brand mr-3" aria-expanded="true">
                     <span class="h4 align-middle mb-0"><span class="lnr lnr-menu"></span></span>
                 </a>
-                <a class="icons" href="#" title="Сам себе унивеситет" aria-expanded="false"><span class="icon-graduation icons text-white"></span></a>
+                <a class="title-name" href="#" title="Сам себе унивеситет" aria-expanded="false"><span class="lnr lnr-graduation-hat text-white"></span></a>
                 <a class="navbar-brand" href="/" title="Home">Сам себе унивеситет</a>
-<!--                <div class="dropdown-menu border-light shadow text-uppercase animate-grow-in">-->
-<!--                    <a class="dropdown-item px-3" href="../" target="_new">Home</a>-->
-<!--                    <span class="dropdown-item-text small text-uppercase text-muted px-3">Versions</span>-->
-<!--                    <a class="dropdown-item px-3" href="../static" target="_new">jQuery</a>-->
-<!--                    <a class="dropdown-item px-3" href="../react" target="_new">React</a>-->
-<!--                    <a class="dropdown-item px-3" href="../vue" target="_new">Vue</a>-->
-<!--                </div>-->
                 <ul class="navbar-nav ml-auto mr-2">
                     <li class="nav-item dropdown position-static mr-1">
                         <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -168,89 +161,20 @@
     <div class="row collapse no-gutters d-flex h-100 position-relative sidebar-collapse">
         <div class="col-3 p-0 h-100 w-sidebar navbar-collapse collapse d-none d-lg-flex sidebar-collapse sidebar">
             <!-- fixed sidebar -->
-            <div class="navbar navbar-dark d-block bg-dark text-white position-fixed h-100 align-self-start w-sidebar shadow-sm p-0 pt-2 pb-4 text-uppercase" id="sidebar">
-                <button data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-brand my-1 mr-3 float-right p-0 d-inline-block d-lg-none btn btn-link">
-                    <span class="h4 align-middle mb-0"><span class="lnr lnr-menu"></span></span>
-                </button>
-                <div class="nav flex-column flex-wrap" id="menu1">
-                    <a href="./#" class="nav-link ripple" aria-expanded="true" data-toggle="collapse" data-target="#demo1"><i class="icon-speedometer icons"></i> Dashboards</a>
-                    <div class="collapse show" data-parent="#menu1" id="demo1">
-                        <div class="nav flex-column flex-wrap text-truncate">
-                            <a href="./" class="nav-link">Dashboard 1</a>
-                            <a href="./dashboard2.html" class="nav-link" title="Default">Dashboard 2</a>
-                            <a href="./dashboard3.html" class="nav-link">Dashboard 3</a>
-                            <a href="./dashboard4.html" class="nav-link">Dashboard 4</a>
-                            <a href="./dashboard5.html" class="nav-link">Dashboard 5</a>
-                        </div>
-                    </div>
-                    <a href="./charts.html" class="nav-link"><i class="icon-chart icons"></i> Charts</a>
-                    <a href="./report.html" class="nav-link"><i class="icon-docs icons"></i> Reports</a>
-                    <a href="#submenu1" class="nav-link ripple" data-toggle="collapse" aria-expanded="false"><i class="icon-plus icons"></i> More</a>
-                    <div class="collapse" data-parent="#menu1" id="submenu1">
-                        <div class="nav flex-column flex-wrap">
-                            <a href="#" class="nav-link" data-target="#subsubmenu" data-toggle="collapse" aria-expanded="false">Sub level 1</a>
-                            <div class="collapse" data-parent="#submenu1" id="subsubmenu">
-                                <div class="nav flex-column flex-wrap text-truncate">
-                                    <a href="#" class="nav-link pl-4">Subsub item 1</a>
-                                    <a href="#" class="nav-link pl-4">Subsub item 2</a>
-                                </div>
-                            </div>
-                            <a href="#" class="nav-link">Sub level 2</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="nav flex-column text-truncate">
-                    <a href="./inbox.html" class="nav-link"><i class="icon-drawer icons"></i> Inbox</a>
-                    <a href="./kanban.html" class="nav-link"><i class="icon-notebook icons"></i> Kanban</a>
-                    <a href="#profile" data-target="#modalProfile" data-toggle="modal" class="nav-link"><i class="icon-mustache icons"></i> Profile</a>
-                </div>
-                <div class="nav flex-column flex-wrap text-truncate" id="menu3">
-                    <a href="./icons.html" class="nav-link"><i class="icon-puzzle icons"></i> Icons</a>
-                    <a href="./cards.html" class="nav-link"><i class="icon-doc icons"></i> Cards</a>
-                    <a href="#" class="nav-link ripple" aria-expanded="false" data-toggle="collapse" data-target="#elements"><span><i class="icon-layers icons"></i> Elements</span></a>
-                    <div class="collapse" data-parent="#menu3" id="elements">
-                        <div class="nav flex-column text-truncate">
-                            <a class="nav-link" href="./elements.html#alerts">Alerts</a>
-                            <a class="nav-link" href="./elements.html#badges">Badges</a>
-                            <a class="nav-link" href="./elements.html#breadcrumbs">Breadcrumbs</a>
-                            <a class="nav-link" href="./elements.html#buttons">Buttons</a>
-                            <a class="nav-link" href="./elements.html#colors">Colors</a>
-                            <a class="nav-link" href="./elements.html#jumbotron">Jumbotron</a>
-                            <a class="nav-link" href="./elements.html#lists">Lists</a>
-                            <a class="nav-link" href="./elements.html#modals">Modals</a>
-                            <a class="nav-link" href="./elements.html#progress">Progress</a>
-                            <a class="nav-link" href="./elements.html#sliders">Slider</a>
-                            <a class="nav-link" href="./elements.html#tables">Tables</a>
-                            <a class="nav-link" href="./elements.html#tabs">Tabs</a>
-                            <a class="nav-link" href="./elements.html#typo">Typography</a>
-                        </div>
-                    </div>
-                    <a href="./forms.html" class="nav-link" data-target="#forms"><span><i class="icon-note icons"></i> Forms</span></a>
-                    <div class="collapse" data-parent="#menu3" id="forms">
-                        <div class="nav flex-column text-truncate">
-                            <a class="nav-link" href="./forms.html#formLogin">Login</a>
-                            <a class="nav-link" href="./forms.html#formRegister">Sign-up</a>
-                            <a class="nav-link" href="./forms.html#formChangePassword">Password</a>
-                            <a class="nav-link" href="./forms.html#formResetPassword">Reset</a>
-                            <a class="nav-link" href="./forms.html#formPayment">Payment</a>
-                            <a class="nav-link" href="./forms.html#formUserEdit">User</a>
-                            <a class="nav-link" href="./forms.html#formContact">Contact</a>
-                            <a class="nav-link" href="./forms.html#formComplex">Complex</a>
-                        </div>
-                    </div>
-                    <a href="#" class="nav-link ripple" aria-expanded="false" data-toggle="collapse" data-target="#pages"><span><i class="icon-docs icons"></i> Pages</span></a>
-                    <div class="collapse" data-parent="#menu3" id="pages">
-                        <div class="nav flex-column text-truncate">
-                            <a class="nav-link" href="./artwork.html">Artwork</a>
-                            <a class="nav-link" href="#modalLogin" data-toggle="modal">Login Modal</a>
-                            <a class="nav-link" href="./timeline.html">Timeline</a>
-                            <a class="nav-link" href="./faq.html">FAQ</a>
-                            <a class="nav-link" href="./pricingtables.html">Pricing</a>
-                            <a class="nav-link" href="./error_404.html">Error 404</a>
-                            <a class="nav-link" href="./error_500.html">Error 500</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?$APPLICATION->IncludeComponent(
+                "forque:menu",
+                "vertical",
+                Array(
+                    "ROOT_MENU_TYPE" => "top",
+                    "MAX_LEVEL" => "1",
+                    "USE_EXT" => "N",
+                    "DELAY" => "Y",
+                    "ALLOW_MULTI_SELECT" => "Y",
+                    "MENU_CACHE_TYPE" => "A",
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "MENU_CACHE_GET_VARS" => array()
+                )
+            );?>
         </div>
         <div class="col p-0 d-flex flex-column">

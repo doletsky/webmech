@@ -61,11 +61,15 @@ footer .nav-link {
     transition: all .5s ease;
     /* background-color: transparent; */
     letter-spacing: 1.2px !important;
-    font-size: 0.74rem !important;
+    font-size: 0.8rem !important;
     padding-top: 8px;
     padding-bottom: 8px;
 }
 
+.navbar .title-name {
+    font-size: 1.75rem;
+    margin-right: 10px;
+}
 .sidebar .nav-link.active,
 .sidebar .nav-link:focus {
     background-color: rgba(--sidebar-active,.9);
