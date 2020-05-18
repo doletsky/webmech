@@ -1,7 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-?>
-    <main class="p-4 flex-fill">
+$APPLICATION->SetTitle("Статьи");?>
 <?
 if(isset($_REQUEST["ELEMENT_CODE"])):
 $APPLICATION->IncludeComponent("bitrix:news.detail","",Array(
@@ -122,7 +121,6 @@ else:?>
     </div>
 <?endif;
 ?>
-    </main>
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
 ?>

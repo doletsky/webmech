@@ -1,4 +1,5 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
+</main>
 <footer id="footer" class="p-4 py-5">
     <div class="row">
         <div class="col-6 col-md-3">

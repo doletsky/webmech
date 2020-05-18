@@ -13,7 +13,7 @@ div.news-detail img.detail_picture
 }
 .img_detail_picture {
     margin-bottom: 40px;
-    margin-top: -50px;
+    /*margin-top: -50px;*/
     margin-left: -5%;
     width: 110%;
     height: 450px;

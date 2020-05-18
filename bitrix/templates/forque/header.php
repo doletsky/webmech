@@ -178,3 +178,7 @@
             );?>
         </div>
         <div class="col p-0 d-flex flex-column">
+            <main class="p-4 flex-fill">
+                <div class="col">
+                    <h2 class="offset-md-2"><?$APPLICATION->ShowTitle();?></h2>
+                </div>

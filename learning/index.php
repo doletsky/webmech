@@ -1,6 +1,5 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("");?>
-<main class="p-4 flex-fill">
+$APPLICATION->SetTitle("Тренинги");?>
     <?$APPLICATION->IncludeComponent(
         "bitrix:learning.course.list",
         "",
@@ -10,10 +9,8 @@ $APPLICATION->SetTitle("");?>
             "COURSE_DETAIL_TEMPLATE" => "course/index.php?COURSE_ID=#COURSE_ID#&INDEX=Y",
             "CHECK_PERMISSIONS" => "Y",
             "COURSES_PER_PAGE" => "20",
-            "SET_TITLE" => "Y"
+            "SET_TITLE" => "N"
         )
     );?>
-</main>
-
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
