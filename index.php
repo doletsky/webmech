@@ -485,7 +485,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                 </div>
                             </div>
                             <?endif;?>
-                            <?$APPLICATION->IncludeComponent("forque:news.list","main_page",Array(
+                            <?$APPLICATION->IncludeComponent("bitrix:news.list","main_page",Array(
                                     "DISPLAY_DATE" => "N",
                                     "DISPLAY_NAME" => "Y",
                                     "DISPLAY_PICTURE" => "Y",

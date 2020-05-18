@@ -162,7 +162,7 @@
         <div class="col-3 p-0 h-100 w-sidebar navbar-collapse collapse d-none d-lg-flex sidebar-collapse sidebar">
             <!-- fixed sidebar -->
             <?$APPLICATION->IncludeComponent(
-                "forque:menu",
+                "bitrix:menu",
                 "vertical",
                 Array(
                     "ROOT_MENU_TYPE" => "top",

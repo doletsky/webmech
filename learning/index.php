@@ -2,7 +2,7 @@
 $APPLICATION->SetTitle("");?>
 <main class="p-4 flex-fill">
     <?$APPLICATION->IncludeComponent(
-        "forque:learning.course.list",
+        "bitrix:learning.course.list",
         "",
         Array(
             "SORBY" => "SORT",

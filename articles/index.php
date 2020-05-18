@@ -4,7 +4,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
     <main class="p-4 flex-fill">
 <?
 if(isset($_REQUEST["ELEMENT_CODE"])):
-$APPLICATION->IncludeComponent("forque:news.detail","",Array(
+$APPLICATION->IncludeComponent("bitrix:news.detail","",Array(
         "DISPLAY_DATE" => "N",
         "DISPLAY_NAME" => "Y",
         "DISPLAY_PICTURE" => "Y",
@@ -63,7 +63,7 @@ $APPLICATION->IncludeComponent("forque:news.detail","",Array(
 else:?>
     <div class="row">
         <div class="col-md-12">
-            <?$APPLICATION->IncludeComponent("forque:news.list","main_page",Array(
+            <?$APPLICATION->IncludeComponent("bitrix:news.list","main_page",Array(
                     "DISPLAY_DATE" => "N",
                     "DISPLAY_NAME" => "Y",
                     "DISPLAY_PICTURE" => "Y",
