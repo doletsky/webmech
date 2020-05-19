@@ -1,0 +1,9 @@
+#tel span {
+	font-size: 26px;
+}
+.popup-veil {
+    background: url(/images/popup-order/veil-bg.png) repeat;
+}
+.pop_up_mail {
+    padding-top: 9px;
+}

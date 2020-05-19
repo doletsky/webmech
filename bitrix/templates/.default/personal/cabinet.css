@@ -1,0 +1,316 @@
+﻿@font-face {
+    font-family: 'Conv_DINPro-Regular';
+    src: url(../Content/fonts/DINPro-Regular.eot);
+    src: local('?'), url(../Content/fonts/DINPro-Regular.woff) format('woff'), url(../Content/fonts/DINPro-Regular.ttf) format('truetype'), url(../Content/fonts/DINPro-Regular.svg) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Conv_DINPro-Bold';
+    src: url(../Content/fonts/DINPro-Bold.eot);
+    src: local('☺'), url(../Content/fonts/DINPro-Bold.woff) format('woff'), url(../Content/fonts/DINPro-Bold.ttf) format('truetype'), url(../Content/fonts/DINPro-Bold.svg) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.bill-pages {
+    background-color: #ffffff; /*dirty-hack for some templates*/
+}
+
+/*LibraryEntrance*/
+.cabinet-wrap{
+    padding: 34px;
+}
+.cabinet-wrap:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.bill {
+    width: 350px;
+    height: 551px;
+    background: url(../Content/Images/bill/bill-bg.png) no-repeat;
+    padding: 66px 40px 0 26px;
+    font-family: Verdana, Arial, sans-serif
+}
+.cong-title, .succes-title {
+    font-size: 16px;
+    color: #616161;
+    margin: 0;
+    text-align: center;
+}
+.cong-title {
+    font-weight: bold;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.succes-title {
+    line-height: 22px;
+    margin-bottom: 22px;   
+}
+.address {
+    font-size: 12px;
+    line-height: 18px;
+    color: #696969;
+    margin-bottom: 40px;
+}
+.order {
+    font-weight: bold;
+    font-size: 17px;
+    color: #848484;
+    margin-bottom: 22px;
+}
+.order, .no-fiscal {
+    text-align: center;
+    text-transform: uppercase;
+}
+.no-fiscal, .summary {
+    font-size: 12px;
+}
+.no-fiscal {
+    margin-bottom: 22px;
+}
+.summary:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.summary {
+    margin-bottom: 65px;
+}
+.summary-left {
+    float: left;
+    width: 140px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 14px;
+}
+.summary-right {
+    float: right;
+    width: 144px;
+    text-align: right;
+    line-height: 14px;
+}
+.summary-total {
+    margin-top: 22px;
+}
+.thanks {
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.cabinet {
+    width: 447px;
+    height: 533px;
+    background-color: #ECECF8;
+    padding: 45px 30px 25px 25px;
+}
+.arrow {
+    width: 79px;
+    height: 64px;
+    background: url(../Content/Images/bill/arrow.png) no-repeat;
+    margin: 232px 0 0 70px;
+}
+.left-part, .arrow {
+    float: left;
+}
+.left-part {
+    color: #848484;
+}
+.right-part, .right-part a {
+    color: #5C59A8;
+}
+.right-part a {
+    text-decoration: underline;
+}
+.right-part {
+    margin-top: 18px;
+    float: right;
+}
+.library-enter {
+    display: block;
+    width: 191px;
+    height: 191px;
+    background: url(../Content/Images/bill/library-enter.png) no-repeat;
+    text-indent: -99999px;
+    margin: 81px auto 0 auto;
+}
+.library-enter:hover {
+    background-position: 0 -191px;
+}
+.cabinet-head {
+    font: 17px 'Conv_DINPro-Bold', Verdana, sans-serif;
+    color: #5c5aa9;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+/*LibraryEntrance*/
+
+/*Start BillLogin*/
+.cabinet-image {
+    width: 126px;
+    height: 126px;
+    background: url(../Content/Images/bill/cabinet-image.png) 0 0 no-repeat;
+    margin: 20px auto;
+}
+.validation-summary-errors .cabinet-image {
+    background-position: 0 -127px;
+}
+.cabinet-field {
+    width: 240px;
+    height: 39px;
+    border: 1px solid #5D75CB;
+    color: #5D75CB;
+    margin-bottom: 17px;
+    padding: 0 10px;
+    font-style: italic;
+}
+.cabinet-field:focus, .cabinet-field:hover {
+    outline: none;
+    box-shadow: inset 0 0 5px #9ecaed, 0 0 5px #9ecaed;
+}
+.cabinet-btn {
+    height: 41px;
+    width: 240px;
+    background-color: #8588CF;
+    color: #ffffff;
+    border: 0;
+    text-transform: uppercase;
+    border-radius: 18px;
+    display: block;
+    margin: 0 auto;
+    outline: none;
+}
+.cabinet-btn:hover {
+    background-color: #52CA5C;
+}
+.cabinet-content {
+    width: 240px;
+    margin: 0 auto;
+}
+.field-wrap {
+    text-align: right;
+}
+.cabinet-error, .validation-summary-errors {
+    color: #F04C4B;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 15px;
+}
+.validation-summary-errors ul {
+    padding: 0;
+    list-style-type: none;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill, input:hover:-webkit-autofill, input:focus:-webkit-autofill, input:active:-webkit-autofill {
+    background-color: #ffffff !important;
+    color: #5D75CB !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-text-fill-color: #5D75CB;
+}
+#registerForm input:-webkit-autofill,
+#registerForm textarea:-webkit-autofill,
+#registerForm select:-webkit-autofill,
+#registerForm input:hover:-webkit-autofill,
+#registerForm input:focus:-webkit-autofill,
+#registerForm input:active:-webkit-autofill {
+    -webkit-text-fill-color: #000000;
+}
+.has-error.cabinet-field {
+    border-color: #F04C4B;
+    color: #5D75CB;
+}
+.has-error .cabinet-image {
+    background-position: 0 -126px;
+}
+.cabinet-field.has-error:focus, .cabinet-field.has-error:hover {
+    box-shadow: inset 0 0 5px #E8CCD8, 0 0 5px #E8CCD8 ;
+}
+.cabinet ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #5D75CB;
+    font-style: italic;
+}
+.cabinet :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #5D75CB;
+    opacity: 1;
+    font-style: italic;
+}
+.cabinet ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #5D75CB;
+    opacity: 1;
+    font-style: italic;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #5D75CB;
+    font-style: italic;
+}
+
+.has-error::-webkit-input-placeholder { /* WebKit browsers */
+    color: #F04C4B;
+}
+.has-error:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #F04C4B;
+    opacity: 1;
+}
+.has-error::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #F04C4B;
+    opacity: 1;
+}
+.has-error:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #F04C4B;
+}
+a.cabinet-link {
+    font-size: 12px;
+    color: #5d76cb;
+    margin-right: 11px;
+    text-decoration: none;
+}
+a.cabinet-link:hover {
+    color: #48469b;  
+}
+/*End BillLogin*/
+
+/*Start Login*/
+.login-title {
+    font-family: 'Conv_DINPro-Bold', Arial, sans-serif;
+    font-size: 29px;
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #5c5aa9
+}
+.login-title, .suggest-reg {
+    text-align: center;
+}
+.cabinet-login {
+    margin: 0 auto;
+    background: transparent;
+}
+.suggest-reg, .suggest-reg a {
+    color: #5d76cb;
+    font-size: 14px;
+    font-family: 'Conv_DINPro-Regular', Arial, sans-serif;
+}
+.suggest-reg a {
+    text-decoration: underline;   
+}
+.cabinet-link, .remember {
+    color: #5C59A8;
+    font-size: 12px;
+}
+.cabinet-link:hover {
+    color: #48469b;
+    text-decoration: none;
+}
+.remember {
+    font-weight: normal;
+    margin: 0;
+}
+/*End Login*/
+
+/*Start BillRegister*/
+.cabinet-reg {
+    background-position: 0 -254px;
+}
+/*Start EndRegister*/

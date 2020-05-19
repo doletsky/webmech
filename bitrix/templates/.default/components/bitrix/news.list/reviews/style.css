@@ -1,0 +1,25 @@
+.big_toys_bg{background: url(/images/big_toys_bg.jpg) no-repeat center top #f6f6f6;}
+.big_toys_bg .message_box_h{text-align: center;margin-bottom: 40px;margin-top: 20px;}
+.testimonial_page_item{margin-bottom: 30px;}
+.testimonial_page_item .speaker_face{}
+.testimonial_page_item .speaker_name{}
+.testimonial_page_item .speaker_h{color: #333;}
+.testimonial_page_item .speaker_role{color: #333;}
+.testimonial_page_item .speaker_text{width: 720px;}
+.testimonial_page_item .testimonial_text{background: #fff;color: #333;box-shadow: 0 0 3px #ccc;padding-left: 40px;padding-right: 40px;}
+.testimonial_page_item .speaker_text .testimonial_text:after{width: 32px;height: 32px;border: 0;background: url(/images/white_cut.png);left: -32px;}
+.testimonial_page_item .more_testimonials{}
+.testimonial_section{background: url(/images/wave.png) repeat-x left top, url(/images/wave.png) repeat-x left bottom;padding: 25px 40px 15px 40px;margin: 0 -40px;}
+.testimonial_section_h{font-size: 18px;font-weight: bold;margin-bottom: 15px;}
+.testimonial_section .subject_head{margin-bottom: 10px;}
+.testimonial_section .sbj_title{font-size: 14px;font-weight: normal;margin-bottom: 4px;font-family: Conv_DINPro-Regular;}
+.testimonial_section .sbj_type{font-size: 12px;}
+.pod_cut{display: none;}
+.testimonial_toggle{font-size: 14px;margin-top: 10px;}
+.testimonial_toggle a{text-decoration: none;border-bottom: 1px dotted  #333;}
+.tt_hide{display: none;}
+.tt_close{position: absolute;right: 0;top: 0;width: 28px;height: 28px;background: url(/images/tt_close.png);display: none;}
+
+.db_nl{display: block;font-family:Conv_DINPro-Bold;font-weight: normal;}
+.comment_write{width: 590px;font-size: 18px;margin: 0 auto;text-align: center;line-height: 21px;padding: 70px 0 0 0;margin-top: 20px;background: url(/images/icon_comment.png) no-repeat center 15px;}
+.comment_write a{color: #48469d;}

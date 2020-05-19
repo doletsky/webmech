@@ -1,0 +1,209 @@
+/*Start Filter styles*/
+.filter-type {
+    margin-bottom: 20px;
+}
+.filter-type input[type=checkbox] {
+    margin-right: 5px;
+}
+.filter-type-item {
+    list-style-type: none;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+.filter-type-item label {
+    cursor: pointer;
+}
+.grade .filter-type-list {
+    width: 160px;
+}
+.grade .filter-type-item {
+    float: left;
+    min-width: 40px;
+}
+.grade .filter-type-name {
+    font-size: 12px;
+}
+.grade .filter-type-list:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.year .filter-type-item {
+    min-width: 80px;
+}
+.filter-type.grade input[type=checkbox] {
+    margin-right: 0px;
+}
+.filter-type-title {
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+.filter-type-name {
+    vertical-align: middle;
+}
+.more-link {
+    color: #646464;
+    text-decoration: none;
+    font-size: 14px;
+}
+.more-text {
+    border-bottom: 1px dashed #666666;
+}
+.symbol-icon {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    font-size: 20px;
+    margin-right: 8px;
+}
+.price-field {
+    width: 45px;
+    height: 18px;
+    line-height: 20px;
+}
+.dash-wrap {
+    margin: 0 8px;
+}
+.structure .filter-type-name {
+    background: url(/markup/i/format-img.png) no-repeat;
+    padding-left: 32px;
+}
+.structure .text {
+    background-position: 0 0;
+}
+.structure .video {
+    background-position: 0 -18px;
+}
+.structure .audio {
+    background-position: 0 -36px;
+}
+.structure .programm {
+    background-position: 0 -54px;
+}
+.filter-switcher {
+    color: #646464;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+}
+.filter-switcher span {
+    border-bottom: 1px dashed #646464;
+}
+.hidden-filters, .hide-filters {
+    display: none;
+}
+.filter-form.active .hidden-filters, .filter-form.active .hide-filters {
+    display: block;
+}
+.filter-form.active .add-filters {
+    display: none;
+}
+.search-result {
+    margin-bottom: 25px;
+}
+.search-title {
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+.search-text {
+    width: 600px;
+    margin: 0;
+    font-size: 14px;
+}
+.subjects .hidden-list {
+    display: none;
+}
+.hide-link {
+    display: none;
+}
+.modef {
+    margin-top: 15px;
+}
+#modef_num {
+    margin-right: 3px;
+}
+#modef_num img{
+    position: relative;
+    top: 3px;
+}
+.subjects .filter-type-name {
+    display: inline-block;
+    width: 248px;
+    vertical-align: top;
+}
+.subjects .filter-type-item {
+    margin-bottom: 5px;
+}
+/*End Filter styles*/
+
+
+/*Стандартный попап фильтра*/
+.bx_filter_popup_result{
+    position: absolute;
+    display: none;
+    height: 33px;
+    border-radius: 3px;
+    background: #48469b;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 33px;
+    padding: 0 10px;
+    margin-left: 158px;
+    margin-top: -7px;
+    z-index:1100;
+}
+.bx_filter_popup_result .arrow{
+    width:8px;
+    height: 14px;
+    position: absolute;
+    top:50%;
+    margin-top:-7px;
+    background: url(images/arr_left.png) no-repeat center;
+
+}
+.bx_filter_popup_result.right .arrow{
+    left: -8px;
+    background: url(images/arr_left.png) no-repeat center;
+}
+.bx_filter_popup_result.left .arrow{
+    right: -8px;
+    background: url(images/arr_right.png) no-repeat center;
+}
+.bx_filter_popup_result a{color: #ffffff; font-weight: bold;}
+.bx_filter_popup_result a:hover{text-decoration: none}
+.bx_filter_popup_result_close{display: none}
+
+@media (max-width:530px){
+
+
+    .bx-touch .bx_filter_popup_result{
+        position: fixed !important;
+        height: auto;
+        line-height: 14px;
+        font-size: 12px;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        top: auto !important;
+        z-index: 1001;
+        padding: 10px;
+        width: auto;
+        border-radius: 0;
+        box-shadow: 0 -2px 5px 0 rgba(0,0,0,.1);
+    }
+    .bx-touch .bx_filter_popup_result_close{
+        display: block;
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        right: 10px;
+        top: 50%;
+        margin-top: -11px;
+        background: url(images/x.png) no-repeat center;
+        -webkit-background-size:16px;
+        background-size:16px;
+    }
+}

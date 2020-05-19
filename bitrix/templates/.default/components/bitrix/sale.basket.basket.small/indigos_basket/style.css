@@ -1,0 +1,594 @@
+/*Table*/
+table.sale_basket_small
+{
+	width:245;
+	border-collapse:collapse;
+	font-size:12px;
+	border:1px solid #ADC3D5;
+}
+
+/*Table head*/
+table.sale_basket_small th
+{
+	text-align: left;
+	color:#25639A;
+}
+
+/* Table cells and heads*/
+table.sale_basket_small th, table.sale_basket_small td
+{
+	padding: 3px 5px;
+	vertical-align:top;
+}
+
+
+
+.basketbox_clear{
+    clear: both;
+}
+
+.basketbox_wrapper{
+    /*height: 100%;*/
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    display: none;
+    left: 0;
+    top: 0;
+    min-width:1155px;
+}
+
+.basketbox_bg{
+    background: #000000;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    min-width:1155px;
+}
+
+.basketbox{
+    width: 970px;
+    margin: 20px 0 0 -485px;
+    left:50%;
+    position: absolute;
+}
+
+.basketbox_header{
+    height: 70px;
+
+    background: #6b48ad; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZiNDhhZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4NTk5ZDQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #6b48ad 0%, #8599d4 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6b48ad), color-stop(100%,#8599d4)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #6b48ad 0%,#8599d4 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #6b48ad 0%,#8599d4 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #6b48ad 0%,#8599d4 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #6b48ad 0%,#8599d4 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b48ad', endColorstr='#8599d4',GradientType=0 ); /* IE6-8 */
+}
+
+.basketbox_header_logo{
+    font-family: "Conv_DINPro-Regular";
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 50px;
+    padding: 6px 0 0 52px;
+    width: 320px;
+}
+
+.basketbox_header_close{
+    position: absolute;
+    right: 55px;
+    top: 26px;
+    cursor: pointer;
+}
+
+.basketbox_header_close img{
+
+}
+
+.basketbox_content{
+    background: none repeat scroll 0 0 #ffffff;
+    height: 590px;
+}
+
+.basketbox_content_topline{
+    text-align: center;
+    padding: 7px 0 22px;
+    display: none;
+}
+
+.basketbox_content_topline_totalprice{
+    display: inline;
+    font-size: 32px;
+    color: #8a89c2;
+    line-height: 42px;
+    margin: 0 11px 0 0;
+}
+
+.basketbox_content_topline_totalprice_label{
+    text-transform: uppercase;
+    font-family: "Exo 2";
+    font-weight: 200;
+    margin: 0 6px 0 0;
+}
+
+.basketbox_content_topline_totalprice_count{
+    font-family: "Exo 2";
+    font-weight: 600;
+}
+
+.basketbox_content_topline_totalprice_count span{
+    margin: 0 8px 0 0;
+}
+
+.basketbox_content_topline_button{
+    font-family: "Exo 2";
+    font-weight: 200;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-size: 17px;
+
+    background: #fdc244; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkYzI0NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMTViNGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #fdc244 0%, #f15b4b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdc244), color-stop(100%,#f15b4b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fdc244 0%,#f15b4b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fdc244 0%,#f15b4b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #fdc244 0%,#f15b4b 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #fdc244 0%,#f15b4b 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdc244', endColorstr='#f15b4b',GradientType=0 ); /* IE6-8 */
+}
+
+.basketbox_content_topline_button.disabled{
+    cursor:default;
+    background: #AAAAAA;
+    filter: none;
+}
+
+.basketbox_content_items_wrapper{
+    padding: 0 10px 15px 25px;
+    position: relative;
+}
+
+.basketbox_note_update {
+    background-color: #fff;
+    border: 2px solid #8a89c2;
+    border-radius: 30px;
+    color: #8a89c2;
+    font-size: 20px;
+    height: 100px;
+    padding-top: 70px;
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    width: 900px;
+    z-index: 999;
+    display:none;
+}
+
+.basketbox_content_items{
+    width: 905px;
+    overflow: auto;
+}
+
+.basketbox_content_item{
+    border-top: 1px solid #b0b5bc;
+    margin: 0 0 20px 8px;
+    padding: 11px 0;
+}
+
+.basketbox_content_item_picbox{
+    position: relative;
+    left: -8px;
+    float: left;
+    width: 101px;
+    height: 101px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.basketbox_content_item_picbox img{
+    width: 101px;
+    height: 101px;
+}
+
+.basketbox_content_item_picbox_picborder{
+    background: url("/img/basket/basket_item_picborder.png") no-repeat;
+    position: absolute;
+    width: 101px;
+    height: 101px;
+    left: 0;
+    top: 0;
+}
+
+.basketbox_content_item_picbox_picborder img{
+
+}
+
+.basketbox_content_item_quantity {
+    float: left;
+}
+.basketbox_content_item_quantity_ctrl{
+    width: 13px;
+    height: 17px;
+    float: left;
+    margin: 1px 15px 3px 0;
+}
+.basketbox_content_item_quantity_ctrl_up, .basketbox_content_item_quantity_ctrl_down{
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 100%;
+    height: 50%;
+    padding: 1px 0;
+}
+.basketbox_content_item_quantity_ctrl_up{
+    background-image: url("/img/basket/up.png");
+}
+.basketbox_content_item_quantity_ctrl_down{
+    background-image: url("/img/basket/down.png");
+}
+.basketbox_content_item_quantity input {
+    width: 55px;
+    font-family: "Exo 2";
+    color: #89A7DB;
+    font-size: 22px;
+    font-weight: bold;
+    border: 0;
+    padding: 0;
+    position: relative;
+    top: -5px;
+    text-align: right;
+}
+
+.basketbox_content_item_infobox{
+    margin: 2px 10px 0 16px;
+    color: #b0b5bc;
+    width: 620px;
+    float: left;
+    width: 320px;
+}
+
+.basketbox_content_item_infobox_name{
+    font-family: "Exo 2";
+    font-weight: 200;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    word-spacing: 0.09em;
+    margin: 0 0 6px;
+}
+
+.basketbox_content_item_infobox_name a{
+    text-decoration: none;
+    color: #b0b5bc;
+}
+
+.basketbox_content_item_infobox_pred{
+    display: inline-block;
+    font-family: "Exo 2";
+    font-weight: 500;
+    display: inline-block;
+}
+
+.basketbox_content_item_infobox_type{
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-style: italic;
+    display: inline-block;
+    letter-spacing: -0.03em;
+    font-size: 14px;
+    margin: 0 0 0 20px;
+}
+
+.basketbox_content_item_infobox_platform{
+    margin: 5px 0 0;
+    height: 64px;
+}
+
+.basketbox_content_item_infobox_platform_label{
+    font-family: "Exo 2";
+    font-weight: 500;
+    letter-spacing: -0.03em;
+}
+
+.basketbox_content_item_infobox_platform ul{
+    margin: 0 0 0 2px;
+    height: 46px;
+}
+
+.basketbox_content_item_infobox_platform ul li:first-child{
+    margin: 0;
+}
+
+.basketbox_content_item_infobox_platform ul li{
+    display: inline-block;
+    list-style: none;
+    width: 35px;
+    text-align: center;
+}
+
+.basketbox_content_item_infobox_platform ul li img{
+}
+
+.basketbox_content_item_infobox_platform ul li span{
+    font-family: "Conv_DINPro-Regular";
+    font-size: 8px;
+    line-height: 10px;
+    position: relative;
+    top: -8px;
+}
+
+.basketbox_content_item_price{
+    float: left;
+    font-family: "Exo 2";
+    color: #89a7db;
+    font-weight: 600;
+    margin: 1px 0 0 13px;
+    font-size: 22px;
+    width: 149px;
+}
+
+.basketbox_content_item_price span{
+
+}
+
+.basketbox_content_item_close{
+    float: left;
+    margin: 5px 0 0 0;
+    cursor: pointer;
+    background: url("/img/basket/basket_item_close.png") no-repeat;
+    width: 19px;
+    height: 19px;
+}
+
+.basketbox_content_item_close img{
+    
+}
+
+.basketbox_footer {
+    height: 70px;
+
+    background: #859ad5; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg1OWFkNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2YjQ5YWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #859ad5 0%, #6b49ae 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#859ad5), color-stop(100%,#6b49ae)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #859ad5 0%,#6b49ae 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #859ad5 0%,#6b49ae 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #859ad5 0%,#6b49ae 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #859ad5 0%,#6b49ae 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#859ad5', endColorstr='#6b49ae',GradientType=0 ); /* IE6-8 */
+}
+
+.basketbox_footer ul{
+    margin: 0 0 0 148px;
+}
+
+.basketbox_footer ul li{
+    display: inline-block;
+    margin: 0 0 0 95px;
+}
+
+.basketbox_footer ul li:first-child{
+    margin: 0;
+}
+
+.basketbox_footer ul li img{
+    display: block;
+}
+
+.basketbox_footer ul li img.webmoney{
+    position: relative;
+    top: 5px;
+}
+
+.basketbox_footer ul li img.yandex{
+    position: relative;
+    top: 5px;
+}
+
+.basketbox_footer ul li img.qiwi{
+    position: relative;
+    top: 14px;
+    background: none;
+}
+
+.basketbox_footer ul li img.cards{
+    position: relative;
+    top: 5px;
+}
+
+.basketbox_content_preloader{
+    left: 50%;
+    margin-left: -25px;
+    position: absolute;
+    text-align: center;
+    top: 45%;
+}
+
+.basketbox_content_preloader img{
+
+}
+
+.basketbox_content_message{
+    margin: 20px 0 0 0;
+    text-align: center;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 30px;
+    color: #89a7db;
+    display: none;
+}
+
+
+
+
+/* Стили для плагина jScrollPane
+--------------------------------------------------------------------------------------------------------------*/
+
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+.jspContainer
+{
+    overflow: hidden;
+    position: relative;
+}
+
+.jspPane
+{
+    position: absolute;
+}
+
+.jspVerticalBar
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6 px;
+    height: 100%;
+    /*background: red;*/
+}
+
+.jspHorizontalBar
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    /*background: red;*/
+}
+
+.jspCap
+{
+    display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+    float: left;
+}
+
+.jspTrack
+{
+    background: url("/img/basket/trackbg.png") repeat-y;
+    position: relative;
+}
+
+.jspDrag
+{
+    background: #89a7db;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 8px;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+    float: left;
+    height: 100%;
+}
+
+.jspArrow
+{
+    background: #50506d;
+    text-indent: -20000px;
+    display: block;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.jspArrow.jspDisabled
+{
+    cursor: default;
+    background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+    height: 16px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+    width: 16px;
+    float: left;
+    height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+    outline: none;
+}
+
+.jspCorner
+{
+    background: #eeeef4;
+    float: left;
+    height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+    margin: 0 -3px 0 0;
+}
+
+.basketbox_box_send{
+    color: #b0b5bc;
+    font-family: Verdana;
+    font-size: 18px;
+    height: 1px;
+    left: 50%;
+    margin-bottom: 16px;
+    margin-left: -175px;
+    margin-top: 20px;
+    position: relative;
+    width: 350px;
+}
+.basketbox_order_to_print, .basketbox_order_to_email{
+    cursor: pointer;
+    float: right;
+    margin: 0 10px;
+}
+.basketbox_order_to_email_for_send{
+    background-color: #ffffff;
+    border: 1px solid #808080;
+    display: none;
+    font-size: 12px;
+    left: 18px;
+    padding: 5px;
+    position: absolute;
+    text-align: left;
+    top: 20px;
+    z-index: 999;
+}
+.basketbox_order_to_email_for_send_close{
+    color: red;
+    cursor: pointer;
+    font-size: 170%;
+    left: 95%;
+    position: relative;
+    top: -6px;
+    transform: rotate(45deg);
+    width: 5px;
+}
+.basketbox_order_to_email_send_send {
+    cursor: pointer;
+}
