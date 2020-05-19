@@ -7,7 +7,7 @@ $APPLICATION->SetTitle("Тренинги");?>
             "SORBY" => "SORT",
             "SORORDER" => "ASC",
             "COURSE_DETAIL_TEMPLATE" => "course/index.php?COURSE_ID=#COURSE_ID#&INDEX=Y",
-            "CHECK_PERMISSIONS" => "Y",
+            "CHECK_PERMISSIONS" => "N",
             "COURSES_PER_PAGE" => "20",
             "SET_TITLE" => "N"
         )
