@@ -1,0 +1,27 @@
+Array
+(
+    [notification_type] => card-incoming
+    [zip] => 
+    [bill_id] => 
+    [amount] => 4.90
+    [firstname] => 
+    [codepro] => false
+    [withdraw_amount] => 5.00
+    [city] => 
+    [unaccepted] => false
+    [label] => 2
+    [building] => 
+    [lastname] => 
+    [datetime] => 2020-05-20T17:17:02Z
+    [suite] => 
+    [sender] => 
+    [phone] => 
+    [sha1_hash] => 0c9918fba8c5e484c4d4ef929ebfe9fabdc49054
+    [street] => 
+    [flat] => 
+    [fathersname] => 
+    [operation_label] => 265779b7-0011-5000-a000-108cad2e31fe
+    [operation_id] => 643310222742005008
+    [currency] => 643
+    [email] => 
+)
