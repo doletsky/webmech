@@ -10,12 +10,6 @@ $arPSCorrespondence = array(
 				"VALUE" => "",
 				"TYPE" => ""
 			),
-		"SCID" => array(
-				"NAME" => GetMessage("SCID"),
-				"DESCR" => GetMessage("SCID_DESCR"),
-				"VALUE" => "",
-				"TYPE" => ""
-			),
 		"SHOP_KEY" => array(
 				"NAME" => GetMessage("SHOP_KEY"),
 				"DESCR" => GetMessage("SHOP_KEY_DESCR"),

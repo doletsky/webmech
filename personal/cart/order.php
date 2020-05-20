@@ -22,7 +22,10 @@ $APPLICATION->SetTitle("Title");
 		"ONLY_FULL_PAY_FROM_ACCOUNT" => "N",
 		"SEND_NEW_USER_NOTIFY" => "Y",
 		"DELIVERY_NO_SESSION" => "N",
+		"PAY_SYSTEM_ID" => 6,
 		"PROP_1" => array("4", "5", "6", "7")
 	),
 false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+<pre><?print_r($_REQUEST)?></pre>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

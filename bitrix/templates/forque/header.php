@@ -19,7 +19,7 @@
 ?>
     <!--title><?//$APPLICATION->ShowTitle()?></title-->
 
-<?//$APPLICATION->ShowPanel();?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,14 +35,18 @@
     <link href="<?=SITE_TEMPLATE_PATH?>/css/styles.css" rel="stylesheet">
     <link href="<?=SITE_TEMPLATE_PATH?>/css/banner_ssu.css" rel="stylesheet">
     <?$APPLICATION->ShowHead();?>
+
 </head>
 <body class="navbar-expand-lg faster" data-wow-delay="300ms" data-spy="scroll" data-target="#sm" data-offset="60">
+
 <div class="container-fluid fixed-top bg-primary" id="topnav">
     <div class="row collapse no-gutters d-flex h-100 position-relative sidebar-collapse">
+        <?$APPLICATION->ShowPanel();?>
         <div class="col-3 pr-4 w-sidebar navbar-collapse collapse d-none d-lg-flex">
             <input class="form-control form-control-sm border-0 font-weight-light rounded-pill" type="text" placeholder="search...">
         </div>
         <div class="col">
+
             <nav class="navbar navbar-dark navbar-expand px-lg-1">
                 <a data-toggle="collapse" href="#" data-target=".sidebar-collapse" class="navbar-brand mr-3" aria-expanded="true">
                     <span class="h4 align-middle mb-0"><span class="lnr lnr-menu"></span></span>

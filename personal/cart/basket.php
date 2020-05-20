@@ -5,7 +5,7 @@ $APPLICATION->SetTitle("Title");
 	"bitrix:sale.basket.basket",
 	"",
 	Array(
-		"PATH_TO_ORDER" => "/personal/order.php",
+		"PATH_TO_ORDER" => "/personal/cart/order.php",
 		"HIDE_COUPON" => "N",
 		"COLUMNS_LIST" => array("NAME", "DISCOUNT", "DELETE", "PRICE", "SUM", "PROPERTY_COURSE_ID"),
 		"PRICE_VAT_SHOW_VALUE" => "N",

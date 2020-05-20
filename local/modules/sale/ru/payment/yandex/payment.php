@@ -1,34 +1,31 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();?><?
 $Sum = CSalePaySystemAction::GetParamValue("SHOULD_PAY");
 $ShopID = CSalePaySystemAction::GetParamValue("SHOP_ID");
-$scid = CSalePaySystemAction::GetParamValue("SCID");
 $customerNumber = CSalePaySystemAction::GetParamValue("ORDER_ID");
 $orderDate = CSalePaySystemAction::GetParamValue("ORDER_DATE");
 $orderNumber = CSalePaySystemAction::GetParamValue("ORDER_ID");
 $Sum = number_format($Sum, 2, ',', '');
 ?>
 <font class="tablebodytext">
-Вы хотите оплатить через систему <b>Яндекс.Деньги</b>.<br /><br />
-Сумма к оплате по счету: <b><?=$Sum?> р.</b><br />
+Сумма к оплате: <b><?=$Sum?> р.</b><br />
 <br />
-<?if(strlen(CSalePaySystemAction::GetParamValue("IS_TEST")) > 0):
-	?>
-	<form name="ShopForm" action="http://demomoney.yandex.ru/eshop.xml" method="post" target="_blank">
-<?else:
-	?>
-	<form name="ShopForm" action="http://money.yandex.ru/eshop.xml" method="post">
-<?endif;?>
 
-<input name="ShopID" value="<?=$ShopID?>" type="hidden">
-<input name="scid" value="<?=$scid?>" type="hidden">
-<input name="customerNumber" value="<?=$customerNumber?>" type="hidden">
-<input name="orderNumber" value="<?=$orderNumber?>" type="hidden">
-<input name="Sum" value="<?=$Sum?>" type="hidden">
-<br />
-Детали заказа:<br />
-<input name="OrderDetails" value="заказ №<?=$orderNumber?> (<?=$orderDate?>)" type="hidden">
-<br />
-<input name="BuyButton" value="Оплатить" type="submit">
+</font>
 
-</font><p><font class="tablebodytext"><b>ВНИМАНИЕ!</b> Возврат средств по платежной системе Яндекс.Деньги - невозможен, пожалуйста, будьте внимательны при оплате заказа.</font></p>
+<form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
+    <input type="hidden" name="receiver" value="<?=$ShopID?>">
+    <input type="hidden" name="formcomment" value="Сам себе университет">
+    <input type="hidden" name="short-dest" value="Тренниг 'Порядок на столе' ">
+    <input type="hidden" name="label" value="<?=$orderNumber?>">
+    <input type="hidden" name="quickpay-form" value="donate">
+    <input type="hidden" name="targets" value="транзакция <?=$orderNumber?>">
+    <input type="hidden" name="sum" value="<?=$Sum?>" data-type="number">
+    <input type="hidden" name="comment" value="">
+    <input type="hidden" name="need-fio" value="false">
+    <input type="hidden" name="need-email" value="false">
+    <input type="hidden" name="need-phone" value="false">
+    <input type="hidden" name="need-address" value="false">
+    <label><input type="radio" name="paymentType" value="PC">Яндекс.Деньгами</label>
+    <label><input type="radio" name="paymentType" value="AC">Банковской картой</label>
+    <input type="submit" value="Перевести">
 </form>
