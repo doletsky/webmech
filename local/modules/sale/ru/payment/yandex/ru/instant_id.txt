@@ -1,5 +1,4 @@
-+BBMxwZagoDnKsPOcYQvqMjb2cMBjZuQctFMupkJSV3VZ2VBqT89SRLwkPe1jrv5
- "instance_id": "+BBMxwZagoDnKsPOcYQvqMjb2cMBjZuQctFMupkJSV3VZ2VBqT89SRLwkPe1jrv5"
+{"instance_id":"gbDHOfJIiFqCZiTuuu0WvLUrVGHiRasnCyzZcuss6OynEytLkqWsFP6C6J8ir3fe","status":"success"}
 
  $curl = curl_init();
 
@@ -13,6 +12,90 @@
    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
    CURLOPT_CUSTOMREQUEST => "POST",
    CURLOPT_POSTFIELDS => "client_id=C7EDECC6044854AE344E20FB725E52C426AC0DE17113AFE79FB73FD057C1C706",
+   CURLOPT_HTTPHEADER => array(
+     "Content-Type: application/x-www-form-urlencoded"
+   ),
+ ));
+
+ $response = curl_exec($curl);
+
+ curl_close($curl);
+ echo $response;
+
+ https://m.money.yandex.ru/internal/public-api/to-payment-type?cps_context_id=333930373235303337315f36333666646266633061396266623761616336363162626462356331313339316430336236613335&paymentType=FC
+
+ fail
+ https://webmech.ru/personal/cart/notice.php?orderN=-nw4F1G-z7WAAiVHmNzAIYLdrl4Z..000.202005&cps_card=425534******5402&merchant_order_id=1590066249948_C2WA&cps_context_id=333930373235303337315f36333666646266633061396266623761616336363162626462356331313339316430336236613335&skr_env=api&reason=success&status=success&RC=00&sum=10.20
+
+ success
+ webmech.ru/personal/cart/notice.php?orderN=8c_ePHvL6khqG3PWccsINKANyeEZ..000.202005&cps_card=425534******0128&merchant_order_id=1590068496167_C2WA&cps_context_id=333930373333353539395f61353339643132336166336666623835613264653631333533333062306563616134666236343965&skr_env=api&reason=success&status=success&RC=00&sum=6.00
+
+
+if(0){
+$curl = curl_init();
+
+ curl_setopt_array($curl, array(
+   CURLOPT_URL => "https://money.yandex.ru/api/process-external-payment",
+   CURLOPT_RETURNTRANSFER => true,
+   CURLOPT_ENCODING => "",
+   CURLOPT_MAXREDIRS => 10,
+   CURLOPT_TIMEOUT => 0,
+   CURLOPT_FOLLOWLOCATION => true,
+   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+   CURLOPT_CUSTOMREQUEST => "POST",
+   CURLOPT_POSTFIELDS => "request_id=333930373333353539395f61353339643132336166336666623835613264653631333533333062306563616134666236343965&instance_id=gbDHOfJIiFqCZiTuuu0WvLUrVGHiRasnCyzZcuss6OynEytLkqWsFP6C6J8ir3fe",
+   CURLOPT_HTTPHEADER => array(
+     "Content-Type: application/x-www-form-urlencoded"
+   ),
+ ));
+
+ $response = curl_exec($curl);
+
+ curl_close($curl);
+ echo $response;
+}
+//$ar=json_decode($response, true);
+if(1||$ar['status']==='success'){
+$ar['request_id']='333930373333353539395f61353339643132336166336666623835613264653631333533333062306563616134666236343965';//.$ar['request_id'];
+$param='request_id='.$ar['request_id']."&instance_id=gbDHOfJIiFqCZiTuuu0WvLUrVGHiRasnCyzZcuss6OynEytLkqWsFP6C6J8ir3fe";
+$param=$param."&ext_auth_success_uri=webmech.ru/personal/cart/notice.php&ext_auth_fail_uri=webmech.ru/personal/cart/notice.php";
+ $curl2 = curl_init();
+
+ curl_setopt_array($curl2, array(
+   CURLOPT_URL => "https://money.yandex.ru/api/process-external-payment",
+   CURLOPT_RETURNTRANSFER => true,
+   CURLOPT_ENCODING => "",
+   CURLOPT_MAXREDIRS => 10,
+   CURLOPT_TIMEOUT => 0,
+   CURLOPT_FOLLOWLOCATION => true,
+   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+   CURLOPT_CUSTOMREQUEST => "POST",
+   CURLOPT_POSTFIELDS => $param,
+   CURLOPT_HTTPHEADER => array(
+     "Content-Type: application/x-www-form-urlencoded"
+   ),
+ ));
+
+ $response2 = curl_exec($curl2);
+echo $response2;
+ curl_close($curl2);
+}else{
+echo 'fail!';
+}
+
+
+$curl = curl_init();
+
+ curl_setopt_array($curl, array(
+   CURLOPT_URL => "https://m.money.yandex.ru/internal/public-api/to-payment-type",
+   CURLOPT_RETURNTRANSFER => true,
+   CURLOPT_ENCODING => "",
+   CURLOPT_MAXREDIRS => 10,
+   CURLOPT_TIMEOUT => 0,
+   CURLOPT_FOLLOWLOCATION => true,
+   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+   CURLOPT_CUSTOMREQUEST => "POST",
+   CURLOPT_POSTFIELDS => "cps_context_id=333930373333353539395f61353339643132336166336666623835613264653631333533333062306563616134666236343965&paymentType=FC",
    CURLOPT_HTTPHEADER => array(
      "Content-Type: application/x-www-form-urlencoded"
    ),
