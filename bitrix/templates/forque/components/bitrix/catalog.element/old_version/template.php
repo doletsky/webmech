@@ -1,5 +1,4 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-<pre><?print_r($arResult)?></pre>
 <div class="catalog-element">
 	<table width="100%" border="0" cellspacing="0" cellpadding="2">
 		<tr>
@@ -284,3 +283,17 @@
 		<br /><a href="<?=$arResult["SECTION"]["SECTION_PAGE_URL"]?>"><?=GetMessage("CATALOG_BACK")?></a>
 	<?endif?>
 </div>
+<?$APPLICATION->IncludeComponent("bitrix:catalog.set.constructor",
+    ".default",
+    array(
+        "IBLOCK_ID" => $arParams["IBLOCK_ID"],
+        "ELEMENT_ID" => $arResult["ID"],
+        "PRICE_CODE" => $arParams["PRICE_CODE"],
+        "BASKET_URL" => $arParams["BASKET_URL"],
+        "CACHE_TYPE" => $arParams["CACHE_TYPE"],
+        "CACHE_TIME" => $arParams["CACHE_TIME"],
+        "CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+    ),
+    $component,
+    array("HIDE_ICONS" => "Y")
+);?>

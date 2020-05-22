@@ -5,7 +5,7 @@ $APPLICATION->SetTitle("Каталог");
 
 <?$APPLICATION->IncludeComponent(
     "bitrix:catalog.element",
-    "visual",
+    "old_version",
     Array(
         "ACTION_VARIABLE" => "action",
         "ADD_DETAIL_TO_SLIDER" => "N",
