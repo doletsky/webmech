@@ -10,14 +10,8 @@ $arUrlRewrite = array(
         "CONDITION" => "#^/catalog/([0-9a-z_]+)/#",
         "RULE" => "ELEMENT_CODE=\$1",
         "ID" => "bitrix:catalog.element",
-        "PATH" => "/catalog/detail.php",
+        "PATH" => "/catalog/detail2.php",
     ),
-	array(
-		"CONDITION" => "#^/products/([0-9]+)/.*#",
-		"RULE" => "ELEMENT_ID=\$1",
-		"ID" => "",
-		"PATH" => "/products/index.php",
-	),
 	array(
 		"CONDITION" => "#^/personal/order/#",
 		"RULE" => "",

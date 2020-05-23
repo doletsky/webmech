@@ -1,0 +1,76 @@
+body {
+    color: #333;
+}
+
+.lk-students {
+    height: 100%;
+}
+.lk-students-body {
+    height: 70%;
+}
+.lk-students-chat{
+    height: 100%;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+    position: relative;
+    top: -100px;
+}
+.lk-students-chat .reviews-reply-form {
+    padding: 0 30px 0 0;
+    margin-left: 9px;
+}
+.lk-students-chat .reviews-reply-form textarea{
+    line-height: inherit !important;
+    height: 70px;
+    padding: 0;
+    font-size: 80%;
+    background-color: #ffffff;
+}
+.lk-students-chat .chat-message-submit{
+    position: absolute;
+    width: 26px;
+    height: 66px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 200%;
+    color: gray;
+    text-align: center;
+    padding-top: 5px;
+    right: 4px;
+    bottom: -76px;
+    cursor: pointer;
+}
+.chat {
+    overflow-y: scroll;
+    height: 100%;
+    position: relative;
+}
+.chat-message {
+    opacity: 0;
+}
+.chat-message .reviews-text {
+    width:80%;
+    padding: 15px 10px;
+}
+.chat-message .chat-message-author{
+    font-size: 70%;
+    color: #AA0000;
+}
+.chat-message-me {
+    float: right;
+    text-align: right;
+}
+.chat-message-me .chat-message-author {
+    color: #00CC00;
+}
+.chat-message-author .message-post-date {
+    color: #333;
+}
+.chat-message-me:after {
+    clear: both;
+}
+.reviews-reply-form {
+    position: absolute;
+}
