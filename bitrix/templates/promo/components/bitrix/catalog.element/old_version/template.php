@@ -221,7 +221,7 @@
             </div>
         </div>
     </div>
-    <pre><?print_r($arResult["PROPERTIES"]["BENEFITS"])?></pre>
+    <pre><?print_r($arResult)?></pre>
     <div id="watch-video" class="flat-section">
         <div class="section-content">
             <div class="container">

@@ -84,7 +84,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
         "PRODUCT_ID_VARIABLE" => "id",
         "PRODUCT_INFO_BLOCK_ORDER" => "sku,props",
         "PRODUCT_PAY_BLOCK_ORDER" => "rating,price,quantityLimit,quantity,buttons",
-        "PRODUCT_PROPERTIES" => array("NEWPRODUCT", "SALELEADER", "MATERIAL"),
+        "PRODUCT_PROPERTIES" => array("CATALOG_PRICE"),
         "PRODUCT_PROPS_VARIABLE" => "prop",
         "PRODUCT_QUANTITY_VARIABLE" => "",
         "PRODUCT_SUBSCRIPTION" => "Y",

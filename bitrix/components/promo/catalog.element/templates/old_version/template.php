@@ -37,7 +37,6 @@
             <div class="separator-bottom"></div>
         </div>
     </section>
-
     <section id="content">
     <div id="content-wrap">
     <div id="fun-facts" class="flat-section" data-scroll-index="1">
@@ -136,92 +135,34 @@
 
     <div id="service-features" class="parallax-section" data-scroll-index="1" data-parallax-bg-img="img-37.jpg"
          data-stellar-background-ratio="0.2"
-         style="background-image: url(<?=SITE_TEMPLATE_PATH?>/images/img-37.jpg); background-position: 50% 50%;">
+         style="background-image: url(<?=$arResul['DETAIL_PICTURE']['SRC']?>); background-position: 50% 50%;">
         <div class="overlay-colored" data-bg-color="#000" data-bg-color-opacity="0.4"
              style="background-color: rgba(0, 0, 0, 0.4);"></div>
         <div class="section-content">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="box-info box-info-1 text-white mb-50 anim-scaledown-seq"
-                             data-opacity-value="1" style="opacity: 0; transform: scale(0.8, 0.8);">
-                            <div class="box-icon icon x2 colorful-icon mr-20"><i class="icon-layers"></i>
-                            </div>
-                            <div class="box-content">
-                                <h4 class="capitalized">Инструкция</h4>
-                                <p>
-                                    Инструкция самообучения по шагам. Что и как делать на каждом шаге. Не нужно искать решение и сомневаться. Все в инструкции.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-info box-info-1 text-white mb-50 anim-scaledown-seq"
-                             data-opacity-value="1" style="opacity: 0; transform: scale(0.8, 0.8);">
-                            <div class="box-icon icon x2 colorful-icon mr-20"><i class="icon-tools"></i></div>
-                            <div class="box-content">
-                                <h4 class="capitalized">Качество</h4>
-                                <p>
-                                    Критерии дадут выбрать качественный и бесплатный материал, дадут способы самоконтроля на соответствие профессиональному уровню и требованиям работодателей.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-info box-info-1 text-white mb-50 anim-scaledown-seq"
-                             data-opacity-value="1" style="opacity: 0; transform: scale(0.8, 0.8);">
-                            <div class="box-icon icon x2 colorful-icon mr-20"><i class="icon-tools-2"></i></div>
-                            <div class="box-content">
-                                <h4 class="capitalized">Работа</h4>
-                                <p>
-                                    Способы получить желаемую работу дадут определить и выполнить требования работодателя.<br><br><br><br>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
+                    <?$col_cnt=0;?>
+                    <?foreach($arResult["PROPERTIES"]["BENEFITS"]["ADV"] as $benefit):$col_cnt++;?>
                     <div class="col-md-4">
                         <div class="box-info box-info-1 text-white mb-md-50 anim-scaledown-seq"
                              data-opacity-value="1" style="opacity: 0; transform: scale(0.8, 0.8);">
-                            <div class="box-icon icon x2 colorful-icon mr-20"><i class="icon-wallet"></i></div>
+                            <div class="box-icon icon x2 colorful-icon mr-20"><i class="<?=$benefit['ICON_CLASS']['VALUE']?>"></i>
+                            </div>
                             <div class="box-content">
-                                <h4 class="capitalized">Экономия</h4>
+                                <h4 class="capitalized"><?=$benefit["NAME"]?></h4>
                                 <p>
-                                    Методика курса делает доступным дорогостоющее образование веб-разработки.
+                                    <?=$benefit["PREVIEW_TEXT"]?>
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="box-info box-info-1 text-white anim-scaledown-seq" data-opacity-value="1"
-                             style="opacity: 0; transform: scale(0.8, 0.8);">
-                            <div class="box-icon icon x2 colorful-icon mr-20"><i class="icon-globe"></i></div>
-                            <div class="box-content">
-                                <h4 class="capitalized">Доступность</h4>
-                                <p>
-                                    Возможность получать образование в любое время и в любом месте, где есть интернет.<br><br><br>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-info box-info-1 text-white mb-md-50 anim-scaledown-seq"
-                             data-opacity-value="1" style="opacity: 0; transform: scale(0.8, 0.8);">
-                            <div class="box-icon icon x2 colorful-icon mr-20"><i class="icon-hotairballoon"></i>
-                            </div>
-                            <div class="box-content">
-                                <h4 class="capitalized">Свобода</h4>
-                                <p>
-                                    Методику самообразования можно применять неограниченное число раз, в разных профессиональных областях и без вложений!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <?if($col_cnt==3) echo "</div><div class='row'>";?>
+                    <?endforeach?>
                 </div>
             </div>
         </div>
     </div>
-    <pre><?print_r($arResult)?></pre>
+<?if(strlen($arResult["PROPERTIES"]["METHOD"]["VALUE"])>0):?>
     <div id="watch-video" class="flat-section">
         <div class="section-content">
             <div class="container">
@@ -244,7 +185,7 @@
             </div>
         </div>
     </div>
-
+<?endif?>
     <div id="clients-testmonials-plan" class="flat-section" data-scroll-index="2">
         <div class="section-content">
             <div class="container">
@@ -258,80 +199,27 @@
                         <div class="testmonials-slider">
                             <div class="slide">
                                 <div class="testmonial-single-2">
-                                    <div class="quote-sign colored">Модуль 0. <span style="color: #eb5600">Вводный. Важные детали.</span></div>
+                                    <?foreach($arResult["PROPERTIES"]["PLAN"]["ADV"] as $mdl):?>
+                                    <div class="quote-sign colored"><?=preg_replace("/\. /", ". <span style='color: #eb5600'>", $mdl["NAME"],1);?></span></div>
                                     <div class="ts-content">
-                                        Организация взаимодействия. Знакомство с системой. Вводные тесты.<br>
+                                        <?=str_replace("Результат модуля:", "<span class='colored'>Результат модуля:</span>", $mdl["PREVIEW_TEXT"]);?><br>
                                     </div>
-                                    <div class="quote-sign colored">Модуль 1. <span style="color: #eb5600">Определение результата его составляющих.</span></div>
-                                    <div class="ts-content">
-                                        Сформулируете, чего хотите достичь (устроиться на работу)
-                                        Какие условия позволяют его достичь (знания, навыки, опыт)
-                                        Определите набор для изучения по каждому пункту
-                                        Определите список ресурсов<br>
-                                        <span class="colored">Результат модуля:</span>
-                                        Детальный список того, что надо изучить<br>
-                                    </div>
-                                    <div class="quote-sign colored">Модуль 2. <span style="color: #eb5600">Определение качественных источников.</span></div>
-                                    <div class="ts-content">
-                                        По результатам модуля #1 сформируете список источников
-                                        Исследуете полноту и качество источников.
-                                        Определите необходимые инструменты для использования источников (среда разработки)
-                                        Составите детальный список того, что нужно изучить, сопоставив выбранным источникам и инструментам.<br>
-                                        <span class="colored">Результат модуля:</span>
-                                        Детальный список источников и инструментов<br>
-                                    </div>
-                                    <div class="quote-sign colored">Модуль 3. <span style="color: #eb5600">Разработка системы самоконтроля.</span></div>
-                                    <div class="ts-content">
-                                        Определите что и для какой цели нужно контролировать
-                                        Выберете методы контроля
-                                        Выберете необходимые инструменты
-                                        Интерпретация результатов контроля<br>
-                                        <span class="colored">Результат модуля:</span>
-                                        Система самоконтроля процесса обучения<br>
-                                    </div>
-                                    <div class="quote-sign colored">Модуль 4. <span style="color: #eb5600">Составление план самообучения.</span></div>
-                                    <div class="ts-content">
-                                        Составите полный порядок изучения с отдельными уроками
-                                        Выделите отдельные этапы для промежуточного контроля и критерии выполнения
-                                        Определите сроки
-                                        Выделите критерии необходимости коррекции плана<br>
-                                        <span class="colored">Результат модуля:</span>
-                                        Пошаговый план обучения со сроками,
-                                        промежуточными результатами и ясным результатом.<br>
-                                    </div>
-                                    <div class="quote-sign colored">Модуль 5. <span style="color: #eb5600">Настройка процесса и СТАРТ.</span></div>
-                                    <div class="ts-content">
-                                        Определите основные условия выполнения плана
-                                        Выберете способы самомотивации
-                                        Найдете доступные способы поддержки
-                                        СТАРТ<br>
-                                        <span class="colored">Результат модуля:</span>
-                                        Процесс обучения запущен! Будьте внимательны к срокам и качеству. При необходимости корректируйте план. Регулярно освежайте мотивацию!
-                                        И готовьтесь к новой работе!)<br>
-                                    </div>
+                                    <?endforeach?>
                                     <br><br>
-                                    <div class="quote-sign" style="color: #eb5600">Бонус 1.<br><span class="colored">Список востребованных специальностей в области веб-разработки</span></div>
+                                    <?
+                                    $bon_cnt=0;
+                                    foreach($arResult["PROPERTIES"]["BONUS"]["ADV"] as $bonus):
+                                        $bon_cnt++;
+                                        ?>
+                                    <div class="quote-sign" style="color: #eb5600">
+                                        Бонус <?=$bon_cnt?>.<br>
+                                        <span class="colored"><?=$bonus["NAME"]?></span>
+                                    </div>
                                     <div class="ts-content">
+                                        <?=$bonus["PREVIEW_TEXT"]?>
                                         <br>
                                     </div>
-                                    <div class="quote-sign" style="color: #eb5600">Бонус 2.<br><span class="colored">Как получить работу без опыта (миникурс).</span></div>
-                                    <div class="ts-content">
-                                        Какая работа возможна без опыта.<br>
-                                        Какой бывает работодатель.<br>
-                                        Что ждет работодатель.<br>
-                                        Резюме. Портфолио.<br>
-                                        Вакансии. Собеседование.<br>
-                                        <br>
-                                    </div>
-                                    <div class="quote-sign" style="color: #eb5600">Бонус 3.<br><span class="colored">Как быстро и эффективно искать информацию в интернете (миникурс).</span></div>
-                                    <div class="ts-content">
-                                        Поисковые системы.<br>
-                                        Каталоги. Архивы.<br>
-                                        Непрямые источники информации.<br>
-                                        Формулирование запросов.<br>
-                                        Анализ результатов поиска.<br>
-                                        <br>
-                                    </div>
+                                    <?endforeach?>
                                 </div>
                             </div>
                         </div>
@@ -340,7 +228,7 @@
             </div>
         </div>
     </div>
-
+<?if(strlen($arResult["PROPERTIES"]["ADD"]["VALUE"])>0):?>
     <div id="watch-video" class="flat-section">
         <div class="section-content">
             <div class="container">
@@ -366,438 +254,26 @@
             </div>
         </div>
     </div>
+<?endif?>
+    <?$APPLICATION->IncludeComponent("bitrix:catalog.set.constructor",
+        ".default",
+        array(
+            "IBLOCK_ID" => $arParams["IBLOCK_ID"],
+            "ELEMENT_ID" => $arResult["ID"],
+            "PRICE_CODE" => $arParams["PRICE_CODE"],
+            "BASKET_URL" => $arParams["BASKET_URL"],
+            "CACHE_TYPE" => $arParams["CACHE_TYPE"],
+            "CACHE_TIME" => $arParams["CACHE_TIME"],
+            "CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+            "PROP_BRAND" => $arResult["PROPERTIES"]["BRANDS"]["VALUE"],
+            "PROP_BONUS" => $arResult["PROPERTIES"]["BONUS"]["ADV"],
+            "PRICE"     =>  $arResult["CATALOG_PRICE_1"]
+        ),
+        $component,
+        array("HIDE_ICONS" => "Y")
+    );?>
 
-    <div id="clients-testmonials" class="flat-section" data-scroll-index="3">
-    <div class="section-content">
-    <div class="container">
-    <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-        <div class="section-title text-center">
-            <h2>Наши предложения</h2>
-            <p>
-                Три пакета - три предложения для разных возможностей и желаний.
-            </p>
-        </div>
-    </div>
-    <div class="col-md-12">
-        <div class="testmonials-slider">
-            <ul class="owl-carousel">
-                <li>
-                    <div class="slide">
-                        <div class="testmonial-single-2">
-                            <span class="quote-sign colored">Пакет <span style="color: #eb5600">“Максимум”</span> <span style="font-size: 70%; float: right">Стоимость: <span style="color: #eb5600">37&nbsp000&nbspруб.</span>*</span></span>
-                            <div class="ts-content colored">
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td>
-                                            Курс <span style="color: #eb5600">“Как бесплатно обучиться веб-разработке”</span> (доступ на 3 мес.)<br>
-                                            видео и конспекты уроков<br>
-                                            инструкции и рекомендации
-                                        </td>
-                                        <td>90000 р.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Практика (можно воспользоваться бесконечное число раз)</td>
-                                        <td>
-                                            Бесценно
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Кураторство:<br>
-                                            - проверка д/з и комментариями<br>
-                                            - пояснения по модулю<br>
-                                            - чат с куратором ежедневно<br>
-                                                                    <span style="color: #eb5600">- индивидуальная поддержка<br>
-                                                                        - поддержка в выполнении составленного плана</span> (до 3 мес.)
-                                        </td>
-                                        <td>50000 р.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span style="color: #eb5600">Бонус 1.</span> Список востребованных специальностей</td>
-                                        <td>5000 р.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span style="color: #eb5600">Бонус 2.</span> Как получить работу без опыта</td>
-                                        <td>15000 р.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span style="color: #eb5600">Бонус 3.</span> Поиск информации в интернете</td>
-                                        <td>15000 р.</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="ts-person" style="text-align: center">
-                                <h5>*Суммарная ценность пакета <span style="color: #eb5600; font-size: inherit">175000 рублей.</span>  Экономия<span style="color: #eb5600; font-size: inherit"> 138000 рублей!</span></h5>
-                                <!--<div><a class="btn scroll-top large colorful hover-dark" href="#">Записаться сейчас</a></div>-->
-                            </div>
-                            <span class="quote-sign colored">Пакет <span style="color: #eb5600">“Максимум”</span> <span style="font-size: 70%; float: right">Стоимость: <span style="color: #eb5600">37&nbsp000&nbspруб.</span>*</span></span>
-                            <form class="signup-form anim-movebottom-seq" data-opacity-value="1" novalidate="true" style="opacity: 0;">
-                                <!--<img src="images/signup-form.png" alt="">-->
-                                <div class="sf1-notifications">
-                                    <div class="sf1-notifications-content"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input class="signup_detect" type="hidden">
-                                    <input type="hidden" name="COURSE" value="kak_zakazat_sayt">
-                                    <select size="1" name="paket"  placeholder="Выберите пакет" style="border: solid 1px grey;">
-                                        <option selected value="1">Максимум</option>
-                                    </select>
-                                    <input type="email" placeholder="Ваш email" name="EMAIL" style="border: solid 1px grey;">
-                                    <input type="submit" class="form-control" value="Записаться сейчас" onclick="return false;">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="slide">
-                        <div class="testmonial-single-2">
-                            <span class="quote-sign colored">Пакет <span style="color: #eb5600">“Достигатор”</span> <span style="font-size: 70%; float: right">Стоимость: <span style="color: #eb5600">19&nbsp000&nbspруб.</span>*</span></span>
-                            <div class="ts-content colored">
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td>
-                                            Курс <span style="color: #eb5600">“Как бесплатно обучиться веб-разработке”</span> (доступ на 2 мес.)<br>
-                                            видео и конспекты уроков<br>
-                                            инструкции и рекомендации
-                                        </td>
-                                        <td>90000 р.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Практика (можно воспользоваться бесконечное число раз)</td>
-                                        <td>
-                                            Бесценно
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Кураторство:<br>
-                                            - проверка д/з и комментариями<br>
-                                            - пояснения по модулю<br>
-                                            - чат с куратором ежедневно<br>
-                                        </td>
-                                        <td>40000 р.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span style="color: #eb5600">Бонус 1.</span> Список востребованных специальностей</td>
-                                        <td>5000 р.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span style="color: #eb5600">Бонус 2.</span> Как получить работу без опыта</td>
-                                        <td>15000 р.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span style="color: #eb5600">Бонус 3.</span> Поиск информации в интернете</td>
-                                        <td>15000 р.</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="ts-person" style="text-align: center">
-                                <h5>*Суммарная ценность пакета <span style="color: #eb5600; font-size: inherit">165000 рублей.</span>  Экономия<span style="color: #eb5600; font-size: inherit"> 146000 рублей!</span></h5>
-                                <!--<div><a class="btn scroll-top large colorful hover-dark" href="#">Записаться сейчас</a></div>-->
-                            </div>
-                            <span class="quote-sign colored">Пакет <span style="color: #eb5600">“Достигатор”</span> <span style="font-size: 70%; float: right">Стоимость: <span style="color: #eb5600">19&nbsp000&nbspруб.</span>*</span></span>
-                            <form class="signup-form anim-movebottom-seq" data-opacity-value="1" novalidate="true" style="opacity: 0;">
-                                <!--<img src="images/signup-form.png" alt="">-->
-                                <div class="sf1-notifications">
-                                    <div class="sf1-notifications-content"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input class="signup_detect" type="hidden">
-                                    <input type="hidden" name="COURSE" value="kak_zakazat_sayt">
-                                    <select size="1" name="paket"  placeholder="Выберите пакет" style="border: solid 1px grey;">
-                                        <option selected value="2">Достигатор</option>
-                                    </select>
-                                    <input type="email" placeholder="Ваш email" name="EMAIL" style="border: solid 1px grey;">
-                                    <input type="submit" class="form-control" value="Записаться сейчас" onclick="return false;">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="slide">
-                        <div class="testmonial-single-2">
-                            <span class="quote-sign colored">Пакет <span style="color: #eb5600">“Информ”</span> <span style="font-size: 70%; float: right">Стоимость: <span style="color: #eb5600">11&nbsp000&nbspруб.</span>*</span></span>
-                            <div class="ts-content colored">
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td>
-                                            Курс <span style="color: #eb5600">“Как бесплатно обучиться веб-разработке”</span> (доступ на 2 мес.)<br>
-                                            видео и конспекты уроков<br>
-                                            инструкции и рекомендации
-                                        </td>
-                                        <td>90000&nbspр.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span style="color: #eb5600">Бонус 1.</span> Список востребованных специальностей</td>
-                                        <td>5000 р.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span style="color: #eb5600">Бонус 2.</span> Как получить работу без опыта</td>
-                                        <td>15000 р.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span style="color: #eb5600">Бонус 3.</span> Поиск информации в интернете</td>
-                                        <td>15000 р.</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="ts-person" style="text-align: center">
-                                <h5>*Суммарная ценность пакета <span style="color: #eb5600; font-size: inherit">105000 рублей.</span>  Экономия<span style="color: #eb5600; font-size: inherit"> 94000 рублей!</span></h5>
-                                <!--<div><a class="btn scroll-top large colorful hover-dark" href="#">Записаться сейчас</a></div>-->
-                            </div>
-                            <span class="quote-sign colored">Пакет <span style="color: #eb5600">“Информ”</span> <span style="font-size: 70%; float: right">Стоимость: <span style="color: #eb5600">11&nbsp000&nbspруб.</span>*</span></span>
-                            <form class="signup-form anim-movebottom-seq" data-opacity-value="1" novalidate="true" style="opacity: 0;">
-                                <!--<img src="images/signup-form.png" alt="">-->
-                                <div class="sf1-notifications">
-                                    <div class="sf1-notifications-content"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input class="signup_detect" type="hidden">
-                                    <input type="hidden" name="COURSE" value="kak_zakazat_sayt">
-                                    <select size="1" name="paket"  placeholder="Выберите пакет" style="border: solid 1px grey;">
-                                        <option selected value="3">Информ</option>
-                                    </select>
-                                    <input type="email" placeholder="Ваш email" name="EMAIL" style="border: solid 1px grey;">
-                                    <input type="submit" class="form-control" value="Записаться сейчас" onclick="return false;">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </li>
 
-            </ul>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-
-    <div id="our-clients" class="flat-section" data-scroll-index="3">
-        <div class="section-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-">
-                        <div class="clients-slider">
-                            <ul class="owl-carousel owl-loaded owl-drag">
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-php"></i>
-                                            <!--<img src="images/php.png" alt="">-->
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-css3"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-javascript"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-html5"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-python"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-less"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-sass"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-mysql"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-java"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-w3c"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-git"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-bootstrap"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-code"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-jquery"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-android"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-swift"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-apple"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-symfony"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-laravel"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-angular"></i></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="slide">
-                                        <div class="client-single"><i class="devicons devicons-nodejs"></i></div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="cta-title-1" class="flat-section">
-        <div class="section-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="box-cta text-center">
-                            <h3 id="table-send" data-scroll-index="4"><span class="colored">Курс-онлайн.</span> "Как <span class="colored">бесплатно</span> обучиться
-                                <span style="color: #eb5600">высокооплачиваемой</span> профессии веб-разработчика и начать зарабатывать."</h3>
-                            <table class="colored" style="width: 100%;">
-                                <tr style="color: #eb5600;font-weight: 700;font-size: 150%">
-                                    <td class="colored" style="width: 40%">Пакет</td><td style="width: 20%">Максимум</td><td>Достигатор</td><td>Информ</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Курс <span style="color: #eb5600">“Как бесплатно обучиться веб-разработке”</span>
-                                    </td>
-                                    <td>(доступ на 3 мес.)</td>
-                                    <td>(доступ на 2 мес.)</td>
-                                    <td>(доступ на 2 мес.)</td>
-                                </tr>
-                                <tr>
-                                    <td>Практика</td>
-                                    <td>+</td>
-                                    <td>+</td>
-                                    <td>Нет</td>
-                                </tr>
-                                <tr>
-                                    <td>Кураторство - проверка д/з и комментариями,<br>
-                                        пояснения по модулю, чат с куратором ежедневно
-                                    </td>
-                                    <td>+ индивидуальная поддержка поддержка в выполнении составленного плана</span> (до 3 мес.)</td>
-                                    <td>+</td>
-                                    <td>Нет</td>
-                                </tr>
-                                <tr>
-                                    <td><span style="color: #eb5600">Бонус 1.</span> Список востребованных специальностей</td>
-                                    <td>+</td>
-                                    <td>+</td>
-                                    <td>+</td>
-                                </tr>
-                                <tr>
-                                    <td><span style="color: #eb5600">Бонус 2.</span> Как получить работу без опыта</td>
-                                    <td>+</td>
-                                    <td>+</td>
-                                    <td>метод. пособие</td>
-                                </tr>
-                                <tr>
-                                    <td><span style="color: #eb5600">Бонус 3.</span> Поиск информации в интернете</td>
-                                    <td>+</td>
-                                    <td>+</td>
-                                    <td>метод. пособие</td>
-                                </tr>
-                                <tr style="font-weight: 700;font-size: 150%">
-                                    <td></td>
-                                    <td>37 000 руб.</td>
-                                    <td>19 000 руб.</td>
-                                    <td>11 000 руб.</td>
-                                </tr>
-                            </table>
-                            <!--<a class="btn large colorful hover-dark" data-scroll-nav="3"-->
-                            <!--href="#clients-testmonials">Записаться сейчас</a>-->
-                            <form class="signup-form anim-movebottom-seq" data-opacity-value="1"
-                                  novalidate="true"
-                                  style="opacity: 0;">
-                                <!--<img src="images/signup-form.png" alt="">-->
-                                <div class="sf1-notifications">
-                                    <div class="sf1-notifications-content"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input class="signup_detect" type="hidden">
-                                    <input type="hidden" name="COURSE" value="kak_zakazat_sayt">
-                                    <select size="1" name="paket"  placeholder="Выберите пакет">
-                                        <option selected="true" disabled="disabled">Выберите пакет</option>
-                                        <option value="1">Максимум</option>
-                                        <option value="2">Достигатор</option>
-                                        <option value="3">Информ</option>
-                                    </select>
-                                    <input type="email" placeholder="Ваш email" name="EMAIL">
-                                    <input type="submit" class="form-control" value="Записаться сейчас"
-                                           onclick="return false;">
-                                </div>
-                            </form>
-                            <img class="shape-1 anim-moveleft-seq" src="<?=SITE_TEMPLATE_PATH?>/images/cta-title-shape-1.png"
-                                 alt="" data-move-duration="2000" data-opacity-value="1"
-                                 style="opacity: 0; transform: translate(-30px, 0px);">
-                            <img class="shape-2 anim-moveright-seq" src="<?=SITE_TEMPLATE_PATH?>/images/cta-title-shape-2.png"
-                                 alt="" data-move-duration="2000" data-opacity-value="1"
-                                 style="opacity: 0; transform: translate(30px, 0px);">
-                            <img class="shape-3 anim-moveleft-seq" src="<?=SITE_TEMPLATE_PATH?>/images/cta-title-shape-3.png"
-                                 alt="" data-move-duration="2000" data-opacity-value="1"
-                                 style="opacity: 0; transform: translate(-30px, 0px);">
-                            <img class="shape-4 anim-moveright-seq" src="<?=SITE_TEMPLATE_PATH?>/images/cta-title-shape-4.png"
-                                 alt="" data-move-duration="2000" data-opacity-value="1"
-                                 style="opacity: 0; transform: translate(30px, 0px);">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     </div>
     </section>
 <?if(0):?>

@@ -554,6 +554,21 @@ if($this->StartResultCache(false, ($arParams["CACHE_GROUPS"]==="N"? false: $USER
 			}
 
 			$arResult["PROPERTIES"] = $obElement->GetProperties();
+            foreach($arResult["PROPERTIES"] as $propName=>$arProp)
+            {
+                if($arProp["PROPERTY_TYPE"]==="E")
+                {
+                    $arSelectP = Array("IBLOCK_ID", "ID", "NAME", "PREVIEW_TEXT", "PROPERTY_*");
+                    $arFilterP = Array("ID"=>$arProp["VALUE"], "ACTIVE"=>"Y");
+                    $resP = CIBlockElement::GetList(Array(), $arFilterP, false, Array(), $arSelectP);
+                    while($obP = $resP->GetNextElement())
+                    {
+                        $arFieldP=$obP->GetFields();
+                        $arResult["PROPERTIES"][$propName]["ADV"][$arFieldP["ID"]]=array_merge($arFieldP,$obP->GetProperties());
+
+                    }
+                }
+            }
 			if ($bCatalog && $boolNeedCatalogCache)
 			{
 				CCatalogDiscount::SetProductPropertiesCache($arResult['ID'], $arResult["PROPERTIES"]);
