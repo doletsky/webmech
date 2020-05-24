@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 ?>
 
 <?$APPLICATION->IncludeComponent(
-    "bitrix:catalog.element",
+    "promo:catalog.element",
     "old_version",
     Array(
         "ACTION_VARIABLE" => "action",
