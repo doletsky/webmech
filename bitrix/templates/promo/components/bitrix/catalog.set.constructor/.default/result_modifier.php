@@ -32,7 +32,43 @@ if ($arResult["ELEMENT"]['DETAIL_PICTURE'] || $arResult["ELEMENT"]['PREVIEW_PICT
 	);
 	$arResult["ELEMENT"]['DETAIL_PICTURE'] = $arFileTmp;
 }
-
+$arTimeWord=array(
+    "H" => array(
+        "час"   => array(1),
+        "часа"  => array(2,3,4),
+        "часов" => array(0,5,6,7,8,9,11,12,13,14)
+    ),
+    "D" => array(
+        "день"  => array(1),
+        "дня"   => array(2,3,4),
+        "дней"  => array(0,5,6,7,8,9,11,12,13,14)
+    ),
+    "W" => array(
+        "неделю" => array(1),
+        "недели" => array(2,3,4),
+        "недель" => array(0,5,6,7,8,9,11,12,13,14)
+    ),
+    "M" => array(
+        "месяц" => array(1),
+        "месяца"=> array(2,3,4),
+        "месяцев"=> array(0,5,6,7,8,9,11,12,13,14)
+    ),
+    "Q" => array(
+            "квартал" => array(1),
+            "квартала"=> array(2,3,4),
+            "кварталов"=> array(0,5,6,7,8,9,11,12,13,14)
+    ),
+    "S" => array(
+        "полугодие" => array(1),
+        "полугодия"=> array(2,3,4),
+        "полугодий"=> array(0,5,6,7,8,9,11,12,13,14)
+    ),
+    "Y" => array(
+        "год" => array(1),
+        "года"=> array(2,3,4),
+        "лет"=> array(0,5,6,7,8,9,11,12,13,14)
+    )
+);
 $arDefaultSetIDs = array($arResult["ELEMENT"]["ID"]);
 foreach (array("DEFAULT", "OTHER") as $type)
 {
@@ -40,12 +76,26 @@ foreach (array("DEFAULT", "OTHER") as $type)
 	{
         $props = CIBlockElement::GetProperty($arItem["IBLOCK_ID"], $arItem["ID"], array("sort" => "asc"), Array("CODE"=>"COST"));
         $propCost = $props->Fetch();
+        $dbAccess=CCatalogProductGroups::GetList(
+            array(),
+            array("PRODUCT_ID" => $arItem["ID"]),
+            false,
+            false,
+            array()
+        );
+        $arAccess=$dbAccess->GetNext();
+        foreach($arTimeWord[$arAccess["ACCESS_LENGTH_TYPE"]] as $accessText=>$numsL)
+        {
+            if(in_array( $arAccess["ACCESS_LENGTH"], $numsL)) $arAccess["ACCESS_TEXT"]=$arAccess["ACCESS_LENGTH"]." ".$accessText;
+        }
+
 		$arElement = array(
 			"ID"=>$arItem["ID"],
 			"NAME" =>$arItem["NAME"],
 			"CODE"=>$arItem["CODE"],
 			"PREVIEW_TEXT"=> $arItem["PREVIEW_TEXT"],
             "COST" => IntVal($propCost["VALUE"]),
+            "ACCESS" => $arAccess,
 			"PRICE_CURRENCY" => $arItem["PRICE_CURRENCY"],
 			"PRICE_DISCOUNT_VALUE" => $arItem["PRICE_DISCOUNT_VALUE"],
 			"PRICE_PRINT_DISCOUNT_VALUE" => $arItem["PRICE_PRINT_DISCOUNT_VALUE"],
@@ -63,7 +113,7 @@ foreach (array("DEFAULT", "OTHER") as $type)
 
 		if ($type == "DEFAULT")
 			$arDefaultSetIDs[] = $arItem["ID"];
-        $arResult["SET_ITEMS"][$type][$key]="";
+//        $arResult["SET_ITEMS"][$type][$key]="";
 		$arResult["SET_ITEMS"][$type][$arElement["CODE"]] = $arElement;
 	}
 }
