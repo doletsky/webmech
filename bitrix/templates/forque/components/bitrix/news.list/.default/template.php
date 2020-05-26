@@ -22,8 +22,8 @@
                         <div title="Подробно о треннинге" class="col-md-4 col-sm-12 img_course" style="background-image: url('<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>')"></div>
                         <div class="col-md p-3 py-4 d-md-flex">
                             <h5 title="Подробно о треннинге" class="col-md-9"><a class="card-link" href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?echo $arItem["NAME"]?></a></h5>
-                            <div class="col-lg col-5">
-                                    <button onclick="location.href='<?=$arItem["DETAIL_PAGE_URL"]?>#pay'" class="btn btn-outline-primary mr-1">Начать</button>
+                            <div class="col-lg col-5 pl-0">
+                                    <button onclick="location.href='<?=$arItem["DETAIL_PAGE_URL"]?>#pay'" class="btn btn-outline-primary mr-1">Записаться</button>
                             </div>
                         </div>
                     </div>
