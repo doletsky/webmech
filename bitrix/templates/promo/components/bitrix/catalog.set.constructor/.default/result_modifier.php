@@ -69,7 +69,9 @@ $arTimeWord=array(
         "лет"=> array(0,5,6,7,8,9,11,12,13,14)
     )
 );
-$arDefaultSetIDs = array($arResult["ELEMENT"]["ID"]);
+$arDefaultSetIDs["vip"] = array($arResult["ELEMENT"]["ID"]);
+$arDefaultSetIDs["curator"] = array($arResult["ELEMENT"]["ID"]);
+$arDefaultSetIDs["course"] = array($arResult["ELEMENT"]["ID"]);
 foreach (array("DEFAULT", "OTHER") as $type)
 {
 	foreach ($arResult["SET_ITEMS"][$type] as $key=>$arItem)
@@ -111,10 +113,22 @@ foreach (array("DEFAULT", "OTHER") as $type)
 		if ($arItem["PRICE_CONVERT_DISCOUNT_DIFFERENCE_VALUE"])
 			$arElement["PRICE_CONVERT_DISCOUNT_DIFFERENCE_VALUE"] = $arItem["PRICE_CONVERT_DISCOUNT_DIFFERENCE_VALUE"];
 
-		if ($type == "DEFAULT")
-			$arDefaultSetIDs[] = $arItem["ID"];
+		if ($type == "DEFAULT"){
+            $arDefaultSetIDs["vip"][] = $arItem["ID"];
+            if($arElement["CODE"]!=="vip")$arDefaultSetIDs["curator"][] = $arItem["ID"];
+            if($arElement["CODE"]!=="vip" && $arElement["CODE"]!=="curator")$arDefaultSetIDs["course"][] = $arItem["ID"];
+        }
+
+
 //        $arResult["SET_ITEMS"][$type][$key]="";
 		$arResult["SET_ITEMS"][$type][$arElement["CODE"]] = $arElement;
 	}
 }
 $arResult["DEFAULT_SET_IDS"] = $arDefaultSetIDs;
+foreach($arResult["DEFAULT_SET_IDS"] as $p=>$ids){
+    foreach($ids as $id){
+        $arResult["ITEMS_RATIO"][$p][$id]=1;
+    }
+
+}
+

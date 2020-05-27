@@ -340,86 +340,33 @@ $sumCostSimple=$arDef["course"]["COST"]+$sumBonus;
     });
 
     BX.ready(function(){
-        catalogSetDefaultObj_<?=$intElementID; ?> = new catalogSetConstructDefault(
-            <?=CUtil::PhpToJSObject($arResult["DEFAULT_SET_IDS"])?>,
+        catalogSetDefaultObj_vip = new catalogSetConstructDefault(
+            <?=CUtil::PhpToJSObject($arResult["DEFAULT_SET_IDS"]["vip"])?>,
             '<? echo $this->GetFolder(); ?>/ajax.php',
             '<?=$arResult["ELEMENT"]["PRICE_CURRENCY"]?>',
             '<?=SITE_ID?>',
             '<?=$intElementID?>',
             '<?=($arResult["ELEMENT"]["DETAIL_PICTURE"]["src"] ? $arResult["ELEMENT"]["DETAIL_PICTURE"]["src"] : $this->GetFolder().'/images/no_foto.png')?>',
-            <?=CUtil::PhpToJSObject($arResult["ITEMS_RATIO"])?>
+            <?=CUtil::PhpToJSObject($arResult["ITEMS_RATIO"]["vip"])?>
+        );
+        catalogSetDefaultObj_curator = new catalogSetConstructDefault(
+            <?=CUtil::PhpToJSObject($arResult["DEFAULT_SET_IDS"]["curator"])?>,
+            '<? echo $this->GetFolder(); ?>/ajax.php',
+            '<?=$arResult["ELEMENT"]["PRICE_CURRENCY"]?>',
+            '<?=SITE_ID?>',
+            '<?=$intElementID?>',
+            '<?=($arResult["ELEMENT"]["DETAIL_PICTURE"]["src"] ? $arResult["ELEMENT"]["DETAIL_PICTURE"]["src"] : $this->GetFolder().'/images/no_foto.png')?>',
+            <?=CUtil::PhpToJSObject($arResult["ITEMS_RATIO"]["curator"])?>
+        );
+        catalogSetDefaultObj_course = new catalogSetConstructDefault(
+            <?=CUtil::PhpToJSObject($arResult["DEFAULT_SET_IDS"]["course"])?>,
+            '<? echo $this->GetFolder(); ?>/ajax.php',
+            '<?=$arResult["ELEMENT"]["PRICE_CURRENCY"]?>',
+            '<?=SITE_ID?>',
+            '<?=$intElementID?>',
+            '<?=($arResult["ELEMENT"]["DETAIL_PICTURE"]["src"] ? $arResult["ELEMENT"]["DETAIL_PICTURE"]["src"] : $this->GetFolder().'/images/no_foto.png')?>',
+            <?=CUtil::PhpToJSObject($arResult["ITEMS_RATIO"]["course"])?>
         );
     });
 
-    if (!window.arSetParams)
-    {
-        window.arSetParams = [{'<?=$intElementID?>' : <?echo CUtil::PhpToJSObject($popupParams)?>}];
-    }
-    else
-    {
-        window.arSetParams.push({'<?=$intElementID?>' : <?echo CUtil::PhpToJSObject($popupParams)?>});
-    }
-
-    function OpenCatalogSetPopup(element_id)
-    {
-        if (window.arSetParams)
-        {
-            for(var obj in window.arSetParams)
-            {
-                if (window.arSetParams.hasOwnProperty(obj))
-                {
-                    for(var obj2 in window.arSetParams[obj])
-                    {
-                        if (window.arSetParams[obj].hasOwnProperty(obj2))
-                        {
-                            if (obj2 == element_id)
-                                var curSetParams = window.arSetParams[obj][obj2]
-                        }
-                    }
-                }
-            }
-        }
-
-        BX.CatalogSetConstructor =
-        {
-            bInit: false,
-            popup: null,
-            arParams: {}
-        };
-        BX.CatalogSetConstructor.popup = BX.PopupWindowManager.create("CatalogSetConstructor_"+element_id, null, {
-            autoHide: false,
-            offsetLeft: 0,
-            offsetTop: 0,
-            overlay : true,
-            draggable: {restrict:true},
-            closeByEsc: false,
-            closeIcon: { right : "12px", top : "10px"},
-            titleBar: {content: BX.create("span", {html: "<div><?=GetMessage("CATALOG_SET_POPUP_TITLE_BAR")?></div>"})},
-            content: '<div style="width:250px;height:250px; text-align: center;"><span style="position:absolute;left:50%; top:50%"><img src="<?=$this->GetFolder()?>/images/wait.gif"/></span></div>',
-            events: {
-                onAfterPopupShow: function()
-                {
-                    BX.ajax.post(
-                        '<? echo $this->GetFolder(); ?>/popup.php',
-                        {
-                            lang: BX.message('LANGUAGE_ID'),
-                            site_id: BX.message('SITE_ID') || '',
-                            arParams:curSetParams,
-                            theme: '<? echo $arParams['TEMPLATE_THEME']; ?>'
-                        },
-                        BX.delegate(function(result)
-                            {
-                                this.setContent(result);
-                                BX("CatalogSetConstructor_"+element_id).style.left = (window.innerWidth - BX("CatalogSetConstructor_"+element_id).offsetWidth)/2 +"px";
-                                var popupTop = document.body.scrollTop + (window.innerHeight - BX("CatalogSetConstructor_"+element_id).offsetHeight)/2;
-                                BX("CatalogSetConstructor_"+element_id).style.top = popupTop > 0 ? popupTop+"px" : 0;
-                            },
-                            this)
-                    );
-                }
-            }
-        });
-
-        BX.CatalogSetConstructor.popup.show();
-    }
 </script>

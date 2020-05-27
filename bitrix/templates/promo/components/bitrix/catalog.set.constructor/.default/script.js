@@ -26,7 +26,7 @@ catalogSetConstructDefault.prototype.Add2Basket = function()
 		},
 		function(result)
 		{
-			showCatalogSetAdd2BasketPopup(detail_img , element_id);
+			location.href='/personal/cart/basket.php';
 		}
 	);
 }
