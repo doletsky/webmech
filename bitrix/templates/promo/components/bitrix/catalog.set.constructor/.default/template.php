@@ -10,6 +10,7 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
+$intElementID = intval($arParams["ELEMENT_ID"]);
 $arDef=$arResult["SET_ITEMS"]["DEFAULT"];
 
 $arStr=explode("&amp;quot;", htmlentities ($arDef["course"]["NAME"]));
@@ -303,8 +304,8 @@ $sumCostSimple=$arDef["course"]["COST"]+$sumBonus;
                                 <select size="1" name="paket"  placeholder="Выберите пакет">
                                     <option selected="true" disabled="disabled">Выберите пакет</option>
                                     <option value="1">Максимум</option>
-                                    <option value="2">Достигатор</option>
-                                    <option value="3">Информ</option>
+                                    <option value="2">Оптимальный</option>
+                                    <option value="3">Простой</option>
                                 </select>
                                 <input type="email" placeholder="Ваш email" name="EMAIL">
                                 <input type="submit" class="form-control" value="Записаться сейчас"
@@ -329,4 +330,96 @@ $sumCostSimple=$arDef["course"]["COST"]+$sumBonus;
         </div>
     </div>
 </div>
-<pre><?print_r($arParams)?></pre>
+<script type="text/javascript">
+    BX.message({
+        setItemAdded2Basket: '<?=GetMessageJS("CATALOG_SET_ADDED2BASKET")?>',
+        setButtonBuyName: '<?=GetMessageJS("CATALOG_SET_BUTTON_BUY")?>',
+        setButtonBuyUrl: '<?=$arParams["BASKET_URL"]?>',
+        setIblockId: '<?=$arParams["IBLOCK_ID"]?>',
+        setOffersCartProps: <?=CUtil::PhpToJSObject($arParams["OFFERS_CART_PROPERTIES"])?>
+    });
+
+    BX.ready(function(){
+        catalogSetDefaultObj_<?=$intElementID; ?> = new catalogSetConstructDefault(
+            <?=CUtil::PhpToJSObject($arResult["DEFAULT_SET_IDS"])?>,
+            '<? echo $this->GetFolder(); ?>/ajax.php',
+            '<?=$arResult["ELEMENT"]["PRICE_CURRENCY"]?>',
+            '<?=SITE_ID?>',
+            '<?=$intElementID?>',
+            '<?=($arResult["ELEMENT"]["DETAIL_PICTURE"]["src"] ? $arResult["ELEMENT"]["DETAIL_PICTURE"]["src"] : $this->GetFolder().'/images/no_foto.png')?>',
+            <?=CUtil::PhpToJSObject($arResult["ITEMS_RATIO"])?>
+        );
+    });
+
+    if (!window.arSetParams)
+    {
+        window.arSetParams = [{'<?=$intElementID?>' : <?echo CUtil::PhpToJSObject($popupParams)?>}];
+    }
+    else
+    {
+        window.arSetParams.push({'<?=$intElementID?>' : <?echo CUtil::PhpToJSObject($popupParams)?>});
+    }
+
+    function OpenCatalogSetPopup(element_id)
+    {
+        if (window.arSetParams)
+        {
+            for(var obj in window.arSetParams)
+            {
+                if (window.arSetParams.hasOwnProperty(obj))
+                {
+                    for(var obj2 in window.arSetParams[obj])
+                    {
+                        if (window.arSetParams[obj].hasOwnProperty(obj2))
+                        {
+                            if (obj2 == element_id)
+                                var curSetParams = window.arSetParams[obj][obj2]
+                        }
+                    }
+                }
+            }
+        }
+
+        BX.CatalogSetConstructor =
+        {
+            bInit: false,
+            popup: null,
+            arParams: {}
+        };
+        BX.CatalogSetConstructor.popup = BX.PopupWindowManager.create("CatalogSetConstructor_"+element_id, null, {
+            autoHide: false,
+            offsetLeft: 0,
+            offsetTop: 0,
+            overlay : true,
+            draggable: {restrict:true},
+            closeByEsc: false,
+            closeIcon: { right : "12px", top : "10px"},
+            titleBar: {content: BX.create("span", {html: "<div><?=GetMessage("CATALOG_SET_POPUP_TITLE_BAR")?></div>"})},
+            content: '<div style="width:250px;height:250px; text-align: center;"><span style="position:absolute;left:50%; top:50%"><img src="<?=$this->GetFolder()?>/images/wait.gif"/></span></div>',
+            events: {
+                onAfterPopupShow: function()
+                {
+                    BX.ajax.post(
+                        '<? echo $this->GetFolder(); ?>/popup.php',
+                        {
+                            lang: BX.message('LANGUAGE_ID'),
+                            site_id: BX.message('SITE_ID') || '',
+                            arParams:curSetParams,
+                            theme: '<? echo $arParams['TEMPLATE_THEME']; ?>'
+                        },
+                        BX.delegate(function(result)
+                            {
+                                this.setContent(result);
+                                BX("CatalogSetConstructor_"+element_id).style.left = (window.innerWidth - BX("CatalogSetConstructor_"+element_id).offsetWidth)/2 +"px";
+                                var popupTop = document.body.scrollTop + (window.innerHeight - BX("CatalogSetConstructor_"+element_id).offsetHeight)/2;
+                                BX("CatalogSetConstructor_"+element_id).style.top = popupTop > 0 ? popupTop+"px" : 0;
+                            },
+                            this)
+                    );
+                }
+            }
+        });
+
+        BX.CatalogSetConstructor.popup.show();
+    }
+</script>

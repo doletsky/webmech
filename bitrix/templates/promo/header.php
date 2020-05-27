@@ -26,6 +26,7 @@
             width: 100%;
             height: 100%;
         }</style>
+    <?$APPLICATION->ShowHead();?>
 </head>
 <body class="device-lg">
 <div id="scroll-progress" style="width: 0%;"><span class="scroll-percent">0%</span></div>

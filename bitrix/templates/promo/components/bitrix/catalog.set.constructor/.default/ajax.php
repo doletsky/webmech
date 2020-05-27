@@ -7,7 +7,7 @@ if(!CModule::IncludeModule("catalog"))
 	return;
 }
 
-if ($_SERVER["REQUEST_METHOD"]=="POST" && strlen($_POST["action"])>0 && check_bitrix_sessid())
+if ($_SERVER["REQUEST_METHOD"]=="POST" && strlen($_POST["action"])>0)
 {
 	$APPLICATION->RestartBuffer();
 
