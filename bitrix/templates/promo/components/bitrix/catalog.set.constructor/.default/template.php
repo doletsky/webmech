@@ -94,7 +94,6 @@ $sumCostSimple=$arDef["course"]["COST"]+$sumBonus;
                             </div>
                             <div class="form-group">
                                 <input class="signup_detect" type="hidden">
-                                <input type="hidden" name="COURSE" value="kak_zakazat_sayt">
                                 <select size="1" name="paket"  placeholder="Выберите пакет" style="border: solid 1px grey;">
                                     <option selected value="1">Максимум</option>
                                 </select>
@@ -151,7 +150,6 @@ $sumCostSimple=$arDef["course"]["COST"]+$sumBonus;
                             </div>
                             <div class="form-group">
                                 <input class="signup_detect" type="hidden">
-                                <input type="hidden" name="COURSE" value="kak_zakazat_sayt">
                                 <select size="1" name="paket"  placeholder="Выберите пакет" style="border: solid 1px grey;">
                                     <option selected value="2">Оптимальный</option>
                                 </select>
@@ -201,7 +199,6 @@ $sumCostSimple=$arDef["course"]["COST"]+$sumBonus;
                             </div>
                             <div class="form-group">
                                 <input class="signup_detect" type="hidden">
-                                <input type="hidden" name="COURSE" value="kak_zakazat_sayt">
                                 <select size="1" name="paket"  placeholder="Выберите пакет" style="border: solid 1px grey;">
                                     <option selected value="3">Простой</option>
                                 </select>
@@ -300,7 +297,6 @@ $sumCostSimple=$arDef["course"]["COST"]+$sumBonus;
                             </div>
                             <div class="form-group">
                                 <input class="signup_detect" type="hidden">
-                                <input type="hidden" name="COURSE" value="kak_zakazat_sayt">
                                 <select size="1" name="paket"  placeholder="Выберите пакет">
                                     <option selected="true" disabled="disabled">Выберите пакет</option>
                                     <option value="1">Максимум</option>
