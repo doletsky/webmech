@@ -3316,3 +3316,7 @@ input[type=submit]:focus,input[type=submit].form-control:focus{box-shadow:none}
     #watch-video .video-preview{height:250px}
     .style-switcher{display:none!important}
 }
+
+input.error, select.error {
+    box-shadow: 0 0 15px 0 red;
+}
