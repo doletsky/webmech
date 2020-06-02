@@ -1,9 +1,10 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?$arMainItem=$arResult["ITEMS"]["AnDelCanBuy"][0];?>
     <section id="banner" class="rounded-bottom" data-scroll-index="0">
         <div class="banner-parallax">
             <div class="bg-element" data-stellar-background-ratio="0.2"
-                 style="background-image: url(<?=$arResult["PREVIEW_PICTURE"]["SRC"]?>); background-position: 50% 0%;"></div>
-            <img src="<?=$arResult["PREVIEW_PICTURE"]["SRC"]?>" alt="">
+                 style="background-image: url(<?=$arMainItem["PREVIEW_PICTURE_SRC"]?>); background-position: 50% 0%;"></div>
+            <img src="<?=$arMainItem["DETAIL_PICTURE_SRC"]?>" alt="">
             <div class="overlay-colored" data-bg-color="#000" data-bg-color-opacity="0.3"
                  style="background-color: rgba(0, 0, 0, 0.3);"></div>
             <div class="slide-content">
@@ -13,28 +14,35 @@
                             <div class="banner-center-box text-white">
                                 <h1 class="anim-movebottom-seq" data-opacity-value="1" style="opacity: 0;">
                                     <?
-                                    $arName=explode(" ",trim($arResult["NAME"]));
-                                    $arGreen=explode(", ",$arResult["PROPERTIES"]["GREEN_WORDS"]["VALUE"]);
-                                    $arOrange=explode(", ",$arResult["PROPERTIES"]["ORANGE_WORDS"]["VALUE"]);
+                                    $arName=explode(" ",trim($arMainItem["NAME"]));
+                                    $arGreen=explode(", ",$arMainItem["PROPERTIES"]["GREEN_WORDS"]["VALUE"]);
+                                    $arOrange=explode(", ",$arMainItem["PROPERTIES"]["ORANGE_WORDS"]["VALUE"]);
                                     foreach($arGreen as $numWordG){$arName[$numWordG-1]='<span class="colored">'.$arName[$numWordG-1].'</span>';}
                                     foreach($arOrange as $numWordO){$arName[$numWordO-1]='<span style="color: #eb5600">'.$arName[$numWordO-1].'</span>';}
                                     $strName=implode(" ",$arName);
                                     ?>
                                     <?=$strName;?>
                                 </h1>
-                                <div class="description anim-movebottom-seq" data-opacity-value="0.7"
-                                     style="opacity: 0;">
-                                    <?=$arResult["PREVIEW_TEXT"];?>
+                                <div class="description col-md-12">
+                                    <div class="col-md-5">
+                                        <h3><?=$arResult["ITEMS"]["TITLE_BASKET"]?></h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h3><span class="colored"><?=$arResult["allSum_FORMATED"]?></span></h3>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="hm-content">
+                                            <a class="header-btn scroll-to btn small colorful hover-white" href="#table-send">Оплатить сейчас</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8"><?=$arResult["ITEMS"]["DESCRIPTION_BASKET"];?></div>
+
                                 </div><br>
-                                <div class="hm-content">
-                                    <a class="header-btn scroll-to btn small colorful hover-white" href="#table-send">Записаться сейчас</a>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="separator-bottom"></div>
         </div>
     </section>
 <pre><?print_r($arResult)?></pre>

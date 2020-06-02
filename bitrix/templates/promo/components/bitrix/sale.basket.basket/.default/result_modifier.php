@@ -1,11 +1,11 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 
 $titleBasket='';
-$descriptBasket='';
+$descriptBasket=array();
 $maxAccess=0;
-if($arParams["PACKET"]==1)$titleBasket='Пакет "Максимум"';
-if($arParams["PACKET"]==2)$titleBasket='Пакет "Оптимальный"';
-if($arParams["PACKET"]==3)$titleBasket='Пакет "Простой"';
+if($_SESSION["lid"]["packet"]==1)$titleBasket='<span class="quote-sign colored">Пакет <span style="color: #eb5600">“Максимум”</span></span>';
+if($_SESSION["lid"]["packet"]==2)$titleBasket='<span class="quote-sign colored">Пакет <span style="color: #eb5600">“Оптимальный”</span></span>';
+if($_SESSION["lid"]["packet"]==3)$titleBasket='<span class="quote-sign colored">Пакет <span style="color: #eb5600">“Простой”</span></span>';
 $arTimeWord=array(
     "H" => array(
         "час"   => array(1),
@@ -49,15 +49,14 @@ $arTimeWord=array(
         $ar_res = $res->GetNext();
         if($key){
             $arName=explode(".", $arItem["NAME"]);
-            if(count($arName)==1){
-                $descriptBasket.=$arName[0]."<br>";
-            }else{
-                $descriptBasket.=$arName[1]."<br>";
+            if(strlen($arName[1])>3){
+                $descriptBasket[0].=$arName[1].". ";
             }
-
                 $arResult["ITEMS"]["AnDelCanBuy"][$key]['PREVIEW_TEXT']=$ar_res['PREVIEW_TEXT'];
-                $descriptBasket.=$ar_res['PREVIEW_TEXT']."<br>";
+                $descriptBasket[1].=$ar_res['PREVIEW_TEXT']."<br>";
 
+        }else{
+            $arResult["ITEMS"]["AnDelCanBuy"][$key]["PREVIEW_PICTURE_SRC"]=CFile::GetPath($ar_res["PREVIEW_PICTURE"]);
         }
 
             $arProp=array();
@@ -85,7 +84,13 @@ $arTimeWord=array(
             $arAccess=$dbAccess->GetNext();
             foreach($arTimeWord[$arAccess["ACCESS_LENGTH_TYPE"]] as $accessText=>$numsL)
             {
-                if(in_array( $arAccess["ACCESS_LENGTH"], $numsL)) $arAccess["ACCESS_TEXT"]=$arAccess["ACCESS_LENGTH"]." ".$accessText;
+                if(in_array( $arAccess["ACCESS_LENGTH"], $numsL)) {
+                    $arAccess["ACCESS_TEXT"]=$arAccess["ACCESS_LENGTH"]." ".$accessText;
+                    if($maxAccess<$arAccess["ACCESS_LENGTH"]){
+                        $maxAccess=$arAccess["ACCESS_LENGTH"];
+                        $maxAccessText=$arAccess["ACCESS_TEXT"];
+                    }
+                }
             }
             $arProp["ACCESS"]=$arAccess;
             $arResult["ITEMS"]["AnDelCanBuy"][$key]['PROPERTIES']=$arProp;
@@ -124,9 +129,9 @@ $arTimeWord=array(
 ////        $arResult["SET_ITEMS"][$type][$key]="";
 //		$arResult["SET_ITEMS"][$type][$arElement["CODE"]] = $arElement;
 	}
-
+$arResult["ITEMS"]["AnDelCanBuy"][0]['PROPERTIES']["ACCESS_MAX"]=$maxAccessText;
 $arResult["ITEMS"]["TITLE_BASKET"]=$titleBasket;
-$arResult["ITEMS"]["DESCRIPTION_BASKET"]=$descriptBasket;
-
+$arResult["ITEMS"]["DESCRIPTION_BASKET"]=$descriptBasket[0].'<br><br>'.$descriptBasket[1];
+$arResult["ITEMS"]["AR_BASKET"]=$descriptBasket[3];
 
 

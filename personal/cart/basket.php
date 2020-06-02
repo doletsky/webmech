@@ -14,11 +14,11 @@ $APPLICATION->SetTitle("Title");
 		"USE_PREPAYMENT" => "N",
 		"QUANTITY_FLOAT" => "N",
 		"SET_TITLE" => "Y",
-		"ACTION_VARIABLE" => "action",
-        "PACKET" => $_SESSION["lid"]["packet"]
+		"ACTION_VARIABLE" => "action"
 	),
 false
 );?>
+<pre><?print_r($_SESSION)?></pre>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
 
 

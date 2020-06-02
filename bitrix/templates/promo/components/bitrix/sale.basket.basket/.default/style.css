@@ -1,3 +1,28 @@
+.banner-center-box{
+    padding-top: 0 !important;
+}
+.slide-content{
+    top: 100px !important;
+}
+.description{
+    line-height: 1.2 !important;
+    opacity: 1 !important;
+}
+.header-btn{
+    font-size: 16px !important;
+}
+.sticky #header-wrap {
+    position: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: none;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    border-bottom-color: transparent;
+}
+
+
 .bx_ordercart .bx_sort_container{
 	margin-bottom:15px;
 	min-height:32px;
