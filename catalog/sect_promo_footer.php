@@ -21,3 +21,10 @@
         </div>
     </div>
 </footer>
+<?
+//очистка корзины
+if (CModule::IncludeModule("sale"))
+{
+    CSaleBasket::DeleteAll(CSaleBasket::GetBasketUserID());
+}
+?>
