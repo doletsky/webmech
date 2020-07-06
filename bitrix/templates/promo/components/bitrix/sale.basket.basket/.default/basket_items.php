@@ -10,9 +10,9 @@
             <div class="slide-content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <div class="banner-center-box text-white">
-                                <h1 class="anim-movebottom-seq" data-opacity-value="1" style="opacity: 0;">
+                                <h1 class="anim-movebottom-seq col-md-8" data-opacity-value="1" style="opacity: 0;">
                                     <?
                                     $arName=explode(" ",trim($arMainItem["NAME"]));
                                     $arGreen=explode(", ",$arMainItem["PROPERTIES"]["GREEN_WORDS"]["VALUE"]);
@@ -36,7 +36,13 @@
                                         </div>
                                     </div>
                                     <div class="col-md-8"><?=$arResult["ITEMS"]["DESCRIPTION_BASKET"];?></div>
-
+                                    <div class="col-md-4">
+                                        <div class="small">
+                                            <br>Нажав "Оплатить" Вы будете перенаправлены на страницу оплаты.
+                                            После оплаты Вы получите письмо на указанный e-mail с доступом и инструкцией<br>
+                                            <br>* Нажимая "Оплатить" Вы принимаете <a href="#">договор оферты</a>.
+                                        </div>
+                                    </div>
                                 </div><br>
                             </div>
                         </div>
