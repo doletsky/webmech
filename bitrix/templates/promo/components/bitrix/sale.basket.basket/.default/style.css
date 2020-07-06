@@ -1,5 +1,8 @@
+.banner-parallax .row {
+    margin-top: -120px;
+}
 .banner-center-box{
-    padding-top: 0 !important;
+    padding: 0 !important;
 }
 .slide-content{
     top: 100px !important;

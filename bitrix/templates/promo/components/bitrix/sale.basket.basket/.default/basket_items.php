@@ -32,7 +32,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="hm-content">
-                                            <a class="header-btn scroll-to btn small colorful hover-white" href="#table-send">Оплатить сейчас</a>
+                                            <a class="header-btn scroll-to btn small colorful hover-white" href="javascript:void(0)" onclick="checkOut();">Оплатить сейчас</a>
                                         </div>
                                     </div>
                                     <div class="col-md-8"><?=$arResult["ITEMS"]["DESCRIPTION_BASKET"];?></div>
@@ -51,9 +51,8 @@
             </div>
         </div>
     </section>
-<pre><?print_r($arResult)?></pre>
 <?
-echo ShowError($arResult["ERROR_MESSAGE"]);
+//echo ShowError($arResult["ERROR_MESSAGE"]);
 
 $bDelayColumn  = false;
 $bDeleteColumn = false;
@@ -61,9 +60,8 @@ $bWeightColumn = false;
 $bPropsColumn  = false;
 $bPriceType    = false;
 
-if ($normalCount > 0):
 ?>
-<div id="basket_items_list">
+<div id="basket_items_list" style="display: none;">
 	<div class="bx_ordercart_order_table_container">
 		<table id="basket_items">
 			<thead>
@@ -553,20 +551,3 @@ if ($normalCount > 0):
 		</div>
 	</div>
 </div>
-<?
-else:
-?>
-<div id="basket_items_list">
-	<table>
-		<tbody>
-			<tr>
-				<td colspan="<?=$numCells?>" style="text-align:center">
-					<div class=""><?=GetMessage("SALE_NO_ITEMS");?></div>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<?
-endif;
-?>

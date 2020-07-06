@@ -18,7 +18,6 @@ $APPLICATION->SetTitle("Title");
 	),
 false
 );?>
-<pre><?print_r($_SESSION)?></pre>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
 
 
