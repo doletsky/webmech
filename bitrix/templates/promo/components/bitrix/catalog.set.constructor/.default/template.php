@@ -290,7 +290,7 @@ $sumCostSimple=$arDef["course"]["COST"]+$sumBonus;
                         <!--href="#clients-testmonials">Записаться сейчас</a>-->
                         <form class="signup-form anim-movebottom-seq" data-opacity-value="1"
                               novalidate="true"
-                              style="opacity: 0;">
+                              style="opacity: 1;">
                             <!--<img src="images/signup-form.png" alt="">-->
                             <div class="sf1-notifications">
                                 <div class="sf1-notifications-content"></div>
