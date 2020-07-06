@@ -1,12 +1,25 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+
 <?
 if (!$USER->IsAuthorized())
 {
-	echo ShowError($arResult["ERROR_MESSAGE"]);	
-	include($_SERVER["DOCUMENT_ROOT"].$templateFolder."/auth.php");
+	//echo ShowError($arResult["ERROR_MESSAGE"]);
+    $rsUsers = CUser::GetList($by="", $order="", array('=EMAIL' => $_SESSION["lid"]["email"]));
+    if($arUser = $rsUsers->GetNext()){
+        $_SESSION["lid"]["arUser"]=$arUser;
+    //пользователь с таким email уже есть в системе,
+    //для продолжения требуется авторизация
+        include($_SERVER["DOCUMENT_ROOT"].$templateFolder."/auth.php");
+    }
+    else{
+    //создаем пользователя и авторизуем
+    }
+
 }
 else
 {
+    include($_SERVER["DOCUMENT_ROOT"].$templateFolder."/step6.php");
+    exit;
 	if ($arResult["CurrentStep"] < 6):?>
 		<form method="post" action="<?= htmlspecialcharsbx($arParams["PATH_TO_ORDER"]) ?>" name="order_form">
 			<?=bitrix_sessid_post()?>

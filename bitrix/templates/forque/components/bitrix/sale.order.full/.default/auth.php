@@ -1,4 +1,41 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+
+<div class="row py-4 mb-2">
+    <div class="col-md-6 offset-md-3">
+        <!-- form card login with validation feedback -->
+        <div class="card card-outline-secondary">
+            <div class="card-header">
+                <h3 class="mb-0">Login</h3>
+            </div>
+            <div class="card-body">
+                <form class="form" name="order_auth_form" role="form" autocomplete="off" id="loginForm" novalidate="" method="post" action="<?= $arParams["PATH_TO_ORDER"] ?>">
+                    <?=bitrix_sessid_post()?>
+                    <input type="hidden" name="do_authorize" value="Y">
+                    <input type="hidden" name="USER_LOGIN" value="<?=$_SESSION["lid"]["arUser"]["LOGIN"]?>">
+                    <div class="form-group">
+                        <label for="uname1">Email</label>
+                        <input type="text" class="form-control" name="username" id="uname2" value="<?=$_SESSION["lid"]["email"]?>" disabled>
+                        <div class="invalid-feedback">Please enter your username or email</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="USER_PASSWORD" id="pwd2" required autocomplete="new-password">
+                        <div class="invalid-feedback">Please enter a password</div>
+                    </div>
+                    <div class="form-check small">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input"> <span>Remember me on this computer</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg float-right" id="btnLogin2">Login</button>
+                </form>
+            </div>
+            <!--/card-body-->
+        </div>
+        <!-- /form card login -->
+    </div>
+</div>
+
 <table border="0" cellspacing="0" cellpadding="1">
 	<tr>
 		<td width="45%" valign="top">

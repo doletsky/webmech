@@ -29,5 +29,4 @@ false
 );?>
 <br>========<br>
 <?//$APPLICATION->IncludeComponent("bitrix:sale.order.payment","",Array(),false);?>
-<pre><?print_r($_REQUEST)?></pre>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
