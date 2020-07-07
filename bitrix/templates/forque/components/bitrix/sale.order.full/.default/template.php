@@ -18,8 +18,6 @@ if (!$USER->IsAuthorized())
 }
 else
 {
-    include($_SERVER["DOCUMENT_ROOT"].$templateFolder."/step6.php");
-    exit;
 	if ($arResult["CurrentStep"] < 6):?>
 		<form method="post" action="<?= htmlspecialcharsbx($arParams["PATH_TO_ORDER"]) ?>" name="order_form">
 			<?=bitrix_sessid_post()?>
@@ -161,6 +159,11 @@ else
 
 	<?if ($arResult["CurrentStep"] < 6):?>
 		</form>
+    <?if($arResult["CurrentStep"]==2 || $arResult["CurrentStep"]==5):?>
+    <script>
+        document.order_form.submit();
+    </script>
+    <?endif?>
 	<?endif;?>
 <?
 }

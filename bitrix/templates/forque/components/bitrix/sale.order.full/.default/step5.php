@@ -234,13 +234,13 @@
 </tr>
 <tr>
 	<td valign="top" width="60%" align="right">
-		<?if(!($arResult["SKIP_FIRST_STEP"] == "Y" && $arResult["SKIP_SECOND_STEP"] == "Y" && $arResult["SKIP_THIRD_STEP"] == "Y" && $arResult["SKIP_FORTH_STEP"] == "Y"))
-		{
-			?>
-			<input type="submit" name="backButton" value="&lt;&lt; <?echo GetMessage("SALE_BACK_BUTTON")?>">
-			<?
-		}
-		?>
+<!--		--><?//if(!($arResult["SKIP_FIRST_STEP"] == "Y" && $arResult["SKIP_SECOND_STEP"] == "Y" && $arResult["SKIP_THIRD_STEP"] == "Y" && $arResult["SKIP_FORTH_STEP"] == "Y"))
+//		{
+//			?>
+<!--			<input type="submit" name="backButton" value="&lt;&lt; --><?//echo GetMessage("SALE_BACK_BUTTON")?><!--">-->
+<!--			--><?//
+//		}
+//		?>
 		<input type="submit" name="contButton" value="<?= GetMessage("SALE_CONFIRM")?>">
 	</td>
 </tr>
