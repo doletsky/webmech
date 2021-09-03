@@ -8,9 +8,10 @@ $APPLICATION->SetTitle("Алгоритм"); ?>
             <li>
                 <div class="icon"><img src="img/suitcase.svg" alt=""></div>
                 <div class="animation-chain overflow-hidden" data-animation="fadeInLeft">
-                    <h3 class="animated" style="animation-delay: 0s;">UI / UX Designer</h3>
-                    <h4 class="animated" style="animation-delay: 0.1s;">Amazing Design</h4>
-                    <div class="date animated" style="animation-delay: 0.2s;">Aug 2007 - Now</div>
+                    <div class="date animated" style="animation-delay: 0.2s;">Шаг первый</div>
+                    <h3 class="animated" style="animation-delay: 0s;">Определение цели.</h3>
+                    <h4 class="animated" style="animation-delay: 0.1s;">Формулирование желаемого результата</h4>
+
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta exercitationem nam perferendis tempora eius repellat expedita numquam, beatae eaque nihil? Aliquam architecto voluptatum provident animi, excepturi fugit ut! Impedit, eum!</p>
             </li>
