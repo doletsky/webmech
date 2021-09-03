@@ -27,10 +27,10 @@
 .bgDarkGray { background-color: rgba(0, 0, 0, 0.7); color: rgb(255, 255, 255); }
 .bgDarkGray h1, .bgDarkGray h2, .bgDarkGray h3, .bgDarkGray h4, .bgDarkGray h5, .bgDarkGray h6 { color: rgb(255, 255, 255); }
 .bgLightGray { background-color: rgb(230, 230, 230); }
-a:link, a:visited { display: inline-block; text-decoration: none; color: rgb(77, 77, 77); transition: color 0.3s ease 0s; position: relative; outline: 0px; }
-a:link::after, a:visited::after { content: ""; display: block; width: 100%; bottom: -4px; height: 2px; background-color: rgb(214, 116, 86); transform: scale3d(0, 1, 1); transform-origin: center center; transition: transform 0.3s ease 0s; position: absolute; }
-a:hover, a:active, a:focus { outline: 0px; }
-a:hover::after, a:active::after, a:focus::after { transform: scale3d(1, 1, 1); }
+/*a:link, a:visited { display: inline-block; text-decoration: none; color: rgb(77, 77, 77); transition: color 0.3s ease 0s; position: relative; outline: 0px; }*/
+/*a:link::after, a:visited::after { content: ""; display: block; width: 100%; bottom: -4px; height: 2px; background-color: rgb(214, 116, 86); transform: scale3d(0, 1, 1); transform-origin: center center; transition: transform 0.3s ease 0s; position: absolute; }*/
+/*a:hover, a:active, a:focus { outline: 0px; }*/
+/*a:hover::after, a:active::after, a:focus::after { transform: scale3d(1, 1, 1); }*/
 input[type="submit"], a.btn { background-color: rgb(214, 116, 86); color: rgb(255, 255, 255); border-width: 0px; font-size: 1em; padding: 0.8em 2em; font-family: Oswald, sans-serif; text-transform: uppercase; letter-spacing: 3px; transition: background-color 0.3s ease 0s; outline: none; line-height: inherit; border-radius: 24px; }
 input[type="submit"] h1, input[type="submit"] h2, input[type="submit"] h3, input[type="submit"] h4, input[type="submit"] h5, input[type="submit"] h6, a.btn h1, a.btn h2, a.btn h3, a.btn h4, a.btn h5, a.btn h6 { color: rgb(255, 255, 255); }
 input[type="submit"] a:link, input[type="submit"] a:visited, a.btn a:link, a.btn a:visited { color: rgb(255, 255, 255); }
@@ -60,25 +60,25 @@ ul.social > li { display: inline-block; height: 48px; width: 48px; font-size: 2.
 ul.social > li:hover { background-color: rgb(200, 84, 49); }
 ul.social > li a:link::after, ul.social > li a:visited::after { display: none; }
 ul.social > li a:hover, ul.social > li a:active { color: rgb(255, 255, 255); }
-nav { position: fixed; top: 0px; right: 0px; width: 0px; height: 0px; z-index: 100; transition: all 0.3s ease 0s; display: flex; align-items: center; justify-content: center; }
-nav ul.menu { list-style-type: none; margin: 0px; padding: 0px; font-family: Oswald, sans-serif; font-weight: 300; text-transform: uppercase; letter-spacing: 3px; font-size: 2em; transition: opacity 0.3s ease 0s; display: none; }
-nav ul.menu > li { text-align: center; margin: 0.7em 0px; transform: translate3d(0px, 20px, 0px); opacity: 0; transition: all 0.3s ease 0s; }
-nav ul.menu > li a:link, nav ul.menu > li a:visited { color: rgb(255, 255, 255); position: relative; }
-nav ul.menu > li a:link.current::before, nav ul.menu > li a:visited.current::before { position: absolute; top: 50%; left: 0px; transform: translate3d(-40px, -10px, 0px); width: 0px; height: 0px; content: ""; display: block; border-top: 10px solid transparent; border-left: 20px solid rgb(214, 116, 86); border-bottom: 10px solid transparent; }
-nav ul.menu > li a:link::after, nav ul.menu > li a:visited::after { display: none; }
-nav ul.menu > li a:hover, nav ul.menu > li a:active { color: rgb(214, 116, 86); }
-nav button.open-menu { position: absolute; top: 64px; right: 80px; text-indent: -9999px; border-width: 0px; height: 40px; width: 40px; padding: 0px; outline: none; cursor: pointer; transition: all 0.3s ease 0s; background-color: transparent; overflow: hidden; }
-nav button.open-menu::before, nav button.open-menu::after { position: absolute; display: block; content: ""; top: 0px; right: 0px; width: 100%; height: 2px; background-color: rgb(204, 204, 204); transition: all 0.3s ease 0s; }
-nav button.open-menu::before { box-shadow: rgb(204, 204, 204) 10px 16px 0px; }
-nav button.open-menu::after { transform: translate3d(0px, 32px, 0px); width: 75%; }
-nav.opened { background-color: rgba(0, 0, 0, 0.7); width: 100%; height: 100%; }
-nav.opened ul.menu { display: block; }
-nav.opened ul.menu.show-menu-items > li { transform: translate3d(0px, 0px, 0px); opacity: 1; }
-nav.opened button.open-menu { transform: rotate(360deg); }
-nav.opened button.open-menu::before { transform: translate3d(0px, 19px, 0px) rotate(45deg); box-shadow: transparent 0px -17px 0px; }
-nav.opened button.open-menu::after { width: 100%; transform: translate3d(0px, 19px, 0px) rotate(-45deg); }
-nav:not(.opened) button.open-menu:hover::before { box-shadow: rgb(204, 204, 204) 10px 14px 0px; }
-nav:not(.opened) button.open-menu:hover::after { transform: translate3d(0px, 28px, 0px); }
+/*nav { position: fixed; top: 0px; right: 0px; width: 0px; height: 0px; z-index: 100; transition: all 0.3s ease 0s; display: flex; align-items: center; justify-content: center; }*/
+/*nav ul.menu { list-style-type: none; margin: 0px; padding: 0px; font-family: Oswald, sans-serif; font-weight: 300; text-transform: uppercase; letter-spacing: 3px; font-size: 2em; transition: opacity 0.3s ease 0s; display: none; }*/
+/*nav ul.menu > li { text-align: center; margin: 0.7em 0px; transform: translate3d(0px, 20px, 0px); opacity: 0; transition: all 0.3s ease 0s; }*/
+/*nav ul.menu > li a:link, nav ul.menu > li a:visited { color: rgb(255, 255, 255); position: relative; }*/
+/*nav ul.menu > li a:link.current::before, nav ul.menu > li a:visited.current::before { position: absolute; top: 50%; left: 0px; transform: translate3d(-40px, -10px, 0px); width: 0px; height: 0px; content: ""; display: block; border-top: 10px solid transparent; border-left: 20px solid rgb(214, 116, 86); border-bottom: 10px solid transparent; }*/
+/*nav ul.menu > li a:link::after, nav ul.menu > li a:visited::after { display: none; }*/
+/*nav ul.menu > li a:hover, nav ul.menu > li a:active { color: rgb(214, 116, 86); }*/
+/*nav button.open-menu { position: absolute; top: 64px; right: 80px; text-indent: -9999px; border-width: 0px; height: 40px; width: 40px; padding: 0px; outline: none; cursor: pointer; transition: all 0.3s ease 0s; background-color: transparent; overflow: hidden; }*/
+/*nav button.open-menu::before, nav button.open-menu::after { position: absolute; display: block; content: ""; top: 0px; right: 0px; width: 100%; height: 2px; background-color: rgb(204, 204, 204); transition: all 0.3s ease 0s; }*/
+/*nav button.open-menu::before { box-shadow: rgb(204, 204, 204) 10px 16px 0px; }*/
+/*nav button.open-menu::after { transform: translate3d(0px, 32px, 0px); width: 75%; }*/
+/*nav.opened { background-color: rgba(0, 0, 0, 0.7); width: 100%; height: 100%; }*/
+/*nav.opened ul.menu { display: block; }*/
+/*nav.opened ul.menu.show-menu-items > li { transform: translate3d(0px, 0px, 0px); opacity: 1; }*/
+/*nav.opened button.open-menu { transform: rotate(360deg); }*/
+/*nav.opened button.open-menu::before { transform: translate3d(0px, 19px, 0px) rotate(45deg); box-shadow: transparent 0px -17px 0px; }*/
+/*nav.opened button.open-menu::after { width: 100%; transform: translate3d(0px, 19px, 0px) rotate(-45deg); }*/
+/*nav:not(.opened) button.open-menu:hover::before { box-shadow: rgb(204, 204, 204) 10px 14px 0px; }*/
+/*nav:not(.opened) button.open-menu:hover::after { transform: translate3d(0px, 28px, 0px); }*/
 section { padding: 80px; position: relative; }
 section.no-padding-top { padding-top: 0px; }
 section.section-hero { background-color: rgb(77, 77, 77); height: 100%; position: relative; color: rgb(255, 255, 255); display: flex; flex-direction: column; justify-content: flex-end; }
