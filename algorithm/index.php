@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Алгоритм самообучения"); ?>
 <?$APPLICATION->AddHeadString('<link href="'.SITE_TEMPLATE_PATH.'/css/jordan.css";  type="text/css" rel="stylesheet" />',true)?>
     <section id="experience-education" class="section-experience-education bgPrimaryColor">
-        <h2>Самообучение: пошаговый план</h2>
+        <h2>Пошаговый план</h2>
         <ul class="timeline">
             <li>
                 <div class="icon"><img src="img/suitcase.svg" alt=""></div>

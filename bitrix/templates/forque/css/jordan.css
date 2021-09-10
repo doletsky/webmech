@@ -20,8 +20,8 @@
 .animation-chain { visibility: hidden; }
 .overflow-hidden { overflow: hidden; }
 .animated { visibility: visible; animation-duration: 0.6s; transform: translateZ(0px); }
-.bgPrimaryColor { background-color: rgb(214, 116, 86); color: rgb(255, 255, 255); }
-.bgPrimaryColor h1, .bgPrimaryColor h2, .bgPrimaryColor h3, .bgPrimaryColor h4, .bgPrimaryColor h5, .bgPrimaryColor h6 { color: rgb(255, 255, 255); }
+.bgPrimaryColor { background-color: rgb(214, 116, 86); color: rgb(153, 153, 153); }
+.bgPrimaryColor h1, .bgPrimaryColor h2, .bgPrimaryColor h3, .bgPrimaryColor h4, .bgPrimaryColor h5, .bgPrimaryColor h6 { color: rgb(235, 86, 0); }
 .bgPrimaryColor a:link, .bgPrimaryColor a:visited { color: rgb(255, 255, 255); }
 .bgPrimaryColor a:link::after, .bgPrimaryColor a:visited::after { background-color: rgb(255, 255, 255); }
 .bgDarkGray { background-color: rgba(0, 0, 0, 0.7); color: rgb(255, 255, 255); }
@@ -128,12 +128,12 @@ section.section-experience-education svg.holes { position: absolute; top: 1em; w
 section.section-experience-education svg.holes > circle, section.section-experience-education svg.holes > path { fill: rgb(255, 255, 255); }
 section.section-experience-education svg.waves { display: none; position: absolute; bottom: 1px; left: 0px; width: 100%; transform: translate3d(0px, 100%, 0px); z-index: 1; }
 section.section-experience-education svg.waves > path { fill: rgb(214, 116, 86); }
-section ul.timeline { list-style-type: none; padding: 0px; position: relative; color: rgb(255, 255, 255); margin: 0px auto; }
-section ul.timeline::before { content: ""; display: block; position: absolute; top: 0px; bottom: -20px; left: 50%; width: 2px; background-color: rgb(255, 255, 255); transform: translateX(-50%); }
+section ul.timeline { list-style-type: none; padding: 0px; position: relative; color: rgb(24, 198, 135); margin: 0px auto; }
+section ul.timeline::before { content: ""; display: block; position: absolute; top: 0px; bottom: -20px; left: 50%; width: 2px; background-color: rgb(24, 198, 135); transform: translateX(-50%); }
 section ul.timeline > li { width: 50%; position: relative; padding: 1.5em 0px; }
 section ul.timeline > li:last-child { margin-bottom: 0px; }
 section ul.timeline > li h3 { font-size: 1.5em; }
-section ul.timeline > li h4 { color: rgb(235, 186, 171); font-size: 0.9em; text-transform: uppercase; letter-spacing: 3px; }
+section ul.timeline > li h4 { color: rgb(24, 198, 135); font-size: 0.9em; text-transform: uppercase; letter-spacing: 3px; }
 section ul.timeline > li .date { margin-bottom: 2em; text-transform: uppercase; letter-spacing: 3px; font-size: 0.8em; font-family: Oswald, sans-serif; }
 section ul.timeline > li p { color: rgb(243, 213, 204); }
 section ul.timeline > li::before, section ul.timeline > li::after, section ul.timeline > li .icon { position: absolute; top: 4.6em; transform: translateY(-50%); content: ""; display: block; background-color: rgb(214, 116, 86); }
@@ -141,7 +141,7 @@ section ul.timeline > li .icon { z-index: 1; }
 section ul.timeline > li .icon, section ul.timeline > li .icon > img { height: 40px; width: auto; }
 section ul.timeline > li .icon::before { position: absolute; content: ""; display: block; height: 1px; width: 55px; top: 50%; background-color: rgba(255, 255, 255, 0.8); }
 section ul.timeline > li .icon::after { position: absolute; content: ""; display: block; width: 20px; height: 20px; border-radius: 20px; box-shadow: rgb(255, 255, 255) 0px 0px 0px 6px; top: 50%; background-color: rgb(214, 116, 86); }
-section ul.timeline > li::before { width: 40px; height: 40px; border-radius: 40px; box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px; }
+section ul.timeline > li::before { width: 40px; height: 40px; border-radius: 40px; box-shadow: rgb(24, 198, 135) 0px 0px 0px 2px; }
 section ul.timeline > li::after { width: 22px; height: 44px; }
 section ul.timeline > li:nth-child(2n+1) { left: 50%; padding-left: 40px; }
 section ul.timeline > li:nth-child(2n+1)::before { left: -20px; }
