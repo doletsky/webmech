@@ -2,7 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 ?>
 
-<?if(0):?>
+<?if(0)://test git?>
 
 
         <main class="p-4 flex-fill">
