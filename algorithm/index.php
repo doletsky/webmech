@@ -6,7 +6,7 @@ $APPLICATION->SetTitle("Алгоритм самообучения"); ?>
         <h2>Пошаговый план</h2>
         <ul class="timeline">
             <li>
-                <div class="icon"><img src="img/suitcase.svg" alt=""></div>
+                <div class="icon"></div>
                 <div class="animation-chain overflow-hidden" data-animation="fadeInLeft">
                     <div class="date animated" style="animation-delay: 0.2s;">Шаг первый</div>
                     <h3 class="animated" style="animation-delay: 0s;">Цель</h3>
@@ -16,7 +16,7 @@ $APPLICATION->SetTitle("Алгоритм самообучения"); ?>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta exercitationem nam perferendis tempora eius repellat expedita numquam, beatae eaque nihil? Aliquam architecto voluptatum provident animi, excepturi fugit ut! Impedit, eum!</p>
             </li>
             <li>
-                <div class="icon"><img src="img/suitcase.svg" alt=""></div>
+                <div class="icon"></div>
                 <div class="animation-chain overflow-hidden" data-animation="fadeInRight">
                     <div class="date animated" style="animation-delay: 0.2s;">Шаг второй</div>
                     <h3 class="animated" style="animation-delay: 0s;">Источники</h3>
@@ -25,7 +25,7 @@ $APPLICATION->SetTitle("Алгоритм самообучения"); ?>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id error atque debitis tempora soluta, modi voluptatum sunt optio, ut quidem quam dolore. Unde minus quasi consequuntur consequatur, tempore repudiandae aperiam?</p>
             </li>
             <li>
-                <div class="icon"><img src="img/cap.svg" alt=""></div>
+                <div class="icon"></div>
                 <div class="animation-chain overflow-hidden" data-animation="fadeInLeft">
                     <div class="date animated" style="animation-delay: 0.2s;">Шаг третий</div>
                     <h3 class="animated" style="animation-delay: 0s;">Контроль</h3>
@@ -34,7 +34,7 @@ $APPLICATION->SetTitle("Алгоритм самообучения"); ?>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id error atque debitis tempora soluta, modi voluptatum sunt optio, ut quidem quam dolore. Unde minus quasi consequuntur consequatur, tempore repudiandae aperiam?</p>
             </li>
             <li>
-                <div class="icon"><img src="img/cap.svg" alt=""></div>
+                <div class="icon"></div>
                 <div class="animation-chain overflow-hidden" data-animation="fadeInRight">
                     <div class="date animated" style="animation-delay: 0.2s;">Шаг четвертый</div>
                     <h3 class="animated" style="animation-delay: 0s;">План</h3>
@@ -43,7 +43,7 @@ $APPLICATION->SetTitle("Алгоритм самообучения"); ?>
                 <p>Thesis: Nulla, Omnis Vitae Illum Molestiae Rem<br>GPA: 4.0</p>
             </li>
             <li>
-                <div class="icon"><img src="img/suitcase.svg" alt=""></div>
+                <div class="icon"></div>
                 <div class="animation-chain overflow-hidden" data-animation="fadeInLeft">
                     <div class="date animated" style="animation-delay: 0.2s;">Шаг пятый</div>
                     <h3 class="animated" style="animation-delay: 0s;">Среда</h3>
@@ -52,7 +52,7 @@ $APPLICATION->SetTitle("Алгоритм самообучения"); ?>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id error atque debitis tempora soluta, modi voluptatum sunt optio, ut quidem quam dolore. Unde minus quasi consequuntur consequatur, tempore repudiandae aperiam?</p>
             </li>
             <li>
-                <div class="icon"><img src="img/cap.svg" alt=""></div>
+                <div class="icon"></div>
                 <div class="animation-chain overflow-hidden" data-animation="fadeInRight">
                     <div class="date animated" style="animation-delay: 0.2s;">Последний шаг</div>
                     <h3 class="animated" style="animation-delay: 0s;">Старт</h3>

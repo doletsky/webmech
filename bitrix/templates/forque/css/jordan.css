@@ -136,10 +136,10 @@ section ul.timeline > li h3 { font-size: 1.5em; }
 section ul.timeline > li h4 { color: rgb(24, 198, 135); font-size: 0.9em; text-transform: uppercase; letter-spacing: 3px; }
 section ul.timeline > li .date { margin-bottom: 2em; text-transform: uppercase; letter-spacing: 3px; font-size: 0.8em; font-family: Oswald, sans-serif; }
 section ul.timeline > li p { color: rgb(77, 77, 77); }
-section ul.timeline > li::before, section ul.timeline > li::after, section ul.timeline > li .icon { position: absolute; top: 4.6em; transform: translateY(-50%); content: ""; display: block; /*background-color: rgb(214, 116, 86);*/ }
+section ul.timeline > li::before, section ul.timeline > li::after, section ul.timeline > li .icon { position: absolute; top: 3.6em; transform: translateY(-50%); content: ""; display: block; /*background-color: rgb(214, 116, 86);*/ }
 section ul.timeline > li .icon { z-index: 1; }
 section ul.timeline > li .icon, section ul.timeline > li .icon > img { height: 40px; width: auto; }
-section ul.timeline > li .icon::before { position: absolute; content: ""; display: block; height: 1px; width: 55px; top: 50%; background-color: rgba(24, 198, 135, 0.8); }
+section ul.timeline > li .icon::before { position: absolute; content: ""; display: block; height: 1px; width: 180px; top: 50%; background-color: rgba(24, 198, 135, 0.8); }
 section ul.timeline > li .icon::after { position: absolute; content: ""; display: block; width: 20px; height: 20px; border-radius: 20px; box-shadow: rgb(24, 198, 135) 0px 0px 0px 6px; top: 50%; background-color: rgb(235, 86, 0); }
 section ul.timeline > li::before { width: 40px; height: 40px; border-radius: 40px; box-shadow: rgb(24, 198, 135) 0px 0px 0px 2px; }
 section ul.timeline > li::after { width: 22px; height: 44px; }
@@ -147,13 +147,13 @@ section ul.timeline > li:nth-child(2n+1) { left: 50%; padding-left: 40px; }
 section ul.timeline > li:nth-child(2n+1)::before { left: -20px; }
 section ul.timeline > li:nth-child(2n+1)::after { left: -23px; }
 section ul.timeline > li:nth-child(2n+1) .icon { left: 0px; transform: translateY(-50%) translateX(-100%) translateX(-61px); }
-section ul.timeline > li:nth-child(2n+1) .icon::before, section ul.timeline > li:nth-child(2n+1) .icon::after { left: 100%; margin-left: 5px; }
+section ul.timeline > li:nth-child(2n+1) .icon::before, section ul.timeline > li:nth-child(2n+1) .icon::after { left: 100%; margin-left: 81px; }
 section ul.timeline > li:nth-child(2n+1) .icon::after { margin-left: 0px; transform: translateY(-50%) translateX(-50%) translateX(61px); }
 section ul.timeline > li:nth-child(2n) { padding-right: 40px; text-align: right; }
 section ul.timeline > li:nth-child(2n)::before { right: -20px; }
 section ul.timeline > li:nth-child(2n)::after { right: -23px; }
 section ul.timeline > li:nth-child(2n) .icon { right: 0px; transform: translateY(-50%) translateX(100%) translateX(61px); }
-section ul.timeline > li:nth-child(2n) .icon::before, section ul.timeline > li:nth-child(2n) .icon::after { right: 100%; margin-right: 5px; }
+section ul.timeline > li:nth-child(2n) .icon::before, section ul.timeline > li:nth-child(2n) .icon::after { right: 100%; margin-right: 81px; }
 section ul.timeline > li:nth-child(2n) .icon::after { margin-right: 0px; transform: translateY(-50%) translateX(50%) translateX(-61px); }
 section.section-skills-knowledge::before, section.section-skills-knowledge .triangle::before { display: block; position: absolute; content: ""; left: 50%; top: 0px; height: 50px; width: 50px; margin-top: -25px; margin-left: -25px; background-color: rgb(230, 230, 230); transform: rotate(45deg); z-index: 0; }
 section.section-skills-knowledge .triangle { position: absolute; bottom: 0px; right: 0px; width: 100px; height: 100px; overflow: hidden; }
