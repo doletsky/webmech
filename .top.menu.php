@@ -7,6 +7,13 @@ $aMenuLinks = Array(
 		Array("class"=>"icon-home icons"), 
 		"" 
 	),
+	Array(
+		"О проекте",
+		"/promo/",
+		Array(),
+		Array("class"=>"icon-docs icons"),
+		""
+	),
     Array(
         "Каталог тренингов",
         "/catalog/",
