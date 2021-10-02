@@ -43,7 +43,7 @@ $(document).ready(function () {
             success: function(msg){
                 var d=JSON.parse(msg);
                 if(d.new_mess==0){
-                    //console.log('новых сообщений нет');
+                    //console.log('пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ');
                 }else{
                     $('.lk-students-chat').find('#messages').html('');
                     var mh='';
@@ -68,7 +68,7 @@ $(document).ready(function () {
         });
     }
 
-    //отслеживание ответов в online
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ online
     var timerId = setInterval(function() {
         controlAddMess(topicId);
     }, 30000);

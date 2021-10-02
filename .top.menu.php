@@ -9,7 +9,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"О проекте",
-		"/promo/",
+		"/about/",
 		Array(),
 		Array("class"=>"icon-docs icons"),
 		""
