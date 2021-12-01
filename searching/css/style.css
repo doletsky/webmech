@@ -3304,6 +3304,7 @@ input[type=submit]:focus,input[type=submit].form-control:focus{box-shadow:none}
     #watch-video .video-preview{height:350px}
     #cta-title-1 .box-cta{padding:90px 80px}
     #cta-title-1 .box-cta [class*=shape-]{display:none}
+    .banner-center-box .hm-content a.btn {font-size: 16px; color: #00CC00}
 }
 @media(max-width:480px){.header-meta{padding:0}
     .header-btn{display:none}
@@ -3315,4 +3316,5 @@ input[type=submit]:focus,input[type=submit].form-control:focus{box-shadow:none}
     .fun-facts-boxes .box-counter:last-child{border-bottom:0}
     #watch-video .video-preview{height:250px}
     .style-switcher{display:none!important}
+    .banner-center-box .hm-content a.btn {font-size: 16px}
 }
