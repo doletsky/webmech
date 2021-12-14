@@ -2720,7 +2720,7 @@ input[type=submit],input[type=submit].form-control,input[type=submit],input[type
 input[type=submit]:hover,input[type=submit]:focus,input[type=submit].form-control:hover,input[type=submit].form-control:focus{background:#18c687}
 input[type=submit]:focus,input[type=submit].form-control:focus{box-shadow:none}
 .flat-section{width:100%;position:relative}
-.flat-section .section-content{width:100%;padding:120px 0;position:relative;clear:both;background:#fff}
+.flat-section .section-content{width:100%;padding:120px 0 0;position:relative;clear:both;background:#fff}
 .flat-section .section-content>.container-fluid{padding:0}
 .section-title{margin-bottom:60px}
 .section-title h2{font-size:30px}
@@ -3005,9 +3005,9 @@ input[type=submit]:focus,input[type=submit].form-control:focus{box-shadow:none}
 .signup-form .form-group{display:table;margin-bottom:0;width: 100%}
 .signup-form select{float:left;width:33%;font-weight:400;border-radius:3px 0 0 3px;background:#fff;border-color:#fff;height: 50px;margin-right: 20px;color: gray}
 .signup-form select:focus{background:#da;border-color:#fff}
-.signup-form input[type=email]{float:left;width:33%;font-weight:400;border-radius:3px 0 0 3px;background:#fff;border-color:#fff}
+.signup-form input[type=email]{width:33%;font-weight:400;border-radius:3px 0 0 3px;background:#fff;border-color:#fff}
 .signup-form input[type=email]:focus{background:#da;border-color:#fff}
-.signup-form input[type=submit]{vertical-align:middle;border:1px solid #18c687;background:#18c687;border-radius:0 3px 3px 0;float: left;margin-left: 20px}
+.signup-form input[type=submit]{vertical-align:middle;border:1px solid #18c687;background:#18c687;border-radius:0 3px 3px 0;}
 .signup-form input[type=submit]:hover{color:#fff;border-color:#000;background:#000!important}
 .signup-form img{position:absolute;right:-35px;bottom:-40px}
 .box-header-form{position:relative;padding:30px;text-align:center;border-top:5px solid #18c687;border-radius:0 0 10px 10px;background:#fff}
@@ -3304,7 +3304,7 @@ input[type=submit]:focus,input[type=submit].form-control:focus{box-shadow:none}
     #watch-video .video-preview{height:350px}
     #cta-title-1 .box-cta{padding:90px 80px}
     #cta-title-1 .box-cta [class*=shape-]{display:none}
-    .banner-center-box .hm-content a.btn {font-size: 16px; color: #00CC00}
+    .banner-center-box .hm-content a.btn {font-size: 16px; color: #fff}
 }
 @media(max-width:480px){.header-meta{padding:0}
     .header-btn{display:none}
